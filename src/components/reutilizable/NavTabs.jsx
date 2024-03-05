@@ -9,8 +9,8 @@ export default function NavTabs() {
     <div className="flex gap-5 mx-auto text-white justify-center css">
       <>
         <Link
-          className={path.includes("/categories") ? "active" : ""}
-          href={"/categories"}
+          className={path.includes("/categories-items") ? "active" : ""}
+          href={"/categories-items"}
         >
           Categories
         </Link>
