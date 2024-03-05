@@ -1,4 +1,4 @@
-import useCategoriesRequest from "../../../hooks/useCategoriesRequest";
+import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import InputCreate from "../InputCreate";
 import LinkProducts from "@/components/products/LinksProducts";
 
