@@ -1,7 +1,7 @@
 import GoogleProvider from "next-auth/providers/google";
-import {  FirestoreAdapter } from '@next-auth/firebase-adapter';
-import { db } from "../../firebase.config"
-import * as firestoreFunctions from "firebase/firestore"
+//import {} from "next-auth";
+//import { db } from "../auth/firebase.config"
+//import * as firestoreFunctions from "firebase/firestore"
 
 export const authOptions = {
 
@@ -18,9 +18,9 @@ export const authOptions = {
     }),
   ],
 
-  adapter: FirestoreAdapter({
+  /*adapter: ({
     db: db,
     ...firestoreFunctions
 
-  }),
+  }),*/
 }

@@ -9,14 +9,14 @@ export default function TextHero() {
       </p>
       <p>
         At Lorem, we understand the importance of staying ahead in the
-        fast-paced world of technology. That's why we handpick our inventory
-        from top brands and manufacturers, ensuring that you have access to the
-        most advanced and reliable products on the market.
+        fast-paced world of technology. That&lsquo;s why we handpick our
+        inventory from top brands and manufacturers, ensuring that you have
+        access to the most advanced and reliable products on the market.
       </p>
       <p>
-        Whether you're a tech enthusiast, a professional in need of the latest
-        tools, or someone simply looking to upgrade their devices, Lorem has you
-        covered
+        Whether you&lsquo;re a tech enthusiast, a professional in need of the
+        latest tools, or someone simply looking to upgrade their devices, Lorem
+        has you covered
       </p>
     </div>
   );

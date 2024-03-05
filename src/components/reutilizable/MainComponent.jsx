@@ -1,7 +1,7 @@
 import HeroMenu from "./HeroMenu";
 import MainTitle from "./MainTitle";
 import MenuPost from "../products/MenuPost";
-import AboutRestaurant from "../about/AboutRestaurant";
+//import AboutRestaurant from "../about/AboutRestaurant";
 
 export default function MainComponent() {
   return (
@@ -16,7 +16,7 @@ export default function MainComponent() {
         />
         <MenuPost className="shadow-blue-100 bg-[#A5C2E2] hover:bg-[#57BBE9]" />
       </div>
-      <AboutRestaurant />
+      {/*<AboutRestaurant />*/}
     </>
   );
 }
