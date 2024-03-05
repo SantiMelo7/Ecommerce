@@ -1,10 +1,9 @@
 import GoogleProvider from "next-auth/providers/google";
-//import {} from "next-auth";
-//import { db } from "../auth/firebase.config"
-//import * as firestoreFunctions from "firebase/firestore"
+import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { db } from "../auth/firebase.config"
+import * as firestoreFunctions from "firebase/firestore"
 
 export const authOptions = {
-
   secret: process.env.SECRET,
   // los provedores que utilizamos son, el de google
   providers: [
@@ -17,10 +16,8 @@ export const authOptions = {
 
     }),
   ],
-
-  /*adapter: ({
+  adapter: FirestoreAdapter({
     db: db,
     ...firestoreFunctions
-
-  }),*/
+  })
 }
