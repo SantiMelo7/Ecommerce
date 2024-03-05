@@ -15,7 +15,7 @@ export function UsePostAboutProducts() {
             })
         })
     }
-    return { aboutProducts }
+    return { aboutProducts, handleAboutImages }
 }
 
 export async function handleDelete(_id) {
