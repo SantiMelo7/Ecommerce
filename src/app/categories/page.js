@@ -1,14 +1,33 @@
-import CategoriesPost from "@/components/form/form-categories/CategoriesPost";
-import FormCategories from "@/components/form/form-categories/FormCategories";
-import NavTabs from "@/components/reutilizable/NavTabs";
+"use client"
 
-export default function CategoriesPage() {
+import MenuItemProps from "@/components/products/MenuItemProps"
+import MainTitle from "@/components/reutilizable/MainTitle"
+import useCategoriesRequest from "@/hooks/useCategoriesRequest"
+import { usePostProducts } from "@/hooks/useProducts"
+
+export default function CategoriesHomePage() {
+
+    const { products } = usePostProducts()
+
+    const { categories } = useCategoriesRequest()
 
     return (
-        <section className="max-w-lg mx-auto relative -top-24">
-            <NavTabs />
-            <FormCategories />
-            <CategoriesPost />
-        </section>
+        <>
+            <div className="relative">
+                <MainTitle title="All the products" subtTitle="Here you will find the full variety of products we have in more detail." />
+            </div>
+            {categories.length > 0 && categories.map((text, index) => (
+                <>
+                    <div key={index}>
+                        <MainTitle title={text.name} />
+                        {products.filter(prevProducts => prevProducts.categories === text._id).map((productsProps, index) => (
+                            <div key={index}>
+                                <MenuItemProps {...productsProps} />
+                            </div>
+                        ))}
+                    </div>
+                </>
+            ))}
+        </>
     )
 }
