@@ -1,27 +1,13 @@
+import ListMenu from "./ListMenu";
+
 export default function Header() {
   return (
-    <header className="flex w-screen h-full top-2 relative justify-between text-white text-lg">
+    <header className="flex w-screen h-full top-2 relative md:justify-between text-white text-lg overflow-hidden">
       <div className="pl-5">
         <h1 className="text-2xl">Ecommerce</h1>
       </div>
-      <nav className="flex flex-grow justify-center items-center">
-        <ul className="flex gap-x-4">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/categories">Categories</a>
-          </li>
-          <li>
-            <a href="/products">All Products</a>
-          </li>
-          <li>
-            <a>Login</a>
-          </li>
-          <li href="/cart">
-            <a>Cart</a>
-          </li>
-        </ul>
+      <nav className="flex flex-grow md:justify-end md:items-end sm:flex-col relative right-10">
+        <ListMenu />
       </nav>
     </header>
   );
