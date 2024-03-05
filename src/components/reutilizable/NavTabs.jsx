@@ -15,8 +15,8 @@ export default function NavTabs() {
           Categories
         </Link>
         <Link
-          className={path.includes("/products") ? "active" : ""}
-          href={"/products"}
+          className={path.includes("/products-items") ? "active" : ""}
+          href={"/products-items"}
         >
           Products
         </Link>

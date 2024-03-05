@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function MenuItemProps({ className, ...item }) {
   const { images, name, price, addToCard } = item;
 
@@ -5,7 +7,12 @@ function MenuItemProps({ className, ...item }) {
     <div
       className={`flex flex-col shadow-xl  ${className} hover:transition-all  rounded-md`}
     >
-      <img src={images} className="w-50 rounded-lg h-36 mx-auto mt-3"></img>
+      <Image
+        width={192}
+        height={144}
+        src={images}
+        className="rounded-lg mx-auto mt-3"
+      ></Image>
       <h1 className="mt-3 text-2xl text-center font-extrabold">{name}</h1>
       <button
         onClick={addToCard}

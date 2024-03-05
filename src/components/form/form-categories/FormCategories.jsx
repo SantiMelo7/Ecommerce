@@ -80,7 +80,7 @@ export default function FormCategories() {
         <button className="btn-category">Cancel</button>
       </div>
       <div className="relative -top-5">
-        <LinkProducts href={"/products"} text="Ir a los productos" />
+        <LinkProducts href={"/products-items"} text="Ir a los productos" />
       </div>
     </form>
   );
