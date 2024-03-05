@@ -5,11 +5,10 @@ export default function useImageCloudinary(setLink) {
     const [loanding, setLoanding] = useState(false)
 
     async function handleFile(ev) {
-
         const files = ev.target.files
         const data = new FormData()
         data.append("file", files[0])
-        data.append("upload_preset", "Products App Shop Restaurant")
+        data.append("upload_preset", "products-restaurant")
         //data.append("upload_preset", "Images About Restaurant")
         setLoanding(true)
 
@@ -33,11 +32,8 @@ export default function useImageCloudinary(setLink) {
         } catch (error) {
             throw new error("Fallo esto")
         }
-
     }
-
     return { loanding, handleFile }
-
 }
 
 /*
