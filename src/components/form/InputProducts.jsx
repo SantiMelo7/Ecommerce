@@ -24,7 +24,7 @@ export default function InputProducts({ onSubmit, product }) {
         type="text"
       />
 
-      <label className={cssLabelInput}>Images</label>
+      <label>Images</label>
       <ImageCloudinary
         link={updatedProduct?.images}
         setLink={(url) => handleUpdate("images", url)}
@@ -46,7 +46,7 @@ export default function InputProducts({ onSubmit, product }) {
         type="text"
       />
 
-      <label className={cssLabelInput}>Category</label>
+      <label>Category</label>
       {/*El valor es el primer estado de las categorias, el change es, el ev, damos la funcion de la actualizacion
                 damos la key, la category, y decimos que si el primer estado de las categorias, damos el metodo find, el cual
                 es el metodo que busca el primer arreglo que cumpla con las condiciones, damos la funcion, damos la categoria

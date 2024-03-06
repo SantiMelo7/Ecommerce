@@ -7,6 +7,7 @@ export default function InputCreate({
   value,
   onChange,
   id,
+  className,
 }) {
   return (
     <GenericInput
@@ -16,6 +17,7 @@ export default function InputCreate({
       onChange={onChange}
       id={id}
       name={name}
+      className={className}
     />
   );
 }

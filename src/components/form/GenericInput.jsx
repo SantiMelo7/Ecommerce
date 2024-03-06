@@ -8,13 +8,14 @@ export default function GenericInput({
   onChange,
   id,
   name,
+  className,
 }) {
   return (
     <>
       <label className={cssLabelInput}>
         {label}
         <input
-          className="input-create"
+          className={className}
           type={type}
           value={value}
           onChange={onChange}

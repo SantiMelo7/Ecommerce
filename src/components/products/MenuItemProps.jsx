@@ -11,6 +11,7 @@ function MenuItemProps({ className, ...item }) {
         width={192}
         height={144}
         src={images}
+        alt="Images"
         className="rounded-lg mx-auto mt-3"
       ></Image>
       <h1 className="mt-3 text-2xl text-center font-extrabold">{name}</h1>
