@@ -9,7 +9,6 @@ export default function useImageCloudinary(setLink) {
         const data = new FormData()
         data.append("file", files[0])
         data.append("upload_preset", "products-restaurant")
-        //data.append("upload_preset", "Images About Restaurant")
         setLoanding(true)
 
         try {
