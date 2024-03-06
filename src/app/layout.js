@@ -15,12 +15,12 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({ session, children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={oswald.className}>
-        <AppProvider session={session}>
-          <div className="bg-gray-800 -z-10 pb-5 w-screen">
+        <AppProvider>
+          <div className="bg-gray-800 -z-10 pb-5 w-full overflow-hidden">
             <Header />
           </div>
           {children}

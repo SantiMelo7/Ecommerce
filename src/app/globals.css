@@ -4,16 +4,16 @@
 
 button.btn-category,
 a.btn-category {
-  @apply bg-red-700 px-5 py-2 font-bold text-white rounded-xl text-lg;
+  @apply bg-red-700 px-12 py-2 font-bold text-white rounded-md text-lg hover:transition hover:scale-100 block;
 }
 
-input.input-create {
-  @apply flex justify-center w-5/12 rounded-lg;
+input {
+  @apply flex justify-center w-[70vh] rounded-lg;
   @apply block text-gray-900 font-bold text-xl mb-4 border-none p-2 bg-blue-300;
 }
 
 input[type="text"].formCategories {
-  @apply flex justify-center w-full my-3 rounded-md;
+  @apply flex justify-center w-[60vh] my-3 rounded-md;
   @apply block border-none p-2 bg-blue-300;
 }
 
