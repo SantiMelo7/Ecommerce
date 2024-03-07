@@ -1,5 +1,6 @@
 import ButtonHero from "../layout/ButtonsHero";
 import TextHero from "../layout/TextHero";
+import { Hero } from "../../../public/hero.png";
 
 export default function HeroMenu() {
   return (
@@ -12,10 +13,12 @@ export default function HeroMenu() {
         </div>
         <div className="flex justify-center items-center">
           <img
-            src="hero.png"
-            className=" relative bottom-10 w-[500px]"
+            width={500}
+            height={100}
+            src={Hero}
+            className="relative bottom-10"
             alt="Photo Header"
-          ></img>
+          />
         </div>
       </div>
     </section>

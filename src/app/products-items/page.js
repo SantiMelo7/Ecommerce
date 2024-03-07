@@ -1,8 +1,8 @@
 "use client"
 
-import AboutPost from "@/components/page/about/AboutPost"
-import LinkProducts from "@/components/page/products/LinksProducts"
-import MenuPost from "@/components/page/products/MenuPost"
+import AboutPost from "@/components/about/AboutPost"
+import LinkProducts from "@/components/products/LinksProducts"
+import MenuPost from "@/components/products/MenuPost"
 import NavTabs from "@/components/reutilizable/NavTabs"
 
 export default function ProductsPage() {

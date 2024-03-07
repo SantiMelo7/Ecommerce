@@ -1,8 +1,8 @@
 "use client";
 
-import MainTitle from "../../reutilizable/MainTitle";
-import TextAbout from "../../reutilizable/TextAbout";
-import { IMAGES_ABOUT } from "../../../constants";
+import MainTitle from "../reutilizable/MainTitle";
+import TextAbout from "../reutilizable/TextAbout";
+import { IMAGES_ABOUT } from "../../constants";
 
 export default function AboutRestaurant() {
   return (
@@ -20,7 +20,7 @@ export default function AboutRestaurant() {
                   width={200}
                   height={100}
                   alt="Images Restaurant"
-                ></img>
+                />
               </div>
             ))}
         </div>

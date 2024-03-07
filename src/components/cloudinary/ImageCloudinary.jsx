@@ -1,4 +1,5 @@
 import useImageCloudinary from "@/hooks/useImageCloudinary";
+import Image from "next/image";
 
 export default function ImageCloudinary({ link, setLink }) {
   const { loanding, handleFile } = useImageCloudinary(setLink);
@@ -18,14 +19,14 @@ export default function ImageCloudinary({ link, setLink }) {
       ) : (
         link && (
           <div>
-            <img
+            <Image
               priority
               src={link}
               alt="Photo Menu"
               width={150}
               height={100}
               className="mt-3 mb-3 rounded-lg"
-            ></img>
+            />
           </div>
         )
       )}

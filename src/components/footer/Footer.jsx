@@ -2,6 +2,7 @@ import { Facebook } from "@/components/layout/IconsFooter";
 import TitleFooter from "./TitleFooter";
 import ListText from "./ListText";
 import CityFooter from "./CityFooter";
+import ImageSponsors from "./ImageSponsors";
 
 export default function Footer() {
   return (
@@ -47,16 +48,22 @@ export default function Footer() {
           </div>
         </div>
         <div className="relative md:left-[200px] mt-9 grid grid-cols-2 gap-x-4 gap-y-4">
-          <img
-            src="./public/footer-images/mastercard.webp"
-            alt="Mastercard"
-          ></img>
-          <img src="./public/footer-images/paypal.webp" alt="Mastercard"></img>
-          <img
-            src="./public/footer-images/discover.webp"
-            alt="Mastercard"
-          ></img>
-          <img src="./public/footer-images/visa.webp" alt="Mastercard"></img>
+          <ImageSponsors
+            src="/public/footer-images/visa.webp"
+            alt="Visa Logo"
+          />
+          <ImageSponsors
+            src="/public/footer-images/paypal.webp"
+            alt="Paypal Logo"
+          />
+          <ImageSponsors
+            src="/public/footer-images/mastercard.webp"
+            alt="Mastercard Logo"
+          />
+          <ImageSponsors
+            src="/public/footer-images/discover.webp"
+            alt="Discover Logo"
+          />
         </div>
       </div>
       <CityFooter />

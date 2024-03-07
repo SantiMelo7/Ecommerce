@@ -21,6 +21,7 @@ export default function Session() {
               src={session?.user?.image}
               width={50}
               height={30}
+              alt="Foto de perfil | Google"
             />
           </div>
         </>

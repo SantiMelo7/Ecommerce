@@ -1,8 +1,8 @@
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import useUpdatedProduct from "@/hooks/useUpdatedProduct";
 import InputCreate from "./InputCreate";
-import ImageCloudinary from "../page/cloudinary/ImageCloudinary";
-import ButtonCreate from "../page/button/ButtonCreate";
+import ImageCloudinary from "../cloudinary/ImageCloudinary";
+import ButtonCreate from "../button/ButtonCreate";
 
 export default function InputProducts({ onSubmit, product }) {
   const { categories: categoriesItem } = useCategoriesRequest();
