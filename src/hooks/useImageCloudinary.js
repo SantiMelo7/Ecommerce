@@ -12,7 +12,7 @@ export default function useImageCloudinary(setLink) {
         setLoanding(true)
 
         try {
-            const response = await fetch("https://api.cloudinary.com/v1_1/dqprmrwka/upload", {
+            const response = await fetch("https://api.cloudinary.com/v1_1/dqprmrwka/image/upload", {
                 method: "POST", body: data
             })
             const file = await response.json()
