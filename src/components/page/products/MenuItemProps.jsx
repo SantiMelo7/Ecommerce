@@ -6,7 +6,7 @@ function MenuItemProps({ className, addToCard, ...item }) {
 
   return (
     <div
-      className={`flex flex-col shadow-xl  ${className} hover:transition-all  rounded-md`}
+      className={`flex flex-col shadow-xl  ${className} hover:transition-all hover:scale-105 rounded-md`}
     >
       <Image
         width={192}
@@ -22,3 +22,4 @@ function MenuItemProps({ className, addToCard, ...item }) {
 }
 
 export default MenuItemProps;
+// "https://res.cloudinary.com/dqprmrwka/image/upload/v1706919795/images/g2tmpjv6wrk5cduupokc.jpg"
