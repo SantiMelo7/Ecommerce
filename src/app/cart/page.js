@@ -10,10 +10,9 @@ export default function PageCart() {
         <>
             <aside>
                 <ul>
-                    {/*mapeamos lo del cart */}
                     {cart.map((product) => (
                         // damos el componente donde tenemos todo lo que se va a ver en el carrito
-                        <MenuItemProps addToCard={() => addToCart(product)} {...product} />
+                        <MenuItemProps key={product.id} addToCard={() => addToCart(product)} {...product} />
                     ))}
                 </ul>
             </aside>
