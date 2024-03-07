@@ -24,11 +24,11 @@ export const cartReducer = (state, action) => {
         // caso de agregar
         case CART_ACTION_TYPES.ADD_TO_CART: {
             // recojemos el id de el payload
-            const { id } = actionPayload
+            const { _id } = actionPayload
             // vemos el index del product,
             // decimos si el state del findIndex, osea que el primer indice del primer elemento
             // es igual al id
-            const productInCartIndex = state.findIndex(item => item.id === id)
+            const productInCartIndex = state.findIndex(item => item._id === _id)
             // si el producto del index es mayor o igual a 0
             if (productInCartIndex >= 0) {
                 // el nuevo estado es el structuredClone
@@ -49,12 +49,12 @@ export const cartReducer = (state, action) => {
         // caso, remover
         case CART_ACTION_TYPES.REMOVE_CART: {
             // recojemos el id
-            const { id } = actionPayload
+            const { _id } = actionPayload
             // el nuevo estado
             // decimos que el state, lo filtramos
             // buscamos los que pasen
             // y decimos que el item, su id tiene que ser diferente o igual al id
-            const newState = state.filter(item => item.id !== id)
+            const newState = state.filter(item => item._id !== _id)
             // actualizamos el localStorage del nuevo estado
             updateLocalStorage(newState)
             // retornamos el nuevo estado
