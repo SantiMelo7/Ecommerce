@@ -1,7 +1,9 @@
 import HeroMenu from "./HeroMenu";
 import MainTitle from "./MainTitle";
 import MenuPost from "../page/products/MenuPost";
-//import AboutRestaurant from "../about/AboutRestaurant";
+import AboutRestaurant from "../page/about/AboutRestaurant";
+import Contact from "../page/contact/Contact";
+import Footer from "../page/footer/Footer";
 
 export default function MainComponent() {
   return (
@@ -9,14 +11,16 @@ export default function MainComponent() {
       <div className=" bg-gray-800 relative -top-1">
         <HeroMenu />
       </div>
-      <div className="mt-28">
+      <div className="mt-10">
         <MainTitle
           title="Menu"
           subtTitle="Here you will find part of the menu of our restaurant"
         />
         <MenuPost className="shadow-blue-100 bg-[#A5C2E2] hover:bg-[#57BBE9]" />
       </div>
-      {/*<AboutRestaurant />*/}
+      <AboutRestaurant />
+      <Contact />
+      <Footer />
     </>
   );
 }

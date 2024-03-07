@@ -1,4 +1,5 @@
 "use client";
+
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 
@@ -8,7 +9,7 @@ export default function Session() {
     <>
       {session ? (
         <>
-          <div className="flex justify-end items-end gap-x-3">
+          <div className="flex justify-end items-end gap-x-3 right-7">
             <div className="flex gap-x-3 justify-center items-center relative right-5 bottom-3">
               <a className="cursor-pointer" onClick={() => signOut()}>
                 Cerrar sesión
@@ -24,12 +25,14 @@ export default function Session() {
           </div>
         </>
       ) : (
-        <a
-          className="relative left-4 cursor-pointer"
-          onClick={() => signIn("google")}
-        >
-          Iniciar Sesion
-        </a>
+        <>
+          <a
+            className="cursor-pointer relative right-8 top-1"
+            onClick={() => signIn("google")}
+          >
+            Iniciar Sesion
+          </a>
+        </>
       )}
     </>
   );
