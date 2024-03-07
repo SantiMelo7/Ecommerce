@@ -1,5 +1,4 @@
 import ListMenu from "./ListMenu";
-import Session from "./Sesion";
 
 export default function Header() {
   return (
@@ -9,10 +8,9 @@ export default function Header() {
           <a href="/">Ecommerce</a>
         </h1>
       </div>
-      <nav className="flex flex-grow md:justify-center md:items-center sm:flex-col relative -right-20">
+      <nav className="flex flex-grow md:justify-end md:items-end sm:flex-col relative ">
         <ListMenu />
       </nav>
-      <Session />
     </header>
   );
 }
