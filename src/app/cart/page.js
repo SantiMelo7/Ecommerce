@@ -1,7 +1,7 @@
 "use client"
 
 import { useCart } from "../../hooks-reducer/cart";
-import MenuItemProps from "@/components/page/products/MenuItemProps";
+import MenuItemProps from "@/components/products/MenuItemProps";
 
 export default function PageCart() {
     const { cart, addToCart } = useCart();

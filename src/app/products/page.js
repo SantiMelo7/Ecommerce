@@ -1,6 +1,6 @@
 "use client"
 
-import MenuPost from "@/components/page/products/MenuPost"
+import MenuPost from "@/components/products/MenuPost"
 
 export default function ProductsHomePage() {
     return (
