@@ -1,0 +1,30 @@
+export default function CityFooter() {
+  const year = new Date().getFullYear();
+  return (
+    <footer
+      className="relative md:bg-transparent opacity-[1] sm:bg-[#000] md:border-none block
+        sm:border-white sm:border-t-[1px] h-full pb-3"
+    >
+      <ul
+        className={`
+          flex md:flex-row sm:flex-col justify-center mt-3 items-center gap-x-4 sm:pt-5 sm:gap-y-4 text-[#d0d1d2] text-sm text-center
+        `}
+      >
+        <li>{year}</li>
+        <li>Los Angeles</li>
+        <li>Logn Beach</li>
+        <li>San Diego</li>
+        <li>San Jose</li>
+        <li>San Francisco</li>
+        <li>Irvine</li>
+        <li>Seatle, WA</li>
+        <li>Las Vegas</li>
+        <li>New England</li>
+        <li>Detroit</li>
+        <li>Missisipi</li>
+        <li>California</li>
+        <li>Arizona</li>
+      </ul>
+    </footer>
+  );
+}
