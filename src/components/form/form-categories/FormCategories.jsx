@@ -1,7 +1,7 @@
 "use client";
 
 import InputCreate from "../InputCreate";
-import LinkProducts from "@/components/products/LinksProducts";
+import LinkProducts from "@/components/page/products/LinksProducts";
 import { useEffect, useState } from "react";
 
 export function useCategoriesRequest() {
