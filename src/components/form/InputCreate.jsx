@@ -3,7 +3,7 @@ import GenericInput from "./GenericInput";
 export default function InputCreate({
   label,
   name = "text",
-  type,
+  type = name,
   value,
   onChange,
   id,

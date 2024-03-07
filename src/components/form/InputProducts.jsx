@@ -20,8 +20,8 @@ export default function InputProducts({ onSubmit, product }) {
         label="Name"
         value={updatedProduct?.name}
         onChange={(ev) => handleUpdate("name", ev.target.value)}
-        name="email"
-        type="text"
+        name="name"
+        id="name"
       />
 
       <label>Images</label>
@@ -35,7 +35,7 @@ export default function InputProducts({ onSubmit, product }) {
         value={updatedProduct?.price}
         onChange={(ev) => handleUpdate("price", ev.target.value)}
         name="price"
-        type="text"
+        id="price"
       />
 
       <InputCreate
@@ -43,14 +43,14 @@ export default function InputProducts({ onSubmit, product }) {
         value={updatedProduct?.description}
         onChange={(ev) => handleUpdate("description", ev.target.value)}
         name="description"
-        type="text"
+        id="description"
       />
 
       <label>Category</label>
       {/*El valor es el primer estado de las categorias, el change es, el ev, damos la funcion de la actualizacion
-                damos la key, la category, y decimos que si el primer estado de las categorias, damos el metodo find, el cual
-                es el metodo que busca el primer arreglo que cumpla con las condiciones, damos la funcion, damos la categoria
-                del _id que sea igual al valor del target*/}
+        damos la key, la category, y decimos que si el primer estado de las categorias, damos el metodo find, el cual
+        es el metodo que busca el primer arreglo que cumpla con las condiciones, damos la funcion, damos la categoria
+      del _id que sea igual al valor del target*/}
       <select
         value={updatedProduct?.categories}
         onChange={(ev) =>
@@ -59,6 +59,7 @@ export default function InputProducts({ onSubmit, product }) {
             categoriesItem.find((category) => category._id === ev.target.value)
           )
         }
+        id="category"
       >
         {categoriesItem?.length > 0 &&
           categoriesItem.map((text, index) => (
