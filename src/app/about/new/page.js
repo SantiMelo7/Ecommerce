@@ -1,6 +1,6 @@
 "use client"
 
-import InputAbout from "@/components/about/InputAbout"
+import InputAbout from "@/components/page/about/InputAbout"
 import { UsePostAboutProducts } from "@/hooks/useAboutImagesRestaurant"
 
 export default function NewProductPage() {

@@ -1,6 +1,6 @@
 "use client"
 
-import MenuItemProps from "@/components/products/MenuItemProps"
+import MenuItemProps from "@/components/page/products/MenuItemProps"
 import MainTitle from "@/components/reutilizable/MainTitle"
 import useCategoriesRequest from "@/hooks/useCategoriesRequest"
 import { usePostProducts } from "@/hooks/useProducts"

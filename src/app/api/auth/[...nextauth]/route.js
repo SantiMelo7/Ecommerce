@@ -18,7 +18,7 @@ const authOptions = {
             console.log("User:", user)
             console.log("Account:", account)
             if (account.provider === "google") {
-                const { email, name, admin } = user
+                const { email, name } = user
                 try {
                     await connectMongoDB()
                     const exist = await UserItem.findOne({ email })
@@ -27,7 +27,7 @@ const authOptions = {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
-                                name, email, admin
+                                name, email
                             })
                         })
                         if (res.ok) {
