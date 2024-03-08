@@ -5,4 +5,4 @@ const UserItemsSchema = new Schema({
     name: { type: String, required: true }
 }, { timestamps: true })
 
-export const UserItem = models?.UserItem || model("session", UserItemsSchema)
+export const UserItem = models?.UserItem || model("users-page", UserItemsSchema)
