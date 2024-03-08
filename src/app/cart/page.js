@@ -1,18 +1,23 @@
 "use client"
 
-import { useCart } from "../../hooks-reducer/cart";
-import MenuItemProps from "@/components/products/MenuItemProps";
+import { useContext } from "react";
+import { CartContext } from "@/context/AppProvider";
+import Image from "next/image";
 
 export default function PageCart() {
-    const { cart, addToCart } = useCart();
-    console.log(cart)
+    const { cartProducts } = useContext(CartContext);
     return (
         <>
             <aside>
                 <ul>
-                    {cart.map((product) => (
-                        // damos el componente donde tenemos todo lo que se va a ver en el carrito
-                        <MenuItemProps key={product.id} addToCard={() => addToCart(product)} {...product} />
+                    {cartProducts?.map((product) => (
+                        <div key={product._id}>
+                            <h1>{product.name}</h1>
+                            <Image src={product.images} width={100} height={100} alt="Product" />
+                            <h1>{product.price}</h1>
+                            <h1>{product.description}</h1>
+                            <h1>{product.categories}</h1>
+                        </div>
                     ))}
                 </ul>
             </aside>

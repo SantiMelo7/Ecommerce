@@ -2,12 +2,9 @@
 
 import { usePostProducts } from "@/hooks/useProducts";
 import MenuItemProps from "./MenuItemProps";
-import { useCart } from "@/hooks-reducer/cart";
 
 export default function MenuPost({ className }) {
   const { products } = usePostProducts();
-  const { addToCard } = useCart();
-
   const productSlice = products.slice(0, 8);
 
   return (
@@ -15,11 +12,7 @@ export default function MenuPost({ className }) {
       {productSlice.length > 0 &&
         productSlice.map((text) => (
           <div key={text.id}>
-            <MenuItemProps
-              addToCard={addToCard}
-              className={className}
-              {...text}
-            />
+            <MenuItemProps className={className} {...text} />
           </div>
         ))}
     </section>
