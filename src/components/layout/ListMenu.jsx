@@ -1,10 +1,11 @@
 "use client";
 
-import { useCart } from "@/hooks-reducer/cart";
 import { CartIcon } from "../reutilizable/Icons";
+import { useContext } from "react";
+import { CartContext } from "@/context/AppProvider";
 
 export default function ListMenu() {
-  const { cart } = useCart();
+  const { cartProducts } = useContext(CartContext);
   return (
     <>
       <ul className="flex gap-x-4 text-xl">
@@ -21,9 +22,9 @@ export default function ListMenu() {
           <a href="/cart" className="relative left-20">
             <CartIcon />
           </a>
-          <div className="bg-blue-200 h-[2vh] w-4 rounded-[20px] relative left-6 -top-7">
+          <div className="bg-blue-200 h-[2.7vh] w-4 rounded-[50px] relative left-7 -top-7">
             <div className="relative text-black flex justify-center items-center text-sm">
-              {cart}
+              {cartProducts.length}
             </div>
           </div>
         </li>

@@ -11,17 +11,20 @@ export default function MainComponent() {
       <div className=" bg-gray-800 relative -top-1 mb-3">
         <HeroMenu />
       </div>
-      <div className="relative -top-4 bg-[#A7E4F1] pb-8 ">
+      <div className="relative top-5 pb-8 ">
         <MainTitle title="Products" subtTitle="Some of the products we have" />
         <MenuPost className="shadow-gray-800 bg-[#A5C2E2] hover:bg-[#57BBE9] animate-flip-x" />
       </div>
-      <div className="relative -top-4 bg-gradient-to-r from-[#f56565] to-[#9b2c2c]">
+      <div className="relative top-14 bg-gray-800">
         <AboutTec />
       </div>
-      <div className="relative -top-4">
+      <div className="relative top-14">
         <Contact />
       </div>
-      <Footer />
+      <div className="relative top-14">
+        <Footer />
+      </div>
     </>
   );
 }
+// bg-gradient-to-r from-[#f56565] to-[#9b2c2c]
