@@ -8,7 +8,7 @@ a.btn-category {
 }
 
 input {
-  @apply flex justify-center w-[70vh] rounded-lg;
+  @apply flex justify-center rounded-lg;
   @apply block text-gray-900 font-bold text-xl mb-4 border-none p-2 bg-blue-300;
 }
 
