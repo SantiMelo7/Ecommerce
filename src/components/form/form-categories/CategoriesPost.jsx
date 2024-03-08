@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
-import DeleteIcon from "@mui/icons-material/Delete";
+import { DeleteIcon, EditIcon } from "../../layout/Icons";
 
 export function useCategoriesRequest() {
   const [categoriesName, setCategoriesName] = useState("");
@@ -83,10 +82,10 @@ export default function CategoriesPost() {
                   }}
                 >
                   {" "}
-                  <ModeEditIcon className="text-gray-100" />
+                  <EditIcon />
                 </button>
                 <button className="pr-4" onClick={() => handleDelete(text._id)}>
-                  <DeleteIcon className="text-red-700" />
+                  <DeleteIcon />
                 </button>
               </div>
             </div>
