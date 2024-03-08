@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={oswald.className}>
         <AppProvider>
-          <div className="bg-gray-800 -z-10 pb-3 w-full overflow-hidden">
+          <div className="bg-gray-800 -z-10 pb-1 w-full overflow-hidden">
             <Header />
           </div>
           {children}
