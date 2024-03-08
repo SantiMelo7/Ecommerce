@@ -1,7 +1,7 @@
 "use client"
 
-import InputProducts from "@/components/form/InputProducts"
-import NavTabs from "@/components/reutilizable/NavTabs"
+import InputProducts from "../../../components/form/InputProducts"
+import NavTabs from "../../../components/reutilizable/NavTabs"
 import { NewProduct } from "../../../hooks/useProducts"
 
 export default function NewProductPage() {

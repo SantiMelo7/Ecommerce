@@ -1,14 +1,12 @@
 "use client"
 
-import MenuItemProps from "@/components/products/MenuItemProps"
-import MainTitle from "@/components/reutilizable/MainTitle"
-import useCategoriesRequest from "@/hooks/useCategoriesRequest"
-import { usePostProducts } from "@/hooks/useProducts"
+import MenuItemProps from "../../components/products/MenuItemProps"
+import MainTitle from "../../components/reutilizable/MainTitle"
+import useCategoriesRequest from "../../hooks/useCategoriesRequest"
+import { usePostProducts } from "../../hooks/useProducts"
 
 export default function CategoriesHomePage() {
-
     const { products } = usePostProducts()
-
     const { categories } = useCategoriesRequest()
 
     return (
@@ -20,9 +18,9 @@ export default function CategoriesHomePage() {
                 <>
                     <div key={index}>
                         <MainTitle title={text.name} />
-                        {products.filter(prevProducts => prevProducts.categories === text._id).map((productsProps, index) => (
-                            <div key={index}>
-                                <MenuItemProps {...productsProps} />
+                        {products.filter(prevProducts => prevProducts.category === text._id).map((product) => (
+                            <div key={product.id}>
+                                <MenuItemProps {...product} />
                             </div>
                         ))}
                     </div>
