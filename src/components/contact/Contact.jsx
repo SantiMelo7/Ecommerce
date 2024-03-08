@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       <MainTitle title="Contact Us" subtTitle="" />
-      <div className="flex justify-center items-center flex-col max-w-2xl mx-auto gap-y-4 text-center">
+      <div className="flex justify-center items-center flex-col md:max-w-2xl sm:max-w-screen-sm mx-auto gap-y-4 text-center">
         <p className="span-about">
           Thank you for considering us for your technology needs! At Lorem,
           we&apos;re dedicated to providing exceptional service and support to
