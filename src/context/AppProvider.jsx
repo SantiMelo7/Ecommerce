@@ -5,6 +5,11 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
+export function cartPrice(cartProduct) {
+  let price = cartProduct.price;
+  return price;
+}
+
 export default function AppProvider({ session, children }) {
   // estado de los products como array vacio
   const [cartProducts, setCartProducts] = useState([]);
@@ -57,7 +62,12 @@ export default function AppProvider({ session, children }) {
 
   return (
     <CartContext.Provider
-      value={{ cartProducts, setCartProducts, addToCart, removeCart }}
+      value={{
+        cartProducts,
+        setCartProducts,
+        addToCart,
+        removeCart,
+      }}
     >
       <SessionProvider session={session}>{children}</SessionProvider>
     </CartContext.Provider>

@@ -2,7 +2,7 @@
 
 import MainTitle from "@/components/reutilizable/MainTitle";
 import ProductsCart from "@/components/cart/ProductsCart";
-import FormCart from "@/components/cart/FormCArt";
+import FormCart from "@/components/cart/FormCart";
 
 export default function PageCart() {
 
