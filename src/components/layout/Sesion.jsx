@@ -28,7 +28,7 @@ export default function Session() {
       ) : (
         <>
           <a
-            className="cursor-pointer relative right-8 top-1"
+            className="cursor-pointer md:relative md:right-8 sm:text-center"
             onClick={() => signIn("google")}
           >
             Iniciar Sesion
