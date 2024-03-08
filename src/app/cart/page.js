@@ -1,25 +1,17 @@
 "use client"
 
-import { useContext } from "react";
-import { CartContext } from "@/context/AppProvider";
-import Image from "next/image";
+import MainTitle from "@/components/reutilizable/MainTitle";
+import ProductsCart from "@/components/cart/ProductsCart";
+import FormCart from "@/components/cart/FormCArt";
 
 export default function PageCart() {
-    const { cartProducts } = useContext(CartContext);
+
     return (
         <>
-            <aside>
-                <ul>
-                    {cartProducts?.map((product) => (
-                        <div key={product._id}>
-                            <h1>{product.name}</h1>
-                            <Image src={product.images} width={100} height={100} alt="Product" />
-                            <h1>{product.price}</h1>
-                            <h1>{product.description}</h1>
-                            <h1>{product.categories}</h1>
-                        </div>
-                    ))}
-                </ul>
+            <MainTitle title="Cart" subtTitle="Here you have your added products, make your purchase" />
+            <aside className="md:grid md:grid-cols-2 max-w-screen-2xl mx-auto">
+                <ProductsCart />
+                <FormCart />
             </aside>
         </>
     );
