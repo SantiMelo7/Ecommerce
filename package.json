@@ -9,17 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
+    "@auth/mongodb-adapter": "^2.5.0",
     "@midudev/tailwind-animations": "^0.0.7",
-    "@mui/icons-material": "^5.15.12",
-    "@mui/material": "^5.15.12",
+    "mongodb": "^6.4.0",
     "mongoose": "^8.2.1",
     "next": "14.0.4",
     "next-auth": "^4.24.6",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.2",
+    "stripe": "^14.20.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
