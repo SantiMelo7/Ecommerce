@@ -1,9 +1,13 @@
-import { UserItem } from "../../../../models/UserItem";
+import clientPromise from "@/libs/mongoConnect";
+import { User } from "../../../../models/User";
 import { connectMongoDB } from "@/util/connectMongoDB";
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 
-const authOptions = {
+export const authOptions = {
+    secret: process.env.NEXTAUTH_SECRET,
+    adapter: MongoDBAdapter(clientPromise),
     providers: [
         // provedor de google
         GoogleProvider({
@@ -15,13 +19,11 @@ const authOptions = {
     ],
     callbacks: {
         async signIn({ user, account }) {
-            console.log("User:", user)
-            console.log("Account:", account)
             if (account.provider === "google") {
                 const { email, name } = user
                 try {
                     await connectMongoDB()
-                    const exist = await UserItem.findOne({ email })
+                    const exist = await User.findOne({ email })
                     if (!exist) {
                         const res = await fetch("http://localhost:3000/api/register", {
                             method: "POST",
