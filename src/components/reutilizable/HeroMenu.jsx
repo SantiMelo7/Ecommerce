@@ -13,11 +13,11 @@ export default function HeroMenu() {
           <TextHero />
           <ButtonHero />
         </div>
-        <div className="flex justify-center items-center mb-14">
+        <div className="flex justify-center items-center mb-6">
           <Image
             width={500}
             height={100}
-            src="/hero.png"
+            src="/hero.webp"
             className="relative bottom-10 animate-spin-clockwise animation-delay-500"
             alt="Photo Header"
           />

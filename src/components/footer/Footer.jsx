@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="mt-5 flex flex-row justify-center items-center gap-x-4">
             <FacebookIconFooter />
             <Image
-              src="/instagram.png"
+              src="/instagram.webp"
               width={50}
               height={100}
               alt="Instagram Logo"
