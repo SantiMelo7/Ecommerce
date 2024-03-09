@@ -6,15 +6,16 @@ import {
   AmexIcon,
   StripeIcon,
   FacebookIconFooter,
-  MastercardIcon,
   PaypalIcon,
-  SantanderIcon,
   VisaIcon,
+  ApplePayIcon,
+  MercadoPagoIcon,
 } from "../layout/Icons";
+import SponsorsFake from "./SponsorsFake";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#255E9E]">
+    <footer className="bg-gray-800">
       <div className="sm:grid sm:grid-cols-2 md:flex md:flex-row justify-center items-center mt-9 max-w-screen-2xl">
         <div className="relative md:right-[150px]">
           <TitleFooter title="Follow us social media" />
@@ -72,21 +73,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="relative md:left-[350px] sm:left-[20px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
-            <VisaIcon />
-          </div>
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
-            <PaypalIcon />
-          </div>
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center z-10 relative">
-            <StripeIcon />
-          </div>
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
-            <AmexIcon />
-          </div>
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
-            <MastercardIcon />
-          </div>
+          <SponsorsFake img={<VisaIcon />} />
+          <SponsorsFake img={<PaypalIcon />} />
+          <SponsorsFake img={<StripeIcon />} />
+          <SponsorsFake img={<AmexIcon />} />
+          <SponsorsFake img={<ApplePayIcon />} />
+          <SponsorsFake img={<MercadoPagoIcon />} />
         </div>
       </div>
       <CityFooter />
