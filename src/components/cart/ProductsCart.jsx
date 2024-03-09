@@ -23,11 +23,13 @@ export default function ProductsCart() {
             <span className="text-lg font-extrabold">
               ${cartPrice(product)}
             </span>
-            <button onClick={() => removeCart(product)}>
-              <DeleteIcon />
-            </button>
+            <div>
+              <button onClick={() => removeCart(product)}>
+                <DeleteIcon />
+              </button>
+            </div>
           </div>
-          <div className="flex border-[1px] border-gray-400 w-[50%]" />
+          <div className="flex border-[1px] border-gray-400 w-[100%]" />
         </>
       ))}
     </ul>

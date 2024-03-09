@@ -9,9 +9,7 @@ function MenuItemProps({ className, ...menuItem }) {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div
-      className={`flex flex-col shadow-xl  ${className} hover:transition-all hover:scale-105 rounded-md`}
-    >
+    <div className={`flex flex-col shadow-lg ${className}`}>
       <Image
         width={192}
         height={144}

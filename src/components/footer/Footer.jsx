@@ -28,7 +28,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="relative mt-8 md:-left-[100px]">
+        <div className="relative mt-8 md:-left-[50px]">
           <TitleFooter title="Products" />
           <div>
             <ListText text="All shorts" />
@@ -39,7 +39,7 @@ export default function Footer() {
             <ListText text="Tote bags" />
           </div>
         </div>
-        <div className="relative md:right-[30px]">
+        <div className="relative md:left-[50px]">
           <TitleFooter title="Services" />
           <div>
             <ListText text="Embroidery" />
@@ -49,7 +49,7 @@ export default function Footer() {
             <ListText text="Design Templates" />
           </div>
         </div>
-        <div className="relative mt-9 md:left-[20px]">
+        <div className="relative mt-9 md:left-[100px]">
           <TitleFooter title="Help" />
           <div>
             <ListText text="Privacity policy" />
@@ -60,7 +60,7 @@ export default function Footer() {
             <ListText text="Design Code" />
           </div>
         </div>
-        <div className="relative mt-9 md:left-[50px]">
+        <div className="relative mt-9 md:left-[150px]">
           <TitleFooter title="Inside Grace Eleyae" />
           <div>
             <ListText text="About Us" />
@@ -71,7 +71,7 @@ export default function Footer() {
             <ListText text="Carrers" />
           </div>
         </div>
-        <div className="relative md:left-[200px] sm:left-[20px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
+        <div className="relative md:left-[350px] sm:left-[20px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
           <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
             <VisaIcon />
           </div>
@@ -86,9 +86,6 @@ export default function Footer() {
           </div>
           <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
             <MastercardIcon />
-          </div>
-          <div className="flex border-[2px] border-gray-700 px-4 md:w-44 sm:w-32 bg-black justify-center items-center">
-            <SantanderIcon />
           </div>
         </div>
       </div>

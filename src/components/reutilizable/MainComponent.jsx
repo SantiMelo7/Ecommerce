@@ -13,7 +13,7 @@ export default function MainComponent() {
       </div>
       <div className="relative top-5 pb-8 ">
         <MainTitle title="Products" subtTitle="Some of the products we have" />
-        <MenuPost className="shadow-gray-800 bg-[#A5C2E2] hover:bg-[#57BBE9] animate-flip-x" />
+        <MenuPost className="shadow-gray-600 bg-[#A5C2E2] hover:bg-[#57BBE9] animate-flip-x hover:transition-all hover:scale-110 inline-block" />
       </div>
       <div className="relative top-14 bg-gray-800">
         <AboutTec />
