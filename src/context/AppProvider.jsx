@@ -6,8 +6,8 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 export function cartPrice(cartProduct) {
-  let price = cartProduct.price;
-  return price;
+  let priceTotal = cartProduct.price;
+  return priceTotal;
 }
 
 export default function AppProvider({ session, children }) {
