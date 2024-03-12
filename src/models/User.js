@@ -1,8 +1,8 @@
-import { Schema, model, models } from "mongoose"
+const mongoose = require("mongoose")
 
-const UserSchema = new Schema({
+const UserSchema = mongoose.Schema({
     email: { type: String, required: true },
     name: { type: String, required: true }
 }, { timestamps: true })
 
-export const User = models?.User || model("users", UserSchema)
+export const UserItem = mongoose.models?.UserItemGoogle || mongoose.model("UserItemGoogle", UserSchema)
