@@ -4,12 +4,12 @@ import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import InputCreate from "../InputCreate";
 
 export default function FormCategories() {
-  const { categoriesName, setCategoriesName, handleFetchCategories, edited } =
+  const { categoriesName, setCategoriesName, handleNewCategories, edited } =
     useCategoriesRequest();
 
   return (
     <>
-      <form className="mt-8" onSubmit={handleFetchCategories}>
+      <form className="mt-8" onSubmit={handleNewCategories}>
         <div className="flex flex-col justify-center items-center text-center">
           <InputCreate
             label="Introduce una nueva categoria"

@@ -9,8 +9,8 @@ export default function useCategoriesRequest() {
     handleFetchCategories();
   }, []);
 
-  async function handleFetchCategories() {
-    const response = await fetch("/api/categories").then((response) => {
+  function handleFetchCategories() {
+    fetch("/api/categories").then((response) => {
       response.json().then((categories) => {
         setCategories(categories);
       });
@@ -23,13 +23,11 @@ export default function useCategoriesRequest() {
     if (edited) {
       data._id = edited._id;
     }
-
     const response = await fetch("/api/categories", {
       method: edited ? "PUT" : "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-
     setCategoriesName("");
     handleFetchCategories();
     setEdited(null);
