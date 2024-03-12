@@ -1,5 +1,5 @@
 import clientPromise from "@/libs/mongoConnect";
-import { User } from "../../../../models/User";
+import { UserItem } from "../../../../models/User";
 import { connectMongoDB } from "@/util/connectMongoDB";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth from "next-auth/next";
@@ -23,7 +23,7 @@ export const authOptions = {
                 const { email, name } = user
                 try {
                     await connectMongoDB()
-                    const exist = await User.findOne({ email })
+                    const exist = await UserItem.findOne({ email })
                     if (!exist) {
                         const res = await fetch("http://localhost:3000/api/register", {
                             method: "POST",
