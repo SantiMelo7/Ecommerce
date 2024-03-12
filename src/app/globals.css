@@ -28,3 +28,7 @@ div.css > * {
 span.span-about {
   padding: 7px;
 }
+
+label {
+  @apply text-2xl text-gray-600 font-bold uppercase mt-3 pb-3;
+}
