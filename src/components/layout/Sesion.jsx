@@ -10,16 +10,16 @@ export default function Session() {
       {session ? (
         <>
           <div className="flex justify-end items-end gap-x-3 right-7">
-            <div className="flex gap-x-3 justify-center items-center relative right-5 bottom-3">
+            <div className="flex gap-x-3 justify-center items-center relative right-5 bottom-6">
               <a className="cursor-pointer" onClick={() => signOut()}>
                 Cerrar sesión
               </a>
               <h1>{session?.user?.name} </h1>
             </div>
             <Image
-              className="rounded-[50%] right-5 relative"
+              className="rounded-[50%] right-5 bottom-4 relative"
               src={session?.user?.image}
-              width={50}
+              width={40}
               height={30}
               alt="Foto de perfil | Google"
             />
