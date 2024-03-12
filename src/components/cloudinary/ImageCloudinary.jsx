@@ -7,7 +7,7 @@ export default function ImageCloudinary({ link, setLink }) {
   return (
     <>
       {!link ? (
-        <div className="rounded-md w-3/12 bg-blue-300 mt-4 flex justify-center items-center p-2">
+        <div className="rounded-md w-[50vh] sm:w-[40vh] bg-blue-300 mt-4 flex justify-center items-center p-2">
           <input type="file" multiple onChange={handleFile} />
         </div>
       ) : null}

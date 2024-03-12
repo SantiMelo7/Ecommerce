@@ -26,7 +26,7 @@ export default function FormCart() {
   }
   return (
     <form
-      className="flex flex-col md:justify-end md:items-end md:right-10 md:relative sm:max-w-screen-md"
+      className="flex flex-col md:justify-center md:items-center mt-10 md:right-10 md:relative sm:max-w-screen-md"
       onSubmit={handleSubmit}
     >
       <h1 className="text-3xl text-center">Checkout</h1>

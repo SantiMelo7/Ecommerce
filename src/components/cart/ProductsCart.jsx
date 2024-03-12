@@ -11,25 +11,28 @@ export default function ProductsCart() {
         <>
           <div
             key={index}
-            className="mt-20 flex flex-row md:justify-start sm:justify-center gap-x-4"
+            className="mt-20 flex md:flex-row sm:flex-col md:justify-start sm:justify-center gap-x-4"
           >
             <Image
               src={product.images}
-              width={100}
-              height={100}
+              width={200}
+              height={200}
+              className="rounded-md shadow-lg shadow-gray-400 mb-5 "
               alt="Product"
             />
-            <h1 className="text-xl font-bold">{product.name}</h1>
-            <span className="text-lg font-extrabold">
-              ${cartPrice(product)}
-            </span>
-            <div>
-              <button onClick={() => removeCart(product)}>
-                <DeleteIcon />
-              </button>
+            <div className="flex flex-col mt-10">
+              <h1 className="text-2xl font-bold">{product.name}</h1>
+              <span className="text-xl font-extrabold">
+                ${cartPrice(product)}
+              </span>
+              <div>
+                <button onClick={() => removeCart(product)}>
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-          <div className="flex border-[1px] border-gray-400 w-[100%]" />
+          <div className="md:flex border-[1px] border-gray-400 w-[55%] sm:hidden" />
         </>
       ))}
     </ul>

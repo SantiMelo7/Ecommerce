@@ -59,7 +59,7 @@ export function MercadoPagoIcon() {
 
 export function DeleteIcon() {
   return (
-    <Image src="/delete.webp" height={40} width={40} />
+    <Image src="/delete.webp" height={35} width={35} />
   )
 }
 

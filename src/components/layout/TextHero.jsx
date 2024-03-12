@@ -1,6 +1,6 @@
 export default function TextHero() {
   return (
-    <div className="md:max-w-2xl sm:max-w-sm sm:mx-auto md:pl-3 sm:mt-4 animate-jump animate-delay-300">
+    <div className="md:max-w-2xl sm:max-w-sm sm:mx-auto md:pl-3 sm:mt-4 animate-jump animate-delay-300 text-orange-300">
       <p>
         Welcome to Lorem, where innovation meets convenience! As a leading
         e-commerce platform specializing in technology products, we bring you

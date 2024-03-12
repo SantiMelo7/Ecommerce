@@ -8,9 +8,9 @@ export default function AboutTec() {
   return (
     <>
       <MainTitle title="About the shop" />
-      <div className="flex md:flex-row sm:flex-col justify-start items-start md:text-start md:max-w-screen-2xl mx-auto sm:max-w-screen-sm sm:text-center gap-4">
+      <div className="flex md:flex-row sm:flex-col justify-start items-start md:text-start md:max-w-screen-2xl mx-auto sm:max-w-screen-sm sm:text-center">
         <TextAbout />
-        <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-3 mt-1 mb-8">
+        <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-3 mt-3 mb-8">
           <ImageSponsors width={800} height={150} src="/photo-1.webp" />
           <ImageSponsors width={800} height={150} src="/photo-2.webp" />
           <ImageSponsors
@@ -30,7 +30,7 @@ export default function AboutTec() {
           <ImageSponsors width={800} height={150} src="/photo-7.webp" />
           <ImageSponsors width={800} height={150} src="/photo-8.webp" />
           <ImageSponsors width={800} height={150} src="/photo-9.webp" />
-          <ImageSponsors width={800} height={150} src="/photo-10.jpeg" />
+          <ImageSponsors width={800} height={150} src="/photo-10.webp" />
           <ImageSponsors width={800} height={150} src="/photo-11.webp" />
           <ImageSponsors width={800} height={150} src="/photo-12.webp" />
         </div>

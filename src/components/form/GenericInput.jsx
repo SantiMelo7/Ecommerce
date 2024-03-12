@@ -1,5 +1,3 @@
-export const cssLabelInput = "text-2xl text-gray-600  font-bold uppercase mt-3";
-
 export default function GenericInput({
   label,
   type,
@@ -11,7 +9,7 @@ export default function GenericInput({
 }) {
   return (
     <>
-      <label className={cssLabelInput}>
+      <label>
         {label}
         <input
           className={className}

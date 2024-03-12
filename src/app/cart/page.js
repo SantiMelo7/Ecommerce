@@ -9,10 +9,12 @@ export default function PageCart() {
     return (
         <>
             <MainTitle title="Cart" subtTitle="Here you have your added products, make your purchase" />
-            <aside className="flex justify-center items-center max-w-screen-2xl mx-auto">
+            <aside className="md:grid md:grid-cols-2 sm:max-w-screen-2xl mx-auto">
                 <ProductsCart />
+                <div className="flex md:justify-end md:items-end sm:justify-center mt-8">
+                    <FormCart />
+                </div>
             </aside>
-            <FormCart />
-        </>
+        </ >
     );
 }
