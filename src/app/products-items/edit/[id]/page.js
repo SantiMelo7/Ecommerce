@@ -12,7 +12,7 @@ export default function EditProductPage() {
 
         <section className="mt-10">
             <NavTabs admin={true} />
-            <div>
+            <div className="mt-5">
                 <InputProducts product={product} onSubmit={handleSubmitEdit} />
                 <div className="flex flex-col justify-center items-center mt-3">
                     <p className="uppercase font-bold text-red-700">If you want to delete the product already generated, press this button</p>

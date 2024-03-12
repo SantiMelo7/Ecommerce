@@ -11,7 +11,7 @@ export default function PageCart() {
             <MainTitle title="Cart" subtTitle="Here you have your added products, make your purchase" />
             <aside className="md:grid md:grid-cols-2 sm:max-w-screen-2xl mx-auto">
                 <ProductsCart />
-                <div className="flex md:justify-end md:items-end sm:justify-center mt-8">
+                <div className="flex md:justify-end md:items-end sm:justify-center mt-4">
                     <FormCart />
                 </div>
             </aside>

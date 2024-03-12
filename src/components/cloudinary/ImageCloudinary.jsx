@@ -30,7 +30,7 @@ export default function ImageCloudinary({ link, setLink }) {
         </h3>
       ) : (
         link && (
-          <div>
+          <div className="sm:flex sm:justify-center">
             <Image
               priority
               src={link}

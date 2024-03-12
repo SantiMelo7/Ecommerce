@@ -47,19 +47,19 @@ export function AmexIcon() {
 
 export function ApplePayIcon() {
   return (
-    <Image src="/apple-pay.webp" height={40} width={40} />
+    <Image src="/apple-pay.webp" height={40} width={40} alt="Apple-Pay-Icon" />
   );
 }
 
 export function MercadoPagoIcon() {
   return (
-    <Image src="/mercado-pago.svg" height={40} width={40} />
+    <Image src="/mercado-pago.svg" height={40} width={40} alt="Mercado-Pago-Icon" />
   );
 }
 
 export function DeleteIcon() {
   return (
-    <Image src="/delete.webp" height={35} width={35} />
+    <Image src="/delete.webp" height={35} width={35} alt="Delete-Icon" />
   )
 }
 

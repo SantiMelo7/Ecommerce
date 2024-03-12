@@ -17,8 +17,6 @@ export default function CityFooter() {
         <li>Seatle, WA</li>
         <li>Las Vegas</li>
         <li>New England</li>
-        <li>Detroit</li>
-        <li>Missisipi</li>
       </ul>
     </footer>
   );

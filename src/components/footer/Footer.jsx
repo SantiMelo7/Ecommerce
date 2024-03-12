@@ -16,20 +16,20 @@ import SponsorsFake from "./SponsorsFake";
 export default function Footer() {
   return (
     <footer className="bg-gray-800">
-      <div className="sm:grid sm:grid-cols-2 md:flex md:flex-row justify-center items-center mt-9 max-w-screen-2xl">
-        <div className="relative md:right-[150px]">
+      <div className="sm:grid sm:grid-cols-2 lg:flex lg:flex-row md:flex-col justify-center items-center mt-9 max-w-screen-2xl">
+        <div className="relative lg:right-[150px]">
           <TitleFooter title="Follow us social media" />
           <div className="mt-5 flex flex-row justify-center items-center gap-x-4">
             <FacebookIconFooter />
             <Image
               src="/instagram.webp"
               width={50}
-              height={100}
+              height={10}
               alt="Instagram Logo"
             />
           </div>
         </div>
-        <div className="relative mt-8 md:-left-[50px]">
+        <div className="relative mt-8 lg:-left-[50px]">
           <TitleFooter title="Products" />
           <div>
             <ListText text="All shorts" />
@@ -40,7 +40,7 @@ export default function Footer() {
             <ListText text="Tote bags" />
           </div>
         </div>
-        <div className="relative md:left-[50px]">
+        <div className="relative lg:left-[50px]">
           <TitleFooter title="Services" />
           <div>
             <ListText text="Embroidery" />
@@ -50,7 +50,7 @@ export default function Footer() {
             <ListText text="Design Templates" />
           </div>
         </div>
-        <div className="relative mt-9 md:left-[150px]">
+        <div className="relative mt-9 lg:left-[150px]">
           <TitleFooter title="Help" />
           <div>
             <ListText text="Privacity policy" />
@@ -61,7 +61,7 @@ export default function Footer() {
             <ListText text="Design Code" />
           </div>
         </div>
-        <div className="relative mt-9 md:left-[220px]">
+        <div className="relative mt-9 lg:left-[220px]">
           <TitleFooter title="Inside Grace Eleyae" />
           <div>
             <ListText text="About Us" />
@@ -72,7 +72,7 @@ export default function Footer() {
             <ListText text="Carrers" />
           </div>
         </div>
-        <div className="relative md:left-[350px] sm:left-[50px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
+        <div className="relative lg:left-[350px] sm:left-[50px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />

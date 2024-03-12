@@ -1,6 +1,6 @@
 export default function TextAbout() {
   return (
-    <div className="flex flex-col gap-y-2 mt-7">
+    <div className="flex flex-col gap-y-2 mt-1">
       <span className="span-about text-red-500 text-lg">
         Sure, here&apos;s a brief description of a technology store in English:
         Welcome to Lorem your one-stop destination for all things tech! Nestled

@@ -15,12 +15,12 @@ export default function ProductsCart() {
           >
             <Image
               src={product.images}
-              width={200}
+              width={150}
               height={200}
               className="rounded-md shadow-lg shadow-gray-400 mb-5 "
               alt="Product"
             />
-            <div className="flex flex-col mt-10">
+            <div className="flex flex-col mt-5">
               <h1 className="text-2xl font-bold">{product.name}</h1>
               <span className="text-xl font-extrabold">
                 ${cartPrice(product)}

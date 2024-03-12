@@ -10,7 +10,7 @@ export default function InputProducts({ onSubmit, product }) {
   return (
     <section className="flex flex-col justify-center items-center">
       <form
-        className=" md:grid grid-cols-2 gap-x-10"
+        className="lg:grid grid-cols-2 gap-x-10"
         onSubmit={(ev) => onSubmit(ev, updatedProduct)}
       >
         <InputCaregories productItem={product} />
