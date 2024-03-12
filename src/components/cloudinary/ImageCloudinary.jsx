@@ -7,8 +7,20 @@ export default function ImageCloudinary({ link, setLink }) {
   return (
     <>
       {!link ? (
-        <div className="rounded-md w-[50vh] sm:w-[40vh] bg-blue-300 mt-4 flex justify-center items-center p-2">
-          <input type="file" multiple onChange={handleFile} />
+        <div className="rounded-md w-[50vh] sm:w-[40vh] bg-gradient-to-r to-[#2993B5] from-[#2CA257] flex justify-center items-center p-2 absolute">
+          <label
+            for="file"
+            className="relative h-[15px] rounded-[25px] flex justify-center items-center text-white font-bold cursor-pointer "
+          >
+            Da click aquí
+          </label>
+          <input
+            className="hidden"
+            id="file"
+            type="file"
+            multiple
+            onChange={handleFile}
+          />
         </div>
       ) : null}
 
@@ -33,7 +45,7 @@ export default function ImageCloudinary({ link, setLink }) {
 
       {!link && (
         <div className="mt-4 flex justify-center">
-          <p className="text-2xl text-red-400 mb-6 font-bold">
+          <p className="text-2xl text-red-400 mb-6 mt-10 font-bold">
             No Image Select
           </p>
         </div>
