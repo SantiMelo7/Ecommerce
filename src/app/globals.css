@@ -32,3 +32,11 @@ span.span-about {
 label {
   @apply text-2xl text-gray-600 font-bold uppercase mt-3 pb-3;
 }
+
+h1.title-categories {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  @apply text-red-400;
+}
