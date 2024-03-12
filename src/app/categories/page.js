@@ -14,17 +14,16 @@ export default function CategoriesHomePage() {
             <div className="relative">
                 <MainTitle title="All the products" subtTitle="Here you will find the full variety of products we have in more detail." />
             </div>
-            {categories.length > 0 && categories.map((text, index) => (
-                <>
-                    <div key={index}>
-                        <MainTitle title={text.name} />
-                        {products.filter(prevProducts => prevProducts.category === text._id).map((product) => (
-                            <div key={product.id}>
-                                <MenuItemProps {...product} />
-                            </div>
-                        ))}
-                    </div>
-                </>
+            {categories.length > 0 && categories.map((text) => (
+                <div key={text._id}>
+                    <h1 className="title-categories">{text.name}</h1>
+                    {products.filter(item => item.category === text._id).map(item => (
+                        <div key={text._id}>
+                            <MenuItemProps {...item} />
+                        </div>
+
+                    ))}
+                </div>
             ))}
         </>
     )
