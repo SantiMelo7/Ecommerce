@@ -7,8 +7,10 @@ const nextConfig = {
                 hostname: "**"
             }
         ],
-        domains: ["res.cloudinary.com"]
+        domains: ["res.cloudinary.com", "lh3.googleusercontent.com"],
+
     }
+
 }
 
 module.exports = nextConfig
