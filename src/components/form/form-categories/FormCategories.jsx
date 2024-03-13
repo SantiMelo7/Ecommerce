@@ -1,7 +1,7 @@
 "use client";
 
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
-import InputCreate from "../InputCreate";
+import GenericInput from "../GenericInput";
 
 export default function FormCategories() {
   const { categoriesName, setCategoriesName, handleNewCategories, edited } =
@@ -11,7 +11,7 @@ export default function FormCategories() {
     <>
       <form className="mt-8" onSubmit={handleNewCategories}>
         <div className="flex flex-col justify-center items-center text-center">
-          <InputCreate
+          <GenericInput
             label="Introduce una nueva categoria"
             value={categoriesName}
             onChange={(ev) => setCategoriesName(ev.target.value)}

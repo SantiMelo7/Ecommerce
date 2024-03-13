@@ -1,34 +1,34 @@
 import useUpdatedProduct from "@/hooks/useUpdatedProduct";
-import InputCreate from "../InputCreate";
+import GenericInput from "../GenericInput";
 
 export default function InputCaregories({ productItem }) {
   const { updatedProduct, handleUpdate } = useUpdatedProduct(productItem);
   return (
     <>
-      <InputCreate
+      <GenericInput
         label="Name"
         value={updatedProduct?.name}
         onChange={(ev) => handleUpdate("name", ev.target.value)}
         name="name"
         id="name"
-        className="w-[50vh] sm:w-[40vh]"
+        className="md:w-[70vh] sm:w-[40vh]"
       />
-      <InputCreate
+      <GenericInput
         label="Description"
         value={updatedProduct?.description}
         onChange={(ev) => handleUpdate("description", ev.target.value)}
         name="description"
-        className="w-[50vh] sm:w-[40vh]"
+        className="md:w-[70vh] sm:w-[40vh]"
         id="description"
       />
 
-      <InputCreate
+      <GenericInput
         label="Price"
         value={updatedProduct?.price}
         onChange={(ev) => handleUpdate("price", ev.target.value)}
         name="price"
         id="price"
-        className="w-[50vh] sm:w-[40vh]"
+        className="md:w-[70vh] sm:w-[40vh]"
       />
     </>
   );
