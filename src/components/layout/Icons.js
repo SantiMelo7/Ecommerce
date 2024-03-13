@@ -57,6 +57,13 @@ export function MercadoPagoIcon() {
   );
 }
 
+export function CartIcon() {
+  return (
+    <Image src="/cart.webp" height={28} width={28} alt="Cart-Icon" />
+  )
+}
+
+
 export function DeleteIcon() {
   return (
     <Image src="/delete.webp" height={35} width={35} alt="Delete-Icon" />
