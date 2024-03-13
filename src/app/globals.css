@@ -12,6 +12,10 @@ input {
   @apply block text-gray-900 font-bold text-xl mb-4 border-none p-2 bg-blue-300;
 }
 
+input:disabled {
+  @apply bg-gray-300;
+}
+
 input[type="text"].formCategories {
   @apply flex justify-center w-[60vh] my-3 rounded-md;
   @apply block border-none p-2 bg-blue-300;
