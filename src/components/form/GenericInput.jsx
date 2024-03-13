@@ -5,6 +5,8 @@ export default function GenericInput({
   onChange,
   id,
   name,
+  disabled,
+  checked,
   className,
 }) {
   return (
@@ -12,12 +14,14 @@ export default function GenericInput({
       <label>
         {label}
         <input
+          checked={checked}
           className={className}
           type={type}
           value={value}
           onChange={onChange}
           id={id}
           name={name}
+          disabled={disabled}
         />
       </label>
     </>
