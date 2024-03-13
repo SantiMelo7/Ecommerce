@@ -72,7 +72,7 @@ export default function Footer() {
             <ListText text="Carrers" />
           </div>
         </div>
-        <div className="relative lg:left-[350px] sm:left-[50px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
+        <div className="relative lg:left-[270px] sm:left-[50px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />

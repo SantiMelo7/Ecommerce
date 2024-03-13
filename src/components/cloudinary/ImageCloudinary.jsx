@@ -7,9 +7,9 @@ export default function ImageCloudinary({ link, setLink }) {
   return (
     <>
       {!link ? (
-        <div className="rounded-md w-[50vh] sm:w-[40vh] bg-gradient-to-r to-[#2993B5] from-[#2CA257] flex justify-center items-center p-2 absolute">
+        <div className="rounded-md md:w-[70vh] sm:w-[40vh] bg-gradient-to-r to-[#2993B5] from-[#2CA257] flex justify-center items-center p-2 absolute">
           <label
-            for="file"
+            htmlFor="file"
             className="relative h-[15px] rounded-[25px] flex justify-center items-center text-white font-bold cursor-pointer "
           >
             Da click aquí

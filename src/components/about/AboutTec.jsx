@@ -1,7 +1,7 @@
 "use client";
 
-import MainTitle from "../reutilizable/MainTitle";
-import TextAbout from "../reutilizable/TextAbout";
+import MainTitle from "../layout/MainTitle";
+import TextAbout from "../layout/TextAbout";
 import ImageSponsors from "../footer/ImageSponsors";
 
 export default function AboutTec() {
@@ -10,7 +10,7 @@ export default function AboutTec() {
       <MainTitle title="About the shop" />
       <div className="flex lg:flex-row sm:flex-col justify-start items-start lg:text-start md:max-w-screen-2xl mx-auto sm:max-w-screen-sm sm:text-center">
         <TextAbout />
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3 mt-3 mb-8 lg:ml-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3 mt-3 mb-8">
           <ImageSponsors
             width={800}
             height={150}
