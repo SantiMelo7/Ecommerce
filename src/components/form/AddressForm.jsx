@@ -1,54 +1,23 @@
-import InputCreate from "./InputCreate";
+import GenericInput from "./GenericInput";
 
 export default function AddressForm({ itemAddress, setAddressProp }) {
-  const {
-    nameRecipient,
-    lastName,
-    phone,
-    streetAddress,
-    postalCode,
-    city,
-    country,
-  } = itemAddress;
+  const { phone, streetAddress, postalCode, city, country } = itemAddress;
   return (
     <div className="flex flex-col justify-center items-center">
+      <GenericInput
+        label="phone"
+        value={phone}
+        className="md:w-[70vh] sm:w-[40vh]"
+        onChange={(ev) => setAddressProp("phone", ev.target.value)}
+      />
       <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <InputCreate
-          label="Name of recipient"
-          value={nameRecipient}
-          className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("nameRecipient", ev.target.value)}
-        />
-        <InputCreate
-          label="Last Name"
-          value={lastName}
-          className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("lastName", ev.target.value)}
-        />
-      </div>
-
-      <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <InputCreate
-          label="Name of recipient"
-          value={nameRecipient}
-          className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("nameRecipient", ev.target.value)}
-        />
-        <InputCreate
-          label="Phone Number"
-          value={phone}
-          className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("phone", ev.target.value)}
-        />
-      </div>
-      <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <InputCreate
+        <GenericInput
           label="Postal Code"
           className="md:w-[35vh] sm:w-[40vh]"
           value={postalCode}
           onChange={(ev) => setAddressProp("postalCode", ev.target.value)}
         />
-        <InputCreate
+        <GenericInput
           label="City"
           className="md:w-[34vh] sm:w-[40vh]"
           value={city}
@@ -56,16 +25,16 @@ export default function AddressForm({ itemAddress, setAddressProp }) {
         />
       </div>
       <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <InputCreate
+        <GenericInput
           label="Street Address"
           value={streetAddress}
           className="md:w-[35vh] sm:w-[40vh]"
           onChange={(ev) => setAddressProp("streetAddress", ev.target.value)}
         />
-        <InputCreate
+        <GenericInput
           label="Country"
           value={country}
-          className="md:w-[35vh] sm:w-[40vh]"
+          className="md:w-[34vh] sm:w-[40vh]"
           onChange={(ev) => setAddressProp("country", ev.target.value)}
         />
       </div>

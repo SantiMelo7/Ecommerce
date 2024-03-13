@@ -1,4 +1,4 @@
-import MainTitle from "@/components/reutilizable/MainTitle";
+import MainTitle from "@/components/layout/MainTitle";
 
 export default function Contact() {
   return (

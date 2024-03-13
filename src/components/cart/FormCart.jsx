@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import AddressForm from "../form/AddressForm";
 import { CartContext } from "@/context/AppProvider";
-import ButtonPay from "./ButtonPay";
+import ButtonPay from "../button/ButtonPay";
 
 export default function FormCart() {
   const [address, setAddress] = useState({});

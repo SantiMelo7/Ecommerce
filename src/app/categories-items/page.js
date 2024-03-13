@@ -1,6 +1,6 @@
 import CategoriesPost from "../../components/form/form-categories/CategoriesPost";
 import FormCategories from "../../components/form/form-categories/FormCategories";
-import NavTabs from "../../components/reutilizable/NavTabs";
+import NavTabs from "../../components/layout/NavTabs";
 
 export default function CategoriesPage() {
 

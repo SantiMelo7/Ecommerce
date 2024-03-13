@@ -1,6 +1,6 @@
 "use client"
 
-import MainTitle from "@/components/reutilizable/MainTitle";
+import MainTitle from "@/components/layout/MainTitle";
 import ProductsCart from "@/components/cart/ProductsCart";
 import FormCart from "@/components/cart/FormCart";
 

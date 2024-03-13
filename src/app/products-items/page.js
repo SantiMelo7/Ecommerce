@@ -1,11 +1,10 @@
 "use client"
 
 import LinkProducts from "@/components/products/LinksProducts"
-import NavTabs from "@/components/reutilizable/NavTabs"
+import NavTabs from "@/components/layout/NavTabs"
 import { usePostProducts } from "@/hooks/useProducts"
 import Image from "next/image"
 import Link from "next/link"
-
 
 export default function ProductsPage() {
     const { products } = usePostProducts()
