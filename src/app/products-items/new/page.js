@@ -1,11 +1,10 @@
 "use client"
 
+import { NewProduct } from "@/hooks/useProducts"
 import InputProducts from "../../../components/form/InputProducts"
-import NavTabs from "../../../components/reutilizable/NavTabs"
-import { NewProduct } from "../../../hooks/useProducts"
+import NavTabs from "../../../components/layout/NavTabs"
 
 export default function NewProductPage() {
-
     const { handleFormSubmit } = NewProduct()
 
     return (

@@ -28,6 +28,9 @@ export default function useCategoriesRequest() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+    if (response.ok) {
+      window.location.reload()
+    }
     setCategoriesName("");
     handleFetchCategories();
     setEdited(null);
@@ -37,6 +40,9 @@ export default function useCategoriesRequest() {
     const response = await fetch("/api/categories?_id=" + _id, {
       method: "DELETE",
     });
+    if (response.ok) {
+      window.location.reload()
+    }
     handleFetchCategories();
   }
 

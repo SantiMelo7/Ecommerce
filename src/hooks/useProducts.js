@@ -47,7 +47,7 @@ export function ProductRequest() {
         setRedirectSubmit(true)
     }
     if (redirectSubmit) {
-        return redirect("/products")
+        return redirect("/products-items")
 
     }
 
@@ -65,15 +65,12 @@ export function NewProduct() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
-
         })
         setRedirectOnSubmit(true)
     }
 
     if (redirectOnSubmit) {
-        return redirect("/products")
+        return redirect("/products-items")
     }
-
     return { handleFormSubmit }
-
 }

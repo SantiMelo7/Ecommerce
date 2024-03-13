@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export default function useUpdatedProduct( product ) {
+export default function useUpdatedProduct(product) {
 
     // recojemos el state del product como objeto vacio
     const [updatedProduct, setUpdatedProduct] = useState({});
@@ -17,7 +17,7 @@ export default function useUpdatedProduct( product ) {
 
     // actualizar
     // recibe como argumento la key y el value
-    const handleUpdate = ( key, value ) => {
+    const handleUpdate = (key, value) => {
         // el product es la copia del primer estado
         const product = { ...updatedProduct }
         // el segundo estado es el arreglo de la copia del producto, y damomo como arreglo la key
