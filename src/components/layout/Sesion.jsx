@@ -2,6 +2,7 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Session() {
   const { data: session } = useSession();
@@ -14,7 +15,9 @@ export default function Session() {
               <a className="cursor-pointer" onClick={() => signOut()}>
                 Cerrar sesión
               </a>
-              <h1>{session?.user?.name} </h1>
+              <Link href={"/profile"}>
+                <h1>{session?.user?.name} </h1>
+              </Link>
             </div>
             <Image
               className="rounded-[50%] right-5 md:bottom-4 sm:bottom-1 relative"
