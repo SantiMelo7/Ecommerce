@@ -17,13 +17,13 @@ export default function useUpdatedProduct(product) {
 
     // actualizar
     // recibe como argumento la key y el value
-    const handleUpdate = (key, value) => {
+    const handleUpdate = (name, value) => {
         // el product es la copia del primer estado
         const product = { ...updatedProduct }
         // el segundo estado es el arreglo de la copia del producto, y damomo como arreglo la key
         // la key es el nombre de cada valor del input
         // y esto sera el valor de arriba
-        setUpdatedProduct({ ...product, [key]: value });
+        setUpdatedProduct({ ...product, [name]: value });
     }
 
     return { handleUpdate, updatedProduct }
