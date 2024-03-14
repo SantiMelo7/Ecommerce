@@ -22,7 +22,7 @@ export default function ListMenu() {
           <a href="/cart" className="relative -left-1 top-[2px]">
             <CartIcon />
           </a>
-          <div className="bg-blue-200 h-[2.3vh] w-4 rounded-[5px] relative left-7 -top-7">
+          <div className="bg-blue-200 h-[2.7vh] w-4 rounded-[5px] relative left-7 -top-7">
             <div className="relative text-black flex justify-center items-center text-sm">
               {cartProducts.length}
             </div>
