@@ -1,7 +1,7 @@
 import useUpdatedProduct from "@/hooks/useUpdatedProduct";
-import GenericInput from "../GenericInput";
+import GenericInput from "./GenericInput";
 
-export default function InputCaregories({ productItem }) {
+export default function InputProductsPost({ productItem }) {
   const { updatedProduct, handleUpdate } = useUpdatedProduct(productItem);
   return (
     <>
