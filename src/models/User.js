@@ -8,7 +8,7 @@ const UserSchema = mongoose.Schema({
     country: { type: String, required: true },
     streetAddress: { type: String, required: true },
     city: { type: String, required: true },
-    admin: { type: Boolean, required: true }
+    admin: { type: Boolean }
 }, { timestamps: true })
 
 export const UserItem = mongoose.models?.UserItemGoogle || mongoose.model("UserItemGoogle", UserSchema)
