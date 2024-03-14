@@ -13,7 +13,9 @@ export default function ProductsPage() {
         <section className="mt-9 mb-10">
             <NavTabs isAdmin={true} />
             <LinkProducts href={"/products-items/new"} text="Crear Un Nuevo Producto" />
-            <NoResults item={products} />
+            <div className="mt-5">
+                <NoResults item={products} />
+            </div>
             <section className="grid xl:grid-cols-4 md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 md:max-w-screen-2xl mt-10  sm:max-w-screen-sm sm:mx-auto">
                 {products.length > 0 && products.map((text) => (
                     <div className={`flex flex-col shadow-lg`} key={text._id}>
