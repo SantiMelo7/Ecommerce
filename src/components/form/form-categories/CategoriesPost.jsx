@@ -2,12 +2,14 @@
 
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import ButtonsCategories from "../../button/ButtonsCategories";
+import NoResults from "@/components/layout/NoResults";
 
 export default function CategoriesPost() {
   const { categories } = useCategoriesRequest();
 
   return (
     <section className="mt-7 grid grid-cols-3 gap-x-5 hover:transition">
+      <NoResults item={categories} />
       {categories?.length > 0 &&
         categories.map((text) => (
           <div
