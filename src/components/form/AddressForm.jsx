@@ -1,41 +1,43 @@
+import useUpdatedProduct from "@/hooks/useUpdatedProduct";
 import GenericInput from "./GenericInput";
 
-export default function AddressForm({ itemAddress, setAddressProp }) {
-  const { phone, streetAddress, postalCode, city, country } = itemAddress;
+export default function AddressForm({ profile }) {
+  const { updatedProduct, handleUpdate } = useUpdatedProduct(profile);
+
   return (
     <div className="flex flex-col justify-center items-center">
       <GenericInput
         label="phone"
-        value={phone}
+        value={updatedProduct?.phone}
         className="md:w-[70vh] sm:w-[40vh]"
-        onChange={(ev) => setAddressProp("phone", ev.target.value)}
+        onChange={(ev) => handleUpdate("phone", ev.target.value)}
       />
       <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
         <GenericInput
           label="Postal Code"
           className="md:w-[35vh] sm:w-[40vh]"
-          value={postalCode}
-          onChange={(ev) => setAddressProp("postalCode", ev.target.value)}
+          value={updatedProduct?.postalCode}
+          onChange={(ev) => handleUpdate("postalCode", ev.target.value)}
         />
         <GenericInput
           label="City"
           className="md:w-[34vh] sm:w-[40vh]"
-          value={city}
-          onChange={(ev) => setAddressProp("city", ev.target.value)}
+          value={updatedProduct?.city}
+          onChange={(ev) => handleUpdate("city", ev.target.value)}
         />
       </div>
       <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
         <GenericInput
           label="Street Address"
-          value={streetAddress}
+          value={updatedProduct?.streetAddress}
           className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("streetAddress", ev.target.value)}
+          onChange={(ev) => handleUpdate("streetAddress", ev.target.value)}
         />
         <GenericInput
           label="Country"
-          value={country}
+          value={updatedProduct?.country}
           className="md:w-[34vh] sm:w-[40vh]"
-          onChange={(ev) => setAddressProp("country", ev.target.value)}
+          onChange={(ev) => handleUpdate("country", ev.target.value)}
         />
       </div>
     </div>
