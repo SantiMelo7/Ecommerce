@@ -6,7 +6,7 @@ export default function CategoriesPage() {
 
     return (
         <section className="max-w-2xl mx-auto relative top-4">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <FormCategories />
             <CategoriesPost />
         </section>

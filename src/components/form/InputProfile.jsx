@@ -31,13 +31,17 @@ export default function InputProfile({ onSubmit, profile }) {
           />
         </div>
         <AddressForm profile={updatedProduct} />
-        <GenericInput
-          type="checkbox"
-          id="admin"
-          label="Admin"
-          checked={updatedProduct?.admin}
-          onChange={(ev) => handleUpdate("admin", ev.target.value)}
-        />
+        {updatedProduct?.admin ? (
+          <GenericInput
+            type="checkbox"
+            id="admin"
+            label="Admin"
+            checked={updatedProduct?.admin}
+            value={"1"}
+            onChange={(ev) => handleUpdate("admin", ev.target.value)}
+          />
+        ) : null}
+
         <ButtonCreate className="bg-orange-400" />
       </form>
     </>

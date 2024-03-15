@@ -18,6 +18,7 @@ export default function Session() {
             </div>
             <button onClick={() => signOut()}>
               <Image
+                priority
                 className="rounded-[50%] right-5 md:bottom-4 sm:bottom-1 relative"
                 src={session?.user?.image}
                 width={40}

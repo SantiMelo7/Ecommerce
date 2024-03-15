@@ -2,7 +2,7 @@ import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import useUpdatedProduct from "@/hooks/useUpdatedProduct";
 
 export default function SelectCategories({ product }) {
-  const { categories: categoriesItem } = useCategoriesRequest();
+  const { categories } = useCategoriesRequest();
   const { updatedProduct, handleUpdate } = useUpdatedProduct(product);
 
   return (
@@ -14,18 +14,14 @@ export default function SelectCategories({ product }) {
       del _id que sea igual al valor del target*/}
       <select
         className="mt-3 bg-blue-300 text-black md:w-[70vh] sm:w-[40vh] py-2 rounded-md text-xl"
-        value={updatedProduct?.categories}
-        onChange={(ev) =>
-          handleUpdate(
-            "category",
-            categoriesItem.find((category) => category._id === ev.target.value)
-          )
-        }
+        value={updatedProduct?.category}
+        name="category"
         id="category"
+        onChange={(ev) => handleUpdate("category", ev.target.value)}
       >
-        {categoriesItem?.length > 0 &&
-          categoriesItem?.map((text) => (
-            <option key={text._id} value={text._id} className="w-full">
+        {categories?.length > 0 &&
+          categories?.map((text) => (
+            <option key={text._id} value={text.name} className="w-full">
               {text.name}
             </option>
           ))}

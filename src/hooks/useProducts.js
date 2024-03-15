@@ -63,7 +63,7 @@ export function NewProduct() {
         ev.preventDefault()
         const response = await fetch("/api/products", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
         setRedirectOnSubmit(true)
