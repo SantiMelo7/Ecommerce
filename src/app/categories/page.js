@@ -17,12 +17,13 @@ export default function CategoriesHomePage() {
             {categories.length > 0 && categories.map((text) => (
                 <div key={text._id}>
                     <h1 className="title-categories">{text.name}</h1>
-                    {products.filter(item => item.category === text._id).map(item => (
-                        <div key={text._id}>
-                            <MenuItemProps {...item} />
-                        </div>
-
-                    ))}
+                    <section className="grid xl:grid-cols-4 md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 md:max-w-screen-2xl md:mt-10 sm:max-w-screen-sm sm:mx-auto">
+                        {products.filter(item => item.category.name === text.name).map(item => (
+                            <div key={text._id}>
+                                <MenuItemProps {...item} />
+                            </div>
+                        ))}
+                    </section>
                 </div>
             ))}
         </>
