@@ -63,16 +63,14 @@ export default function InputProfile({ onSubmit, profile }) {
             onChange={(ev) => handleUpdate("country", ev.target.value)}
           />
         </div>
-        {updatedProduct?.admin ? (
-          <GenericInput
-            type="checkbox"
-            id="admin"
-            label="Admin"
-            checked={updatedProduct?.admin}
-            value={"1"}
-            onChange={(ev) => handleUpdate("admin", ev.target.value)}
-          />
-        ) : null}
+        <GenericInput
+          type="checkbox"
+          id="admin"
+          label="Admin"
+          checked={updatedProduct?.admin}
+          value={"1"}
+          onChange={(ev) => handleUpdate("admin", ev.target.value)}
+        />
         <ButtonCreate className="bg-orange-400" />
       </form>
     </>
