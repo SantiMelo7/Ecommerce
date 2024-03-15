@@ -17,7 +17,7 @@ input:disabled {
 }
 
 input[type="text"].formCategories {
-  @apply flex justify-center w-[60vh] my-3 rounded-md;
+  @apply flex justify-center md:w-[60vh] sm:w-[40vh] my-3 rounded-md;
   @apply block border-none p-2 bg-blue-300;
 }
 
