@@ -9,12 +9,10 @@ export default function useCategoriesRequest() {
     handleFetchCategories();
   }, []);
 
-  function handleFetchCategories() {
-    fetch("/api/categories").then((response) => {
-      response.json().then((categories) => {
-        setCategories(categories);
-      });
-    });
+  async function handleFetchCategories() {
+    const response = await fetch("/api/categories")
+    const data = await response.json()
+    setCategories(data)
   }
 
   async function handleNewCategories(ev) {
