@@ -9,8 +9,7 @@ export async function PUT(req) {
     const session = await getServerSession(authOptions);
     const email = session?.user?.email;
     const doc = await UserItem.updateOne({ email }, data)
-    console.log(doc)
-    return Response.json(true);
+    return Response.json(doc);
 }
 
 export async function GET() {

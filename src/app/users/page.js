@@ -21,7 +21,7 @@ export default function UsersPage() {
         <section className="mt-5">
             <NavTabs isAdmin={true} />
             {user.length > 0 && user.map((text) => (
-                <div key={text._id} className="flex md:flex-row sm:flex-col sm:gap-y-5 md:justify-between sm:justify-center items-center mt-10 text-xl p-3 bg-yellow-200 md:w-[40%] sm:w-[90%]
+                <div key={text._id} className="flex flex-col sm:gap-y-5 md:justify-between sm:justify-center items-center mt-10 text-xl p-3 bg-yellow-200 md:w-[40%] sm:w-[90%]
                     mx-auto py-3 rounded-md">
                     {text.name ? <span className="text-2xl font-bold text-green-900">{text.name}</span> : <span className="text-2xl font-bold text-red-900">No Name</span>}
                     <h1 className="text-xl font-extrabold text-blue-900">{text.email}</h1>

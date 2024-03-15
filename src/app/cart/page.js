@@ -3,8 +3,11 @@
 import MainTitle from "@/components/layout/MainTitle";
 import ProductsCart from "@/components/cart/ProductsCart";
 import FormCart from "@/components/cart/FormCart";
+import { useProfile } from "@/hooks/useProfile";
 
 export default function PageCart() {
+
+    const { user } = useProfile()
 
     return (
         <>
@@ -12,7 +15,7 @@ export default function PageCart() {
             <aside className="md:grid md:grid-cols-2 sm:max-w-screen-2xl mx-auto">
                 <ProductsCart />
                 <div className="flex md:justify-end md:items-end sm:justify-center mt-4">
-                    <FormCart />
+                    <FormCart profile={user} />
                 </div>
             </aside>
         </ >

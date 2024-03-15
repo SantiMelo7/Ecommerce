@@ -1,17 +1,18 @@
 "use client"
 
-import { NewProduct } from "@/hooks/useProducts"
+import { NewProduct, ProductRequest } from "@/hooks/useProducts"
 import InputProducts from "../../../components/form/InputProducts"
 import NavTabs from "../../../components/layout/NavTabs"
 
 export default function NewProductPage() {
     const { handleFormSubmit } = NewProduct()
+    const { product } = ProductRequest()
 
     return (
         <section className="mt-10 text-gray-300 relative top-18">
             <NavTabs isAdmin={true} />
             <div className="max-h-min mt-10">
-                <InputProducts onSubmit={handleFormSubmit} />
+                <InputProducts product={product} onSubmit={handleFormSubmit} />
             </div>
         </section>
     )
