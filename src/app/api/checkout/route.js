@@ -3,7 +3,7 @@ import { authOptions } from "../auth/[...nextauth]/route";
 import { Order } from "../../../models/Order";
 import { ProductsItem } from "../../../models/ProductsItem";
 import { connectMongoDB } from "../../../util/connectMongoDB";
-const stripe = require('stripe')(process.env.SK);
+const stripe = require('stripe')(process.env.STRIPE_SK);
 
 export async function POST(req) {
     await connectMongoDB()
