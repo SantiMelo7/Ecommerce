@@ -1,5 +1,6 @@
 "use client";
 
+import { ROUTES } from "@/util/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,7 +11,7 @@ export default function NavTabs({ isAdmin }) {
       <>
         <Link
           className={path.includes("/profile") ? "active" : ""}
-          href={"/profile"}
+          href={ROUTES.profile}
         >
           Profile
         </Link>
@@ -18,19 +19,19 @@ export default function NavTabs({ isAdmin }) {
           <>
             <Link
               className={path.includes("/categories-items") ? "active" : ""}
-              href={"/categories-items"}
+              href={ROUTES.categoriesItem}
             >
               Categories
             </Link>
             <Link
               className={path.includes("/products-items") ? "active" : ""}
-              href={"/products-items"}
+              href={ROUTES.productsItems}
             >
               Products
             </Link>
             <Link
               className={path.includes("/users") ? "active" : ""}
-              href={"/users"}
+              href={ROUTES.users}
             >
               Users-Admin
             </Link>

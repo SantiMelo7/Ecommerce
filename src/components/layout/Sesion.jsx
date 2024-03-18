@@ -1,5 +1,6 @@
 "use client";
 
+import { ROUTES } from "@/util/constants";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,7 @@ export default function Session() {
         <>
           <div className="flex sm:pl-10 md:flex-row sm:flex-col md:justify-end md:items-end sm:justify-center sm:items-center sm:mt-5 gap-x-3 md:right-7">
             <div className="flex md:flex-col sm:flex-row gap-x-3 justify-center items-center relative right-5 bottom-[22px]">
-              <Link href={"/profile"}>
+              <Link href={ROUTES.profile}>
                 <h1>Profile</h1>
               </Link>
             </div>

@@ -3,6 +3,8 @@
 import { useContext } from "react";
 import { CartContext } from "@/context/AppProvider";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { ROUTES } from "@/util/constants";
+import Link from "next/link";
 
 export default function ListMenu() {
   const { cartProducts } = useContext(CartContext);
@@ -10,18 +12,18 @@ export default function ListMenu() {
     <>
       <ul className="flex gap-x-4 text-xl">
         <li>
-          <a href="/">Home</a>
+          <Link href={ROUTES.home}>Home</Link>
         </li>
         <li>
-          <a href="/categories">Categories</a>
+          <Link href={ROUTES.categories}>Categories</Link>
         </li>
         <li>
-          <a href="/products">All Products</a>
+          <Link href={ROUTES.products}>All Products</Link>
         </li>
         <li className="relative bottom-[2px]">
-          <a href="/cart">
+          <Link href={ROUTES.cart}>
             <ShoppingCartIcon />
-          </a>
+          </Link>
         </li>
         <li>
           <div className="bg-blue-200 md:h-[2.4vh] sm:h-[3.2vh] w-4 rounded-[5px] right-4 relative">
