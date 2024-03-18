@@ -1,9 +1,7 @@
 import TitleFooter from "./TitleFooter";
 import ListText from "./ListText";
 import CityFooter from "./CityFooter";
-import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import {
   AmexIcon,
   StripeIcon,
