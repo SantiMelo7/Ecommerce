@@ -9,7 +9,7 @@ export default function Header() {
           <a href="/">Ecommerce</a>
         </h1>
       </div>
-      <nav className="flex justify-center items-center md:pt-[4px] sm:mt-2 max-w-screen-xl mx-auto">
+      <nav className="flex justify-center items-center relative bottom-2 sm:mt-2 max-w-screen-xl mx-auto">
         <ListMenu />
       </nav>
       <Session />

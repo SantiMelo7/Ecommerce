@@ -2,10 +2,11 @@ import TitleFooter from "./TitleFooter";
 import ListText from "./ListText";
 import CityFooter from "./CityFooter";
 import Image from "next/image";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import {
   AmexIcon,
   StripeIcon,
-  FacebookIconFooter,
   PaypalIcon,
   VisaIcon,
   ApplePayIcon,
@@ -20,13 +21,12 @@ export default function Footer() {
         <div className="relative lg:right-[150px]">
           <TitleFooter title="Follow us social media" />
           <div className="mt-5 flex flex-row justify-center items-center gap-x-4">
-            <FacebookIconFooter />
-            <Image
-              src="/instagram.webp"
-              width={50}
-              height={10}
-              alt="Instagram Logo"
+            <FacebookIcon className="text-blue-500 w-[50px] h-[50px]" />
+            <link
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+              rel="stylesheet"
             />
+            <i class="fa fa-instagram" id="insta" aria-hidden="true"></i>
           </div>
         </div>
         <div className="relative mt-8 lg:-left-[50px]">
