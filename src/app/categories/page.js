@@ -4,6 +4,7 @@ import MenuItemProps from "../../components/products/MenuItemProps"
 import MainTitle from "../../components/layout/MainTitle"
 import useCategoriesRequest from "../../hooks/useCategoriesRequest"
 import { usePostProducts } from "../../hooks/useProducts"
+import { configAll } from "@/util/constants"
 
 export default function CategoriesHomePage() {
     const { products } = usePostProducts()
@@ -20,7 +21,7 @@ export default function CategoriesHomePage() {
                     <section className="grid xl:grid-cols-4 md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 md:max-w-screen-2xl md:mt-10 sm:max-w-screen-sm sm:mx-auto">
                         {products.filter(item => item.category.name === text.name).map(item => (
                             <div key={text._id}>
-                                <MenuItemProps {...item} />
+                                <MenuItemProps {...item} config={configAll} />
                             </div>
                         ))}
                     </section>
