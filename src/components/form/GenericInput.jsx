@@ -6,7 +6,6 @@ export default function GenericInput({
   id,
   name,
   disabled,
-  checked,
   className,
 }) {
   return (
@@ -14,8 +13,8 @@ export default function GenericInput({
       <label>
         {label}
         <input
-          checked={checked}
           className={className}
+          autoComplete="on"
           type={type}
           value={value}
           onChange={onChange}
