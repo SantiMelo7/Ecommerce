@@ -11,7 +11,7 @@ const ProductsItemsSchema = new Schema({
 
     description: { type: String, required: true },
 
-    categories: { type: CategoriesSchema, required: true },
+    category: { type: CategoriesSchema, required: true },
 
 }, { timestamps: true })
 
