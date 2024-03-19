@@ -12,18 +12,18 @@ export default function InputProfile({ onSubmit, profile }) {
         className="flex flex-col justify-center items-center max-w-screen-2xl mx-auto"
         onSubmit={(ev) => onSubmit(ev, updatedProduct)}
       >
-        <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3 mt-4">
+        <GenericInput
+          className="md:w-[70vh] sm:w-[40vh]"
+          label="Email"
+          id="email"
+          name="email"
+          disabled={true}
+          type="email"
+          value={session?.data?.user?.email || ""}
+        />
+        <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3 ">
           <GenericInput
-            className="md:w-[35vh] sm:w-[40vh]"
-            label="Email"
-            id="email"
-            name="email"
-            disabled={true}
-            type="email"
-            value={session?.data?.user?.email || ""}
-          />
-          <GenericInput
-            className="md:w-[33vh] sm:w-[40vh]"
+            className="md:w-[34vh] sm:w-[40vh]"
             label="Name"
             type="text"
             id="name"
@@ -31,19 +31,19 @@ export default function InputProfile({ onSubmit, profile }) {
             onChange={(ev) => handleUpdate("name", ev.target.value)}
             name="name"
           />
+          <GenericInput
+            label="phone"
+            value={updatedProduct?.phone || ""}
+            className="md:w-[34vh] sm:w-[40vh]"
+            onChange={(ev) => handleUpdate("phone", ev.target.value)}
+            id="phone"
+            name="phone"
+          />
         </div>
-        <GenericInput
-          label="phone"
-          value={updatedProduct?.phone || ""}
-          className="md:w-[70vh] sm:w-[40vh]"
-          onChange={(ev) => handleUpdate("phone", ev.target.value)}
-          id="phone"
-          name="phone"
-        />
-        <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
+        <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3">
           <GenericInput
             label="Postal Code"
-            className="md:w-[35vh] sm:w-[40vh]"
+            className="md:w-[34vh] sm:w-[40vh]"
             value={updatedProduct?.postalCode || ""}
             onChange={(ev) => handleUpdate("postalCode", ev.target.value)}
             id="postalCode"
@@ -58,11 +58,11 @@ export default function InputProfile({ onSubmit, profile }) {
             name="city"
           />
         </div>
-        <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
+        <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3">
           <GenericInput
             label="Street Address"
             value={updatedProduct?.streetAddress || ""}
-            className="md:w-[35vh] sm:w-[40vh]"
+            className="md:w-[34vh] sm:w-[40vh]"
             onChange={(ev) => handleUpdate("streetAddress", ev.target.value)}
             id="streetAddress"
             name="streetAddress"

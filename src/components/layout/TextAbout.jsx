@@ -1,8 +1,7 @@
 export default function TextAbout() {
   return (
-    <div className="flex flex-col gap-y-2 mt-4">
+    <div className="flex flex-col gap-y-2 mt-6 max-w-screen-md">
       <span className="span-about text-red-500 text-lg">
-        Sure, here&apos;s a brief description of a technology store in English:
         Welcome to Lorem your one-stop destination for all things tech! Nestled
         in the heart of downtown, Lorem boasts a vast array of cutting-edge
         gadgets and gizmos to satisfy even the most discerning tech enthusiasts.
@@ -22,7 +21,7 @@ export default function TextAbout() {
         offer regular workshops and events where customers can learn new skills,
         discover emerging trends, and connect with like-minded tech enthusiasts.
       </span>
-      <span className="span-about sm:hidden">
+      <span className="span-about sm:hidden ">
         So whether you&apos;re in the market for a new smartphone, craving the
         latest gaming console, or simply want to geek out over the newest tech
         innovations, come experience the excitement at Lorem where technology

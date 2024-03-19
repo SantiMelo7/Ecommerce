@@ -10,7 +10,7 @@ import MenuPost from "../products/MenuPost";
 export default function MainComponent() {
   return (
     <>
-      <div className=" bg-gray-800 relative -top-1 mb-3">
+      <div className=" bg-gray-800 relative ">
         <HeroMenu />
       </div>
       <div className="relative top-5 pb-8 ">
