@@ -1,5 +1,5 @@
-import { DeleteIcon, EditIcon } from "@/components/layout/Icons";
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
+import { DeleteIconItem, EditIconItem } from "../layout/IconsItem";
 
 export default function ButtonsCategories({ textName, name, deleteName }) {
   const { setCategoriesName, setEdited, handleDelete } = useCategoriesRequest();
@@ -11,10 +11,10 @@ export default function ButtonsCategories({ textName, name, deleteName }) {
           setEdited(textName), setCategoriesName(name);
         }}
       >
-        <EditIcon />
+        <EditIconItem />
       </button>
       <button className="pr-4" onClick={() => handleDelete(deleteName)}>
-        <DeleteIcon />
+        <DeleteIconItem />
       </button>
     </div>
   );

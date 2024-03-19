@@ -35,15 +35,3 @@ export function MercadoPagoIcon() {
     <Image src="/mercado-pago.svg" height={40} width={40} alt="Mercado-Pago-Icon" />
   );
 }
-
-export function DeleteIcon() {
-  return (
-    <Image src="/delete.webp" height={35} width={35} alt="Delete-Icon" />
-  )
-}
-
-export function EditIcon() {
-  return (
-    <Image src="/edit.webp" height={35} width={35} alt="Delete-Icon" />
-  )
-}
