@@ -26,14 +26,14 @@ export default function AboutTec() {
           <ImageSponsors
             width={500}
             height={100}
-            className=" h-[16vh]"
+            className="md:h-[16vh] sm:h-[30vh]"
             src="/photo-3.webp"
             alt="photo-3"
           />
           <ImageSponsors
             width={500}
             height={100}
-            className=" h-[16vh]"
+            className="md:h-[16vh]"
             src="/photo-4.webp"
             alt="photo-4"
           />
@@ -60,30 +60,6 @@ export default function AboutTec() {
             height={150}
             src="/photo-8.webp"
             alt="photo-8"
-          />
-          <ImageSponsors
-            width={500}
-            height={150}
-            src="/photo-9.webp"
-            alt="photo-9"
-          />
-          <ImageSponsors
-            width={500}
-            height={150}
-            src="/photo-10.webp"
-            alt="photo-10"
-          />
-          <ImageSponsors
-            width={500}
-            height={150}
-            src="/photo-11.webp"
-            alt="photo-11"
-          />
-          <ImageSponsors
-            width={500}
-            height={150}
-            src="/photo-12.webp"
-            alt="photo-12"
           />
         </div>
       </div>

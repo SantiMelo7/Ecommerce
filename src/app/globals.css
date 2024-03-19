@@ -46,6 +46,10 @@ h1.title-categories {
   @apply text-red-400;
 }
 
+img.hero-img {
+  @apply md:w-[400px] sm:w-[300px];
+}
+
 #insta {
   background: radial-gradient(
     circle at 30% 107%,
