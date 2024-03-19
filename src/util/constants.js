@@ -17,5 +17,6 @@ export const ROUTES = {
     productsItemsNew: "/products-items/new",
     productsItems: "/products-items",
     profile: "/profile",
-    users: "/users"
+    users: "/users",
+    usersEdit: "/users/edit"
 }
