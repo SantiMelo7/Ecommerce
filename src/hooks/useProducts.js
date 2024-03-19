@@ -3,8 +3,12 @@ import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { ROUTES } from "@/util/constants"
 
-export function usePostProducts() {
+export function useProducts() {
     const [products, setProducts] = useState([])
+    const { id } = useParams()
+    const [product, setProduct] = useState(null)
+    const [error, setError] = useState(null)
+    const router = useRouter()
     useEffect(() => {
         fetch("/api/products").then(response => {
             response.json().then(products => {
@@ -12,35 +16,13 @@ export function usePostProducts() {
             })
         })
     }, [])
-    return { products }
-}
-
-export function useProductRequest() {
-
-    const { id } = useParams()
-    const [product, setProduct] = useState(null)
-    const [error, setError] = useState(null)
-    const router = useRouter()
-
-    useEffect(() => {
-        fetch("/api/products").then(response => {
-            response.json().then(items => {
-                const item = items.find((product) => product._id === id)
-                setProduct(item)
-            })
-        })
-    }, [])
-
-    async function handleNewProduct(ev, data) {
-        console.log(data);
+    async function handleSubmitNewProduct(ev, data) {
         ev.preventDefault()
         const response = await fetch("/api/products", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
-        console.log(response.request)
-        console.log(response.data)
         setError(false)
         if (response.ok) {
             router.push(ROUTES.productsItems)
@@ -49,6 +31,14 @@ export function useProductRequest() {
             router.push(ROUTES.productsItemsNew)
         }
     }
+    useEffect(() => {
+        fetch("/api/products").then(response => {
+            response.json().then(items => {
+                const item = items.find((product) => product._id === id)
+                setProduct(item)
+            })
+        })
+    }, [])
 
     async function handleSubmitEdit(ev, data) {
         ev.preventDefault()
@@ -59,18 +49,30 @@ export function useProductRequest() {
                 body: JSON.stringify(data)
             })
             setError(false)
-            routerProduct()
+            if (response.ok) {
+                router.push(ROUTES.productsItems)
+            }
         } catch (error) {
-            setError(error)
+            console.log(error)
+            setError(true)
+            router.push(`${ROUTES.productsItemsEdit}/api/products?_id`)
         }
     }
 
     async function handleDelete() {
-        const response = await fetch("/api/products?_id=" + id, {
-            method: "DELETE"
-        })
-        routerProduct()
+        try {
+            const response = await fetch("/api/products?_id=" + id, {
+                method: "DELETE"
+            })
+            setError(false)
+            if (response.ok) {
+                router.push(ROUTES.productsItems)
+            }
+        } catch (error) {
+            console.log(error)
+            setError(true)
+            router.push(`${ROUTES.productsItemsEdit}/api/products?_id`)
+        }
     }
-
-    return { product, handleSubmitEdit, handleDelete, handleNewProduct, error }
+    return { products, product, error, handleSubmitNewProduct, handleSubmitEdit, handleDelete }
 }

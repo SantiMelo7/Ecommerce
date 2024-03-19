@@ -2,15 +2,22 @@
 
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import GenericInput from "./GenericInput";
+import ErrorText from "../layout/ErrorText";
 
 export default function InputCategories() {
-  const { categoriesName, setCategoriesName, handleNewCategories, edited } =
-    useCategoriesRequest();
+  const {
+    categoriesName,
+    setCategoriesName,
+    handleNewCategories,
+    edited,
+    error,
+  } = useCategoriesRequest();
 
   return (
     <>
       <form className="mt-8" onSubmit={handleNewCategories}>
         <div className="flex flex-col justify-center items-center text-center">
+          <ErrorText error={error} />
           <GenericInput
             label="Introduce una nueva categoria"
             value={categoriesName}
