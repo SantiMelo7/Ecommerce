@@ -1,10 +1,11 @@
 "use client";
 
-import { usePostProducts } from "@/hooks/useProducts";
+import { useProducts } from "@/hooks/useProducts";
 import MenuItemProps from "./MenuItemProps";
+import { ROUTES } from "@/util/constants";
 
 export default function MenuPost({ className, config }) {
-  const { products } = usePostProducts();
+  const { products } = useProducts();
   let productsToDisplay = products;
   if (config.slice) {
     productsToDisplay = products.slice(0, config.slice);
@@ -16,7 +17,21 @@ export default function MenuPost({ className, config }) {
         {productsToDisplay.length > 0 &&
           productsToDisplay.map((text) => (
             <div key={text._id}>
-              <MenuItemProps className={className} config={config} {...text} />
+              {config.link ? (
+                <a href={`${ROUTES.productsItemsEdit}/${text._id}`}>
+                  <MenuItemProps
+                    className={className}
+                    config={config}
+                    {...text}
+                  />
+                </a>
+              ) : (
+                <MenuItemProps
+                  className={className}
+                  config={config}
+                  {...text}
+                />
+              )}
             </div>
           ))}
       </section>
