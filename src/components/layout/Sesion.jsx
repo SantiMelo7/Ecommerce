@@ -13,9 +13,9 @@ export default function Session() {
         <>
           <div className="flex sm:pl-10 md:flex-row sm:flex-col md:justify-end md:items-end sm:justify-center sm:items-center sm:mt-5 gap-x-3 md:right-7">
             <div className="flex md:flex-col sm:flex-row gap-x-3 justify-center items-center relative right-5 bottom-[20px]">
-              <Link href={ROUTES.profile}>
+              <a href={ROUTES.profile}>
                 <h1>Profile</h1>
-              </Link>
+              </a>
             </div>
             <button onClick={() => signOut()}>
               <Image

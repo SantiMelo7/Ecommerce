@@ -12,18 +12,18 @@ export default function ListMenu() {
     <>
       <ul className="flex gap-x-4 text-xl">
         <li>
-          <Link href={ROUTES.home}>Home</Link>
+          <a href={ROUTES.home}>Home</a>
         </li>
         <li>
-          <Link href={ROUTES.categories}>Categories</Link>
+          <a href={ROUTES.categories}>Categories</a>
         </li>
         <li>
-          <Link href={ROUTES.products}>All Products</Link>
+          <a href={ROUTES.products}>All Products</a>
         </li>
         <li className="relative bottom-[2px]">
-          <Link href={ROUTES.cart}>
+          <a href={ROUTES.cart}>
             <ShoppingCartIcon />
-          </Link>
+          </a>
         </li>
         <li>
           <div className="bg-blue-200 md:h-[2.4vh] sm:h-[3.2vh] w-4 rounded-[5px] right-4 relative">
