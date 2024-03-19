@@ -4,8 +4,8 @@ import { ProductsItem } from "../../../models/ProductsItem"
 export async function POST(req) {
     await connectMongoDB()
     const data = await req.json()
-    const doc = await ProductsItem.create(data)
-    return Response.json(doc)
+    await ProductsItem.create({ data })
+    return Response.json(true)
 }
 
 export async function PUT(req) {
@@ -20,7 +20,6 @@ export async function GET() {
     const doc = await ProductsItem.find()
     return Response.json(doc)
 }
-
 
 export async function DELETE(req) {
     await connectMongoDB()
