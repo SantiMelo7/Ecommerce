@@ -5,6 +5,15 @@ export function useUsers() {
     const { id } = useParams()
     const [userProfile, setuserProfile] = useState(null)
     const [redirectSubmit, setRedirectSubmit] = useState(false)
+    const [user, setUser] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/users").then((response) => {
+            response.json().then((data) => {
+                setUser(data);
+            });
+        });
+    }, []);
 
     useEffect(() => {
         fetch("/api/users").then(response => {
@@ -35,5 +44,5 @@ export function useUsers() {
     if (redirectSubmit) {
         return redirect("/users")
     }
-    return { userProfile, handleDelete, handleSubmitEdit }
+    return { userProfile, handleDelete, handleSubmitEdit, user }
 }
