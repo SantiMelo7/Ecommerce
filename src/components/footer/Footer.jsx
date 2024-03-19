@@ -24,7 +24,7 @@ export default function Footer() {
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
               rel="stylesheet"
             />
-            <i class="fa fa-instagram" id="insta" aria-hidden="true"></i>
+            <i className="fa fa-instagram" id="insta" aria-hidden="true"></i>
           </div>
         </div>
         <div className="relative mt-8 lg:-left-[50px]">
