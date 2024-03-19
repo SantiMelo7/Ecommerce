@@ -10,7 +10,7 @@ export default function ImageCloudinary({ link, setLink }) {
         <div className="rounded-md md:w-[70vh] sm:w-[40vh] bg-gradient-to-r to-[#2993B5] from-[#2CA257] flex justify-center items-center p-2 absolute">
           <label
             htmlFor="file"
-            className="relative h-[15px] rounded-[25px] flex justify-center items-center text-white font-bold cursor-pointer "
+            className="relative h-[15px] rounded-[25px] bottom-3 flex justify-center items-center text-white font-bold cursor-pointer "
           >
             Da click aquí
           </label>
@@ -35,7 +35,7 @@ export default function ImageCloudinary({ link, setLink }) {
               priority
               src={link}
               alt="Photo Menu"
-              width={150}
+              width={250}
               height={100}
               className="mt-3 mb-3 rounded-lg"
             />

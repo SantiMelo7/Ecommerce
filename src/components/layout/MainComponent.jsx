@@ -13,7 +13,7 @@ export default function MainComponent() {
       <div className=" bg-gray-800 relative ">
         <HeroMenu />
       </div>
-      <div className="relative top-5 pb-8 ">
+      <div className="relative pb-8">
         <MainTitle title="Products" subtTitle="Some of the products we have" />
         <MenuPost
           config={{

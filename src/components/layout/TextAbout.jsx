@@ -1,6 +1,6 @@
 export default function TextAbout() {
   return (
-    <div className="flex flex-col gap-y-2 mt-2 max-w-screen-xl">
+    <div className="flex flex-col gap-y-2 md:mt-6 sm:mt-1 max-w-screen-xl">
       <span className="span-about text-red-500 text-lg">
         Welcome to Lorem your one-stop destination for all things tech! Nestled
         in the heart of downtown, Lorem boasts a vast array of cutting-edge

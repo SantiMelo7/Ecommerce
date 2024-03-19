@@ -1,12 +1,8 @@
-import Image from "next/image";
-
-export default function ImageSponsors({ src, alt, width, height, className }) {
+export default function ImageSponsors({ src, alt, className }) {
   return (
-    <Image
-      className={`${className} hover:transition-all hover:scale-95 rounded-md`}
+    <img
+      className={`${className} hover:transition-all hover:scale-95 rounded-md about-img`}
       src={src}
-      width={width}
-      height={height}
       alt={alt}
     />
   );

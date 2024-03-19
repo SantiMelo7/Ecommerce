@@ -15,7 +15,7 @@ import SponsorsFake from "./SponsorsFake";
 export default function Footer() {
   return (
     <footer className="bg-gray-800">
-      <div className="sm:grid sm:grid-cols-2 lg:flex lg:flex-row md:flex-col justify-center items-center mt-9 max-w-screen-2xl">
+      <div className="sm:grid sm:grid-cols-2 md:flex md:flex-row  justify-center items-center mt-9 max-w-screen-2xl">
         <div className="relative lg:right-[150px]">
           <TitleFooter title="Follow us social media" />
           <div className="mt-5 flex flex-row justify-center items-center gap-x-4">
@@ -70,7 +70,7 @@ export default function Footer() {
             <ListText text="Carrers" />
           </div>
         </div>
-        <div className="relative xl:left-[270px] sm:left-[50px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
+        <div className="relative lg:left-[270px] md:left-[1px] sm:left-[30px] mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />

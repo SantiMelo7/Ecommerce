@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CartButton from "../button/CartButton";
 import { useContext } from "react";
 import { CartContext } from "@/context/AppProvider";
@@ -10,7 +9,7 @@ function MenuItemProps({ className, config, ...menuItem }) {
   return (
     <div className={`flex flex-col shadow-lg ${className}`}>
       {config.ShowImages && (
-        <Image
+        <img
           width={192}
           height={144}
           src={images}
@@ -31,7 +30,7 @@ function MenuItemProps({ className, config, ...menuItem }) {
       )}
       {config.ShowCategory && (
         <div className="flex justify-center items-center bg-purple-300 w-[40%] mx-auto mt-2 mb-4 rounded-md">
-          <span className="text-xl mb-3 text-white pt-3">{category.name}</span>
+          <span className="text-xl mb-3 text-white pt-3">{category}</span>
         </div>
       )}
     </div>
