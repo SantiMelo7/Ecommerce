@@ -1,11 +1,11 @@
+import { ProductsItem } from "@/models/ProductsItem"
 import { connectMongoDB } from "@/util/connectMongoDB"
-import { ProductsItem } from "../../../models/ProductsItem"
 
 export async function POST(req) {
     await connectMongoDB()
     const data = await req.json()
-    await ProductsItem.create({ data })
-    return Response.json(true)
+    const doc = await ProductsItem.create({ data })
+    return Response.json({ doc })
 }
 
 export async function PUT(req) {
