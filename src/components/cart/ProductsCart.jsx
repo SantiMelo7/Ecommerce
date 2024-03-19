@@ -1,7 +1,7 @@
 import { CartContext, cartPrice } from "@/context/AppProvider";
 import Image from "next/image";
 import { useContext } from "react";
-import { DeleteIcon } from "../layout/Icons";
+import { DeleteIconItem } from "../layout/IconsItem";
 
 export default function ProductsCart() {
   const { cartProducts, removeCart } = useContext(CartContext);
@@ -27,7 +27,7 @@ export default function ProductsCart() {
               </span>
               <div>
                 <button onClick={() => removeCart(product)}>
-                  <DeleteIcon />
+                  <DeleteIconItem />
                 </button>
               </div>
             </div>
