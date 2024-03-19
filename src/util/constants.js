@@ -15,7 +15,7 @@ export const ROUTES = {
     orders: "/orders",
     productsItems: "/products-items",
     productsItemsNew: "/products-items/new",
-    productsItems: "/products-items",
+    productsItemsEdit: "/products-items/edit",
     profile: "/profile",
     users: "/users",
     usersEdit: "/users/edit"
