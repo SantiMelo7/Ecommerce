@@ -16,7 +16,13 @@ export default function ProductsPage() {
             <div className="mt-5">
                 <NoResults item={products} />
             </div>
-            <MenuPost />
+            <MenuPost config={{
+                ShowImages: true,
+                ShowName: true,
+                ShowDescription: false,
+                ShowPrice: false,
+                ShowCategory: true,
+            }} />
         </section>
     )
 }
