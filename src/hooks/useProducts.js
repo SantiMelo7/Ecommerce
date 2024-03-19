@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
+import { ROUTES } from "@/util/constants"
 
 export function usePostProducts() {
     const [products, setProducts] = useState([])
@@ -20,7 +21,6 @@ export function useProductRequest() {
     const [product, setProduct] = useState(null)
     const [error, setError] = useState(null)
     const router = useRouter()
-    const routerProduct = router.push("/products-items")
 
     useEffect(() => {
         fetch("/api/products").then(response => {
@@ -31,19 +31,22 @@ export function useProductRequest() {
         })
     }, [])
 
-    async function handleFormSubmit(ev, data) {
+    async function handleNewProduct(ev, data) {
+        console.log(data);
         ev.preventDefault()
-        try {
-            const response = await fetch("/api/products", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            })
-            setError(false)
-            routerProduct()
-        } catch (error) {
-            setError(error)
-            router.push("/products-items/new")
+        const response = await fetch("/api/products", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        console.log(response.request)
+        console.log(response.data)
+        setError(false)
+        if (response.ok) {
+            router.push(ROUTES.productsItems)
+        } else {
+            setError(true)
+            router.push(ROUTES.productsItemsNew)
         }
     }
 
@@ -69,5 +72,5 @@ export function useProductRequest() {
         routerProduct()
     }
 
-    return { product, handleSubmitEdit, handleDelete, handleFormSubmit, error }
+    return { product, handleSubmitEdit, handleDelete, handleNewProduct, error }
 }
