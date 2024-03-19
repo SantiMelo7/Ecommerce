@@ -11,24 +11,24 @@ export default function InputProducts({ onSubmit, product }) {
   return (
     <section className="flex flex-col justify-center items-center">
       <form onSubmit={(ev) => onSubmit(ev, updatedProduct)}>
-        <div className="flex flex-col justify-start items-start text-start mb-3">
-          <label>Category</label>
-          {/*El valor es el primer estado de las categorias, el change es, el ev, damos la funcion de la actualizacion damos la key, la category, y decimos que si el primer estado de las categorias, damos el metodo find, el cual es el metodo que busca el primer arreglo que cumpla con las condiciones, damos la funcion, damos la categoria
-            del _id que sea igual al valor del target*/}
-          <select
-            className="mt-3 bg-blue-300 text-black md:w-[70vh] sm:w-[40vh] py-2 rounded-md text-xl"
-            value={updatedProduct?.category || ""}
-            name="category"
-            id="category"
-            onChange={(ev) => handleUpdate("category", ev.target.value)}
-          >
-            {categories?.length > 0 &&
-              categories?.map((text) => (
-                <option key={text._id} value={text.name || ""}>
-                  {text.name}
-                </option>
-              ))}
-          </select>
+        <div className="flex justify-start items-start text-start mb-3">
+          <label>
+            Category
+            <select
+              className="mt-3 bg-blue-300 text-black md:w-[70vh] sm:w-[40vh] py-2 rounded-md text-xl flex"
+              value={updatedProduct?.category || ""}
+              name="category"
+              id="category"
+              onChange={(ev) => handleUpdate("category", ev.target.value)}
+            >
+              {categories?.length > 0 &&
+                categories?.map((text) => (
+                  <option key={text._id} value={text.name || ""}>
+                    {text.name}
+                  </option>
+                ))}
+            </select>
+          </label>
         </div>
         <GenericInput
           label="Name"
@@ -56,11 +56,13 @@ export default function InputProducts({ onSubmit, product }) {
           className="md:w-[70vh] sm:w-[40vh]"
         />
         <div className="mt-3">
-          <label>Images</label>
-          <ImageCloudinary
-            link={updatedProduct?.images || ""}
-            setLink={(url) => handleUpdate("images", url)}
-          />
+          <label>
+            Images
+            <ImageCloudinary
+              link={updatedProduct?.images || ""}
+              setLink={(url) => handleUpdate("images", url)}
+            />
+          </label>
         </div>
         <div
           className="flex justify-center items-center relative bottom-12
