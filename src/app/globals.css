@@ -31,10 +31,11 @@ div.css > * {
 
 span.span-about {
   padding: 7px;
+  text-align: center;
 }
 
 label {
-  @apply text-2xl text-gray-600 font-bold uppercase mt-3 pb-3;
+  @apply text-2xl text-red-800 font-bold uppercase mt-5;
 }
 
 h1.title-categories {
