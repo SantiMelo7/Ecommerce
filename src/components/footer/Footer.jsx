@@ -16,8 +16,8 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-900">
-      <div className="flex flex-row justify-between max-w-screen-2xl">
-        <div className="mt-5 flex flex-row justify-center items-center gap-x-4">
+      <div className="flex md:flex-row sm:flex-col justify-between max-w-screen-2xl">
+        <div className="mt-5 flex flex-row md:justify-between sm:justify-center items-center gap-x-4">
           <TitleFooter title="Follow us social media" />
           <FacebookIcon className="text-blue-500 w-[50px] h-[50px]" />
           <link
@@ -35,10 +35,10 @@ export default function Footer() {
           <ListText text="See more" />
           <ListText text="Tote bags" />
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <Image src="/logo.webp" width={200} height={200} />
         </div>
-        <div className="mt-8">
+        <div className="md:mt-8 sm:mt-0">
           <TitleFooter title="Services" />
           <ListText text="Embroidery" />
           <ListText text="Screen printin" />
@@ -46,7 +46,7 @@ export default function Footer() {
           <ListText text="Design Studio" />
           <ListText text="Design Templates" />
         </div>
-        <div className="mt-9 md:grid md:grid-cols-2 gap-x-4 md:gap-y-4 sm:gap-y-8">
+        <div className="mt-9 sm:grid sm:grid-cols-2 max-w-screen-2xl mx-auto gap-x-4 md:gap-y-4 sm:gap-y-8">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />

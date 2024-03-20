@@ -1,8 +1,8 @@
-import { Oswald } from 'next/font/google'
+import { Newsreader } from 'next/font/google'
 import './globals.css'
 import AppProvider from '@/context/AppProvider'
 
-const oswald = Oswald({ subsets: ['cyrillic'], weight: ["400"] })
+const newsreader = Newsreader({ subsets: ['latin'], weight: ["400"] })
 
 export const metadata = {
   title: 'Ecommerce Technology',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>
+      <body className={newsreader.className}>
         <AppProvider>
           {children}
         </AppProvider>

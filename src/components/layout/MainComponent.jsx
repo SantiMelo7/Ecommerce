@@ -10,8 +10,10 @@ import Oferts from "@/Oferts";
 export default function MainComponent() {
   return (
     <>
-      <HeroMenu />
-      <div className="md:flex md:h-[25vh] sm:h-[45vh]">
+      <div className="">
+        <HeroMenu />
+      </div>
+      <div className="md:flex w-screen md:h-[25vh] sm:h-[45vh]">
         <Oferts
           margin="mt-1"
           width={100}
@@ -33,7 +35,7 @@ export default function MainComponent() {
           description="Si en un año, compras mas de $3000 en productos, te ganas unos audifonos"
         />
       </div>
-      <div className="w-full">
+      <div className="w-full md:mt-0 sm:mt-[260px]">
         <MenuPost
           config={{
             ShowImages: true,
@@ -45,13 +47,13 @@ export default function MainComponent() {
           }}
         />
       </div>
-      <div className="w-full mt-10">
+      <div className="w-full md:mt-10 sm:mt-0">
         <AboutTec />
       </div>
-      <div className="w-full mt-10">
+      <div className="w-full">
         <Contact />
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full md:mt-10 sm:mt-0">
         <Footer />
       </div>
     </>

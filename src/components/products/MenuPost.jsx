@@ -18,7 +18,7 @@ export default function MenuPost({ className, config }) {
         src="/fondo-global.webp"
         width={900}
         height={50}
-        className="object-center object-cover w-full h-[95vh] -z-10 absolute"
+        className="object-center object-cover w-full md:h-[95vh] sm:h-full -z-10 absolute"
       />
       <MainTitle title="Products" subtTitle="Some of the products we have" />
       <section className="grid md:grid-cols-4 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 w-full h-full md:max-w-screen-xl md:mt-10 sm:max-w-screen-sm sm:mx-auto">

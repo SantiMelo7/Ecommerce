@@ -21,7 +21,7 @@ export default function TextAbout() {
         offer regular workshops and events where customers can learn new skills,
         discover emerging trends, and connect with like-minded tech enthusiasts.
       </span>
-      <span className="span-about sm:hidden">
+      <span className="span-about md:flex sm:hidden">
         So whether you&apos;re in the market for a new smartphone, craving the
         latest gaming console, or simply want to geek out over the newest tech
         innovations, come experience the excitement at Lorem where technology
