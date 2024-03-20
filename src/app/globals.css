@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+li.menu {
+  @apply bg-[#FEFAE2] px-10 rounded-md hover:transition-all hover:scale-110 text-blue-400;
+}
+
 button.btn-category,
 a.btn-category {
   @apply bg-red-700 px-12 py-2 font-bold text-white rounded-md text-lg hover:transition hover:scale-100 block;
@@ -32,6 +36,8 @@ div.css > * {
 span.span-about {
   padding: 7px;
   text-align: center;
+  font-size: 17px;
+  font-weight: 900;
 }
 
 label {
@@ -83,8 +89,22 @@ img.hero-img {
 
 @media (min-width: 1024px) {
   img.about-img {
-    width: 800px;
+    width: 200px;
     height: 150px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  img.hero-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  img.hero-img {
+    width: 250px;
+    height: 250px;
   }
 }
 

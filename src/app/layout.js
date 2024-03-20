@@ -1,6 +1,5 @@
 import { Oswald } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/layout/Header'
 import AppProvider from '@/context/AppProvider'
 
 const oswald = Oswald({ subsets: ['cyrillic'], weight: ["400"] })
@@ -20,13 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={oswald.className}>
         <AppProvider>
-          <div className="bg-gray-800 -z-10 w-full
-          overflow-hidden">
-            <Header />
-          </div>
           {children}
         </AppProvider>
       </body>
-    </html>
+    </ html>
   )
 }

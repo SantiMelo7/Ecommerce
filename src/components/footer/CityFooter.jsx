@@ -8,15 +8,19 @@ export default function CityFooter() {
         `}
       >
         <li>{year}</li>
-        <li>Los Angeles</li>
-        <li>Logn Beach</li>
-        <li>San Diego</li>
-        <li>San Jose</li>
-        <li>San Francisco</li>
-        <li>Irvine</li>
-        <li>Seatle, WA</li>
-        <li>Las Vegas</li>
-        <li>New England</li>
+        <li>Pachuca</li>
+        <li>CDMX</li>
+        <li>Estado de México</li>
+        <li>Jalisco</li>
+        <li>Monterrey</li>
+        <li>Puebla</li>
+        <li>León</li>
+        <li>Tijuana</li>
+        <li>Aguascalientes</li>
+        <li>Durango</li>
+        <li>Mexicali</li>
+        <li>Tamaulipas</li>
+        <li>Hermosillo</li>
       </ul>
     </footer>
   );

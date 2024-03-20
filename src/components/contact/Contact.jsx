@@ -1,32 +1,45 @@
 import MainTitle from "@/components/layout/MainTitle";
+import GenericInput from "../form/GenericInput";
+import Image from "next/image";
 
 export default function Contact() {
   return (
-    <>
-      <MainTitle title="Contact Us" subtTitle="" />
-      <div className="flex justify-center items-center flex-col md:max-w-2xl sm:max-w-screen-sm mx-auto gap-y-4 text-center">
+    <div className="relative">
+      <Image
+        src="/fondo-global.webp"
+        width={900}
+        height={50}
+        className="object-center object-cover w-full h-[55vh] -z-10 absolute"
+      />
+      <MainTitle title="Contact Us" subtTitle="¿Qué es Lorem Ipsum?" />
+      <div className="flex justify-center gap-x-10 items-center flex-row md:max-w-screen-xl mt-5 sm:max-w-screen-sm mx-auto gap-y-4 text-center">
         <p className="span-about">
-          Thank you for considering us for your technology needs! At Lorem,
-          we&apos;re dedicated to providing exceptional service and support to
-          our customers. Customer Support Hotline: +1 (555) 123-4567 Our hotline
-          is available Monday through Friday, from 9:00 AM to 6:00 PM (EST).
+          Bienvenido a LoremIpsum, tu puente hacia el futuro digital. En un
+          mundo cada vez más interconectado, nuestra empresa se destaca como
+          líder en proporcionar soluciones tecnológicas avanzadas y accesibles
+          para satisfacer tus necesidades de comunicación segura.
         </p>
         <p className="span-about">
-          Whether you&apos;re troubleshooting technical issues, exploring
-          product features, or seeking assistance with your account, we&apos;re
-          committed to providing prompt and effective solutions.
-        </p>
-        <p className="span-about">
-          Your Satisfaction Guaranteed: At Lorem, customer satisfaction is our
-          top priority. We&apos;re committed to providing exceptional service
-          and support to ensure that your experience with us is positive and
-          hassle-free.
-        </p>
-        <p className="span-about">
-          Thank you for choosing Lorem as your technology partner. We look
-          forward to serving you!
+          En LoremIpsum, entendemos la importancia de mantenernos conectados en
+          todo momento. Ya sea a través de dispositivos móviles, servicios en la
+          nube o soluciones de Internet de las cosas (IoT), estamos aquí para
+          garantizar que tu experiencia tecnológica sea fluida, eficiente y
         </p>
       </div>
-    </>
+      <div className="flex justify-center">
+        <h1 className="text-xl font-extrabold mt-10">
+          Conviertete en un Lorem Ipsum en nuestra comunidad
+        </h1>
+      </div>
+      <div className="flex justify-center gap-x-10">
+        <GenericInput className="w-[40vh]" label="Name" />
+        <GenericInput className="w-[40vh]" label="Email" />
+        <div className="block mt-14">
+          <button className="bg-red-200 text-md font-bold px-10 py-2 rounded-md">
+            Suscríbete
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }

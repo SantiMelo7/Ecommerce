@@ -11,18 +11,20 @@ export default function Session() {
     <>
       {session ? (
         <>
-          <div className="flex sm:pl-10 md:flex-row sm:flex-col md:justify-end md:items-end sm:justify-center sm:items-center sm:mt-5 gap-x-3 md:right-7">
+          <div className="flex sm:pl-10 md:flex-row sm:flex-col justify-center items-center sm:mt-5 gap-x-3">
             <div className="flex md:flex-col sm:flex-row gap-x-3 justify-center items-center relative right-5 bottom-[20px]">
               <a href={ROUTES.profile}>
-                <h1>Profile</h1>
+                <h1 className="text-2xl font-extrabold text-yellow-200">
+                  Profile
+                </h1>
               </a>
             </div>
             <button onClick={() => signOut()}>
               <Image
                 priority
-                className="rounded-[50%] right-5 md:bottom-3 sm:bottom-1 relative"
+                className="rounded-[50%] right-5  sm:bottom-1 relative"
                 src={session?.user?.image}
-                width={40}
+                width={50}
                 height={30}
                 alt="Foto de perfil | Google"
               />
