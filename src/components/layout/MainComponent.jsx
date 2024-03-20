@@ -13,26 +13,26 @@ export default function MainComponent() {
       <div className="">
         <HeroMenu />
       </div>
-      <div className="md:flex w-screen md:h-[25vh] sm:h-[45vh]">
-        <Oferts
-          margin="mt-1"
-          width={100}
-          height={100}
-          src="/fondo-verde.webp"
-          srcOfert="/ofert-1.webp"
-          title="Oferta de arranque"
-          date="Todo el mes esta disponible la oferta"
-          description="En tu primera compra mayor a $1000, te llevas una playera de inaguración"
-        />
+      <div className="md:flex w-screen md:h-[30vh] sm:h-[40vh]">
         <Oferts
           margin="mt-1"
           width={130}
           height={130}
+          src="/fondo-verde.webp"
+          srcOfert="/ofert-1.webp"
+          title="Starter offer"
+          date="The offer is available all month"
+          description="On your first purchase over $1000, you get an opening t-shirt"
+        />
+        <Oferts
+          margin="mt-1"
+          width={150}
+          height={150}
           src="/fondo-azul.webp"
           srcOfert="/ofert-2.webp"
-          title="Oferta Principal"
-          date="Oferta Válida en tu primera compra"
-          description="Si en un año, compras mas de $3000 en productos, te ganas unos audifonos"
+          title="Main Offer"
+          date="Offer Valid on your first purchase"
+          description="If in a year, you buy more than $3000 in products, you will win some headphones"
         />
       </div>
       <div className="w-full md:mt-0 sm:mt-[260px]">

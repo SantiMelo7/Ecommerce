@@ -13,6 +13,7 @@ export default function AboutTec() {
         width={900}
         height={50}
         className="object-center object-cover w-full h-full -z-10 absolute"
+        alt="fondo-about"
       />
       <MainTitle title="About the shop" />
       <section className="flex flex-col justify-center items-center lg:text-center md:max-w-screen-lg mx-auto sm:max-w-screen-md sm:text-center">

@@ -9,7 +9,7 @@ export default function ListMenu() {
   const { cartProducts } = useContext(CartContext);
   return (
     <>
-      <ul className="gap-x-8 text-2xl md:flex sm:grid sm:grid-cols-2 sm:text-center sm:mt-7 md:mt-0 ">
+      <ul className="gap-x-8 text-xl md:flex sm:grid sm:grid-cols-2 sm:text-center sm:mt-7 md:mt-0 ">
         <li className="menu">
           <a href={ROUTES.home}>Home</a>
         </li>
@@ -24,8 +24,8 @@ export default function ListMenu() {
             <ShoppingCartIcon className="w-[35px] h-[35px] text-[#FEFAE2]" />
           </a>
         </li>
-        <li className="flex sm:justify-end md:left-0 sm:left-[160px] sm:bottom-7 md:bottom-0  relative">
-          <div className="bg-[#FEFAE2] md:h-[2.2vh] sm:h-[2.8vh] w-4 rounded-[5px] md:right-8 relative">
+        <li className="flex sm:justify-end md:left-0 sm:left-[140px] sm:bottom-8 md:bottom-0  relative">
+          <div className="bg-[#FEFAE2] md:h-[2.2vh] sm:h-[2.3vh] w-4 rounded-[5px] md:right-8 relative">
             <div className="relative text-black flex justify-center items-center text-sm">
               {cartProducts.length}
             </div>
