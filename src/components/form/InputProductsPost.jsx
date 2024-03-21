@@ -17,6 +17,7 @@ export default function InputProductsPost({ productItem, setProductItem }) {
             id="category"
             onChange={(ev) => setProductItem("category", ev.target.value)}
           >
+            <option>Selecciona una opción</option>
             {categoriesName?.length > 0 &&
               categoriesName?.map((text) => (
                 <option key={text._id} value={text.name || ""}>
