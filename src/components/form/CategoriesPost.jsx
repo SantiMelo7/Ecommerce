@@ -5,13 +5,13 @@ import NoResults from "@/components/layout/NoResults";
 import ButtonsCategories from "../button/ButtonsCategories";
 
 export default function CategoriesPost() {
-  const { categories } = useCategoriesRequest();
+  const { categories, setEdited, setCategoriesName } = useCategoriesRequest();
 
   return (
     <section className="mt-7 flex flex-col gap-x-5 hover:transition">
       <NoResults item={categories} />
       {categories?.length > 0 &&
-        categories.map((text) => (
+        categories?.map((text) => (
           <div key={text._id} className="grid md:grid-cols-2">
             <div className="flex flex-col items-center mb-4 bg-orange-300 w-[30vh] mx-auto hover:scale-105 rounded-md">
               <div className="grow rounded-md">
@@ -21,7 +21,7 @@ export default function CategoriesPost() {
               </div>
             </div>
             <ButtonsCategories
-              textName={text}
+              edited={text}
               name={text.name}
               deleteName={text._id}
             />

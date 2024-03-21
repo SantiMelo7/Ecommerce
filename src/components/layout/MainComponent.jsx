@@ -5,7 +5,6 @@ import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
 import AboutTec from "../about/AboutTec";
 import MenuPost from "../products/MenuPost";
-import Combos from "./Combos";
 
 export default function MainComponent() {
   return (
