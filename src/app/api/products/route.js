@@ -4,7 +4,16 @@ import { connectMongoDB } from "@/util/connectMongoDB"
 export async function POST(req) {
     await connectMongoDB()
     const data = await req.json()
-    const doc = await ProductsItem.create(data)
+    const newData = {
+        name: data.name,
+        images: data.images,
+        price: data.price,
+        description: data.description,
+        category: {
+            name: data.category.name
+        }
+    };
+    const doc = await ProductsItem.create(newData)
     return Response.json(doc)
 }
 
