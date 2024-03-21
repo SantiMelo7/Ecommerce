@@ -4,8 +4,8 @@ import { connectMongoDB } from "@/util/connectMongoDB"
 export async function POST(req) {
     await connectMongoDB()
     const data = await req.json()
-    const doc = await ProductsItem.create({ data })
-    return Response.json({ doc })
+    const doc = await ProductsItem.create(data)
+    return Response.json(doc)
 }
 
 export async function PUT(req) {

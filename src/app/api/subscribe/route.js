@@ -1,4 +1,4 @@
-import { SubscribeItem } from "@/models/User";
+import { SubscribeItem } from "@/models/Suscribe";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 import { connectMongoDB } from "@/util/connectMongoDB";
