@@ -5,6 +5,13 @@ import InputNameAndEmail from "./InputNameAndEmail";
 
 export default function InputProfile({ onSubmit, profile }) {
   const { updatedProduct, handleUpdate } = useUpdatedProduct(profile);
+  const updateAddress = {
+    phone: updatedProduct?.phone,
+    postalCode: updatedProduct?.postalCode,
+    city: updatedProduct?.city,
+    streetAddress: updatedProduct?.streetAddress,
+    country: updatedProduct?.country,
+  };
   return (
     <>
       <form
@@ -12,16 +19,7 @@ export default function InputProfile({ onSubmit, profile }) {
         onSubmit={(ev) => onSubmit(ev, updatedProduct)}
       >
         <InputNameAndEmail doc={{ name: updatedProduct?.name }} />
-        <AddressInput
-          address={{
-            phone: updatedProduct?.phone,
-            postalCode: updatedProduct?.postalCode,
-            city: updatedProduct?.city,
-            streetAddress: updatedProduct?.streetAddress,
-            country: updatedProduct?.country,
-          }}
-          setAddress={handleUpdate}
-        />
+        <AddressInput address={updateAddress} setAddress={handleUpdate} />
         <label>
           Admin{" "}
           <input
