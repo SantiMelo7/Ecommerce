@@ -28,7 +28,9 @@ export default function MenuPost({ className, config }) {
           <NoResults item={products} />
         </div>
       ) : null}
-      <MainTitle title="Products" subtTitle="Some of the products we have" />
+      {config.title ? (
+        <MainTitle title="Products" subtTitle="Some of the products we have" />
+      ) : null}
       <section className="grid md:grid-cols-4 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 w-full h-full md:max-w-screen-xl md:mt-10 sm:max-w-screen-sm sm:mx-auto rounded-md">
         {productsToDisplay.length > 0 &&
           productsToDisplay.map((text) => (
