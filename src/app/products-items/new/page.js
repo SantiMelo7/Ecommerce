@@ -13,7 +13,7 @@ export default function NewProductPage() {
             <NavTabs isAdmin={true} />
             <div className="max-h-min mt-10">
                 <ErrorText error={error} />
-                <InputProducts product={null} onSubmit={handleSubmitNewProduct} />
+                <InputProducts onSubmit={handleSubmitNewProduct} />
             </div>
         </section>
     )
