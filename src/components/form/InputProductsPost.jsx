@@ -1,9 +1,10 @@
 import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import GenericInput from "./GenericInput";
+import ImageCloudinary from "../cloudinary/ImageCloudinary";
 
 export default function InputProductsPost({ productItem, setProductItem }) {
   const { categories: categoriesName } = useCategoriesRequest();
-  const { name, description, price, category } = productItem;
+  const { name, description, price, category, images } = productItem;
   return (
     <>
       <div className="flex justify-start items-start text-start mb-3">
@@ -50,6 +51,15 @@ export default function InputProductsPost({ productItem, setProductItem }) {
         id="price"
         className="md:w-[70vh] sm:w-[40vh]"
       />
+      <div className="mt-3">
+        <label>
+          Images
+          <ImageCloudinary
+            link={images || ""}
+            setLink={(url) => setProductItem("images", url)}
+          />
+        </label>
+      </div>
     </>
   );
 }
