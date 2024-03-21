@@ -1,49 +1,42 @@
 import useUpdatedProduct from "@/hooks/useUpdatedProduct";
-import ButtonPay from "../button/ButtonPay";
+import AddressInput from "../form/AddressInput";
 import GenericInput from "../form/GenericInput";
+import ButtonPay from "../button/ButtonPay";
 
 export default function FormCart({ onSubmit, profile }) {
-  const { updatedProduct } = useUpdatedProduct(profile);
+  const { updatedProduct, handleUpdate } = useUpdatedProduct(profile);
   return (
-    <form
-      className="flex flex-col md:justify-center md:items-center mt-10 md:right-10 md:relative sm:max-w-screen-md"
-      onSubmit={(ev) => onSubmit(ev, updatedProduct)}
-    >
-      <h1 className="text-3xl text-center">Checkout</h1>
-      <GenericInput
-        label="phone"
-        value={updatedProduct?.phone}
-        className="md:w-[70vh] sm:w-[40vh]"
-        onChange={(ev) => handleUpdate("phone", ev.target.value)}
+    <form onSubmit={(ev) => onSubmit(ev, updatedProduct)}>
+      <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3">
+        <GenericInput
+          className="md:w-[34vh] sm:w-[40vh]"
+          label="Name"
+          type="text"
+          id="name"
+          value={updatedProduct?.name || ""}
+          onChange={(ev) => handleUpdate("name", ev.target.value)}
+          name="name"
+        />
+        <GenericInput
+          className="md:w-[34vh] sm:w-[40vh]"
+          label="Name of recipient"
+          type="text"
+          id="nameRecipient"
+          value={updatedProduct?.nameRecipient || ""}
+          onChange={(ev) => handleUpdate("nameRecipient", ev.target.value)}
+          name="nameRecipient"
+        />
+      </div>
+      <AddressInput
+        address={{
+          phone: updatedProduct?.phone,
+          postalCode: updatedProduct?.postalCode,
+          city: updatedProduct?.city,
+          streetAddress: updatedProduct?.streetAddress,
+          country: updatedProduct?.country,
+        }}
+        setAddress={handleUpdate}
       />
-      <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <GenericInput
-          label="Postal Code"
-          className="md:w-[35vh] sm:w-[40vh]"
-          value={updatedProduct?.postalCode}
-          onChange={(ev) => handleUpdate("postalCode", ev.target.value)}
-        />
-        <GenericInput
-          label="City"
-          className="md:w-[34vh] sm:w-[40vh]"
-          value={updatedProduct?.city}
-          onChange={(ev) => handleUpdate("city", ev.target.value)}
-        />
-      </div>
-      <div className="md:grid md:grid-cols-2 mx-auto md:relative left-2 gap-x-3">
-        <GenericInput
-          label="Street Address"
-          value={updatedProduct?.streetAddress}
-          className="md:w-[35vh] sm:w-[40vh]"
-          onChange={(ev) => handleUpdate("streetAddress", ev.target.value)}
-        />
-        <GenericInput
-          label="Country"
-          value={updatedProduct?.country}
-          className="md:w-[34vh] sm:w-[40vh]"
-          onChange={(ev) => handleUpdate("country", ev.target.value)}
-        />
-      </div>
       <ButtonPay />
     </form>
   );

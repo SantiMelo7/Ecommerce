@@ -1,22 +1,42 @@
-import useUpdatedProduct from "@/hooks/useUpdatedProduct";
+import useCategoriesRequest from "@/hooks/useCategoriesRequest";
 import GenericInput from "./GenericInput";
 
-export default function InputProductsPost({ productItem }) {
-  const { updatedProduct, handleUpdate } = useUpdatedProduct(productItem);
+export default function InputProductsPost({ productItem, setProductItem }) {
+  const { categories: categoriesName } = useCategoriesRequest();
+  const { name, description, price, category } = productItem;
   return (
     <>
+      <div className="flex justify-start items-start text-start mb-3">
+        <label>
+          Category
+          <select
+            className="md:w-[70vh] sm:w-[40vh] py-2 text-white"
+            value={category || ""}
+            name="category"
+            id="category"
+            onChange={(ev) => setProductItem("category", ev.target.value)}
+          >
+            {categoriesName?.length > 0 &&
+              categoriesName?.map((text) => (
+                <option key={text._id} value={text.name || ""}>
+                  {text.name}
+                </option>
+              ))}
+          </select>
+        </label>
+      </div>
       <GenericInput
         label="Name"
-        value={updatedProduct?.name}
-        onChange={(ev) => handleUpdate("name", ev.target.value)}
+        value={name || ""}
+        onChange={(ev) => setProductItem("name", ev.target.value)}
         name="name"
         id="name"
         className="md:w-[70vh] sm:w-[40vh]"
       />
       <GenericInput
         label="Description"
-        value={updatedProduct?.description}
-        onChange={(ev) => handleUpdate("description", ev.target.value)}
+        value={description || ""}
+        onChange={(ev) => setProductItem("description", ev.target.value)}
         name="description"
         className="md:w-[70vh] sm:w-[40vh]"
         id="description"
@@ -24,8 +44,8 @@ export default function InputProductsPost({ productItem }) {
 
       <GenericInput
         label="Price"
-        value={updatedProduct?.price}
-        onChange={(ev) => handleUpdate("price", ev.target.value)}
+        value={price || ""}
+        onChange={(ev) => setProductItem("price", ev.target.value)}
         name="price"
         id="price"
         className="md:w-[70vh] sm:w-[40vh]"
