@@ -25,7 +25,7 @@ export default function InputCategories() {
             onChange={(ev) => setCategoriesName(ev.target.value)}
             type="text"
             name="categoriesName"
-            className="md:w-[60vh] sm:w-[50vh]"
+            className="md:w-[60vh] sm:w-[50vh] mt-3 mx-auto"
           />
         </div>
         <div className="flex justify-center gap-3 mt-5">

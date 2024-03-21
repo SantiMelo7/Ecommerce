@@ -37,7 +37,9 @@ export default function FormCart({ onSubmit, profile }) {
         }}
         setAddress={handleUpdate}
       />
-      <ButtonPay />
+      <div className="flex justify-center items-center">
+        <ButtonPay />
+      </div>
     </form>
   );
 }

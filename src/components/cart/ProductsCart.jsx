@@ -1,39 +1,34 @@
-import { CartContext, cartPrice } from "@/context/AppProvider";
+import { CartContext } from "@/context/AppProvider";
 import Image from "next/image";
 import { useContext } from "react";
 import { DeleteIconItem } from "../layout/IconsItem";
 
 export default function ProductsCart() {
-  const { cartProducts, removeCart } = useContext(CartContext);
+  const { cartProducts, removeCart, cartPrice } = useContext(CartContext);
   return (
-    <>
+    <section className="mt-10 sm:flex sm:flex-col sm:relative sm:right-5 md:grid md:grid-cols-2 gap-y-10 gap-x-6 pl-11">
       {cartProducts?.map((product, index) => (
-        <div
-          key={index}
-          className="mt-10 flex md:flex-row sm:flex-col md:justify-start md:items-start sm:justify-center sm:items-center gap-x-6"
-        >
-          <Image
-            src={product.images}
-            width={150}
-            height={200}
-            className="rounded-md shadow-lg shadow-gray-400 mb-5 "
-            alt="Product"
-          />
-          <div className="mt-6">
-            <h1 className="text-2xl font-bold">{product.name}</h1>
-            <div className="mt-2 flex flex-col">
+        <div key={index}>
+          <div className="flex border-b border-black md:w-96 sm:w-80">
+            <Image
+              src={product.images}
+              width={100}
+              height={100}
+              className="rounded-md shadow-lg shadow-gray-400 mb-5"
+              alt="Product"
+            />
+            <div className="flex flex-col left-3 relative mt-5">
+              <h1 className="text-2xl font-bold">{product.name}</h1>
               <span className="text-xl font-extrabold text-center">
                 ${cartPrice(product)}
               </span>
-              <div className="flex justify-center items-center">
-                <button onClick={() => removeCart(product)}>
-                  <DeleteIconItem />
-                </button>
-              </div>
+              <button onClick={() => removeCart(product)}>
+                <DeleteIconItem />
+              </button>
             </div>
           </div>
         </div>
       ))}
-    </>
+    </section>
   );
 }
