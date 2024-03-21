@@ -1,6 +1,6 @@
 export default function TextAbout() {
   return (
-    <div className="flex flex-col gap-y-2 md:mt-2 sm:mt-1 max-w-screen-xl">
+    <div className="flex flex-col md:justify-start sm:justify-center md:items-start sm:items-center gap-y-2 md:mt-7 sm:mt-1 max-w-screen-md">
       <span className="span-about">
         Welcome to Lorem your one-stop destination for all things tech! Nestled
         in the heart of downtown, Lorem boasts a vast array of cutting-edge
@@ -20,12 +20,6 @@ export default function TextAbout() {
         passionate about fostering a tech-savvy community. That&apos;s why we
         offer regular workshops and events where customers can learn new skills,
         discover emerging trends, and connect with like-minded tech enthusiasts.
-      </span>
-      <span className="span-about md:flex sm:hidden">
-        So whether you&apos;re in the market for a new smartphone, craving the
-        latest gaming console, or simply want to geek out over the newest tech
-        innovations, come experience the excitement at Lorem where technology
-        meets community.
       </span>
     </div>
   );

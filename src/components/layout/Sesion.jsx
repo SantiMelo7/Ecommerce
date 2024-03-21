@@ -1,45 +1,37 @@
 "use client";
 
-import { ROUTES } from "@/util/constants";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Session() {
   const { data: session } = useSession();
   return (
     <>
       {session ? (
-        <>
-          <div className="flex sm:pl-10 md:flex-row sm:flex-col justify-center items-center sm:mt-5 gap-x-3">
-            <div className="flex md:flex-col sm:flex-row gap-x-3 justify-center items-center relative right-5 bottom-[20px]">
-              <a href={ROUTES.profile}>
-                <h1 className="text-2xl font-extrabold text-yellow-200">
-                  Profile
-                </h1>
-              </a>
-            </div>
-            <button onClick={() => signOut()}>
-              <Image
-                priority
-                className="rounded-[50%] right-5  sm:bottom-1 relative"
-                src={session?.user?.image}
-                width={50}
-                height={30}
-                alt="Foto de perfil | Google"
-              />
-            </button>
+        <div className="flex flex-row md:top-44 sm:top-48 justify-end items-end gap-x-3 relative">
+          <button onClick={() => signOut()}>
+            <Image
+              priority
+              className="rounded-[50%] right-5 sm:bottom-1 relative"
+              src={session?.user?.image}
+              width={60}
+              height={30}
+              alt="Foto de perfil | Google"
+            />
+          </button>
+          <div className="flex md:flex-col sm:flex-row gap-x-3 justify-end items-end relative bottom-3 bg-[#FEFAE2] px-5 py-1 rounded-md">
+            <a href={"/profile"} className="text-2xl font-extrabold text-black">
+              Profile
+            </a>
           </div>
-        </>
+        </div>
       ) : (
-        <>
-          <a
-            className="cursor-pointer md:relative bottom-2 md:right-10 sm:text-center"
-            onClick={() => signIn("google")}
-          >
-            Iniciar Sesion
-          </a>
-        </>
+        <a
+          className="cursor-pointer relative md:top-40 sm:top-48 bg-orange-200 py-2 px-7 rounded-lg  text-2xl sm:text-center"
+          onClick={() => signIn("google")}
+        >
+          Iniciar Sesion
+        </a>
       )}
     </>
   );

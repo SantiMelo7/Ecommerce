@@ -16,9 +16,9 @@ export default function AboutTec() {
         alt="fondo-about"
       />
       <MainTitle title="About the shop" />
-      <section className="flex flex-col justify-center items-center lg:text-center md:max-w-screen-lg mx-auto sm:max-w-screen-md sm:text-center">
+      <section className="flex md:flex-row sm:flex-col md:justify-start sm:justify-center md:items-start sm:items-center lg:text-start md:max-w-screen-2xl mx-auto sm:max-w-screen-md sm:text-center">
         <TextAbout />
-        <div className="grid  md:grid-cols-4 sm:grid-cols-2 gap-4 mt-3 mb-8 md:ml-6">
+        <div className="grid md:grid-cols-4 gap-y-0 gap-x-0 sm:grid-cols-2 gap-4 mt-3 mb-8 md:ml-6">
           <ImageSponsors
             className="about-img"
             src="/photo-1.webp"

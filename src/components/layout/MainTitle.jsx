@@ -4,7 +4,7 @@ function MainTitle({ title, subtTitle }) {
       <h1 className="text-5xl text-red-700 font-extrabold text-center mt-8">
         {title}
       </h1>
-      <h3 className="mt-3 text-2xl uppercase text-center md:mb-2 sm:mb-5 text-violet-300">
+      <h3 className="mt-3 text-3xl uppercase text-center md:mb-2 sm:mb-5 text-violet-300">
         {subtTitle}
       </h3>
     </div>

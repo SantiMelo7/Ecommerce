@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 li.menu {
-  @apply bg-[#FEFAE2] pt-2 md:px-10 sm:px-5 rounded-md hover:transition-all hover:scale-110 text-blue-400;
+  @apply bg-[#FEFAE2] pt-2 md:px-10 sm:px-5 rounded-md hover:transition-all hover:scale-110 text-black border-[3px] border-gray-200;
 }
 
 button.btn-category,
@@ -11,7 +11,8 @@ a.btn-category {
   @apply bg-red-700 px-12 py-2 font-bold text-white rounded-md text-lg hover:transition hover:scale-100 block;
 }
 
-input {
+input,
+select {
   @apply flex justify-center rounded-lg;
   @apply block text-gray-900 font-bold text-xl mb-4 border-none p-2 bg-[#9AB5A4];
 }
@@ -20,23 +21,18 @@ input:disabled {
   @apply bg-gray-300;
 }
 
-input[type="text"].formCategories {
-  @apply flex justify-center md:w-[60vh] sm:w-[40vh] my-3 rounded-md;
-  @apply block border-none p-2 bg-blue-300;
-}
-
 div.css > *.active {
   @apply bg-green-700;
 }
 
 div.css > * {
-  @apply bg-red-400 py-3 px-5 rounded-lg text-white font-bold;
+  @apply bg-red-400 py-2 px-5 rounded-lg text-white font-bold;
 }
 
 span.span-about {
   padding: 7px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 900;
 }
 
@@ -89,7 +85,7 @@ img.hero-img {
 
 @media (min-width: 1024px) {
   img.about-img {
-    width: 200px;
+    width: 900px;
     height: 150px;
   }
 }

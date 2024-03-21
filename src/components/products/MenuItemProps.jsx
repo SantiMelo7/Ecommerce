@@ -10,8 +10,8 @@ function MenuItemProps({ className, config, ...menuItem }) {
     <div className={`flex flex-col shadow-lg ${className}`}>
       {config.ShowImages && (
         <img
-          width={192}
-          height={144}
+          width={200}
+          height={200}
           src={images}
           alt="Images"
           className="rounded-lg mx-auto mt-3"

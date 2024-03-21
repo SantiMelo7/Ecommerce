@@ -35,10 +35,10 @@ export default function Footer() {
           <ListText text="See more" />
           <ListText text="Tote bags" />
         </div>
-        <div className="flex justify-center items-center max-w-screen-2xl mx-auto md:relative md:left-32">
+        <div className="flex justify-center items-center max-w-screen-2xl mx-auto md:relative md:left-40">
           <Image src="/logo.webp" width={200} height={200} />
         </div>
-        <div className="md:mt-8 sm:mt-0 md:relative md:left-32">
+        <div className="md:mt-8 sm:mt-0 md:relative md:left-40">
           <TitleFooter title="Services" />
           <ListText text="Embroidery" />
           <ListText text="Screen printin" />
@@ -46,7 +46,7 @@ export default function Footer() {
           <ListText text="Design Studio" />
           <ListText text="Design Templates" />
         </div>
-        <div className="mt-9 sm:grid sm:grid-cols-2 max-w-screen-2xl mx-auto gap-x-4 md:gap-y-4 sm:gap-y-8 md:relative md:left-32">
+        <div className="mt-9 sm:grid sm:grid-cols-2 max-w-screen-2xl mx-auto gap-x-4 md:gap-y-4 sm:gap-y-8 md:relative md:left-40">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />

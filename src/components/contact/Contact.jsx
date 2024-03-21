@@ -12,11 +12,11 @@ export default function Contact() {
         src="/fondo-global.webp"
         width={900}
         height={50}
-        className="object-center object-cover w-full md:h-[60vh] sm:h-full -z-10 absolute"
+        className="object-center object-cover w-full h-full -z-10 absolute"
         alt="fondo-global"
       />
-      <MainTitle title="Contact Us" subtTitle="¿Qué es Lorem Ipsum?" />
-      <div className="flex justify-center gap-x-10 items-center md:flex-row sm:flex-col md:max-w-screen-md mt-5 sm:max-w-screen-sm mx-auto gap-y-4 text-center">
+      <MainTitle title="Contact Us" subtTitle="¿What is Lorem Ipsum?" />
+      <div className="flex justify-center gap-x-10 items-center md:flex-row sm:flex-col md:max-w-screen-lg mt-5 sm:max-w-screen-sm mx-auto gap-y-4 text-center">
         <p className="span-about text-green-900 font-extrabold">
           Welcome to LoremIpsum, your bridge to the digital future. In a
           increasingly interconnected world, our company stands out as leader in
