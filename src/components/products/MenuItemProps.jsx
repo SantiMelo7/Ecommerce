@@ -30,7 +30,7 @@ function MenuItemProps({ className, config, ...menuItem }) {
       )}
       {config.ShowCategory && (
         <div className="flex justify-center items-center bg-purple-300 w-[40%] mx-auto mt-2 mb-4 rounded-md">
-          <span className="text-xl mb-3 text-white pt-3">{category}</span>
+          <span className="text-xl mb-3 text-white pt-3">{category.name}</span>
         </div>
       )}
     </div>

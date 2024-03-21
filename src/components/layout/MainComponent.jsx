@@ -13,7 +13,7 @@ export default function MainComponent() {
       <div className="overflow-hidden">
         <HeroMenu />
       </div>
-      <div className="md:flex w-full md:h-[37vh] sm:h-full overflow-hidden">
+      <div className="md:flex w-full md:h-[40vh] sm:h-full overflow-hidden">
         <Oferts
           margin="mt-1"
           width={140}
@@ -26,8 +26,8 @@ export default function MainComponent() {
         />
         <Oferts
           margin="mt-1"
-          width={180}
-          height={180}
+          width={160}
+          height={160}
           src="/fondo-azul.webp"
           srcOfert="/ofert-2.webp"
           title="Main Offer"
@@ -46,7 +46,6 @@ export default function MainComponent() {
             slice: 6,
             imageFound: true,
             title: true,
-            //className: "bg-[#D8E19D] shadow-2xl shadow-[#333]",
           }}
         />
       </div>
@@ -54,7 +53,7 @@ export default function MainComponent() {
         <AboutTec />
       </div>
       <div className="md:flex w-full md:h-[30vh] sm:h-[40vh] overflow-hidden">
-        <Oferts width={100} height={100} src="/combo-1.webp" />
+        <Oferts width={100} height={100} src="/fondo-azul.webp" />
         <Oferts width={130} height={130} src="/combo-2.webp" />
         <Oferts width={130} height={130} src="/combo-3.webp" />
       </div>

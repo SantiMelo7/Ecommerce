@@ -11,12 +11,12 @@ export default function Oferts({
   height,
 }) {
   return (
-    <section className="grid grid-cols-2 w-full md:h-[37vh] sm:h-full relative">
+    <section className="grid grid-cols-2 w-full md:h-[40vh] sm:h-full relative">
       <Image
         src={src}
         width={900}
         height={100}
-        className="object-center object-cover w-full md:h-[37vh] sm:h-full -z-10"
+        className="object-center object-cover w-full md:h-[40vh] sm:h-full -z-10"
       />
       <div
         className={`absolute ${margin} flex flex-col justify-center items-center w-full mx-auto text-center animate-zoom-in animate-delay-900`}

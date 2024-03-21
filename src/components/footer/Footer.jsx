@@ -46,7 +46,7 @@ export default function Footer() {
           <ListText text="Design Studio" />
           <ListText text="Design Templates" />
         </div>
-        <div className="mt-9 sm:grid sm:grid-cols-2 max-w-screen-2xl mx-auto gap-x-4 md:gap-y-4 sm:gap-y-8 md:relative md:left-40">
+        <div className="mt-9 sm:grid sm:grid-cols-2 max-w-screen-2xl mx-auto sm:gap-y-8 md:relative lg:left-[115px]">
           <SponsorsFake img={<VisaIcon />} />
           <SponsorsFake img={<PaypalIcon />} />
           <SponsorsFake img={<StripeIcon />} />
