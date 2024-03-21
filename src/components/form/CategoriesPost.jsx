@@ -20,11 +20,7 @@ export default function CategoriesPost() {
                 </h2>
               </div>
             </div>
-            <ButtonsCategories
-              edited={text}
-              name={text.name}
-              deleteName={text._id}
-            />
+            <ButtonsCategories category={text} />
           </div>
         ))}
     </section>
