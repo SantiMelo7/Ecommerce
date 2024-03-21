@@ -5,16 +5,16 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
-export function cartPrice(cartProduct) {
-  let priceTotal = cartProduct.price;
-  return priceTotal;
-}
-
 export default function AppProvider({ session, children }) {
   // estado de los products como array vacio
   const [cartProducts, setCartProducts] = useState([]);
   // si el tipo de window es diferente a undefines damos guardar en local sino nada
   const ls = typeof window !== "undefined" ? window.localStorage : null;
+
+  function cartPrice(cartProduct) {
+    const totalPrice = cartProduct.price;
+    return totalPrice;
+  }
 
   // effect
   useEffect(() => {
@@ -67,6 +67,7 @@ export default function AppProvider({ session, children }) {
         setCartProducts,
         addToCart,
         removeCart,
+        cartPrice,
       }}
     >
       <SessionProvider session={session}>{children}</SessionProvider>
