@@ -10,7 +10,8 @@ export async function POST(req) {
         price: data.price,
         description: data.description,
         category: {
-            name: data.category.name
+            name: data.category
+
         }
     };
     const doc = await ProductsItem.create(newData)
