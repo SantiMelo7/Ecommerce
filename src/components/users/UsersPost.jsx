@@ -1,5 +1,4 @@
 import { useUsers } from "@/hooks/useUsers";
-import { ROUTES } from "@/util/constants";
 import { DeleteIconItem, EditIconItem } from "../layout/IconsItem";
 import Link from "next/link";
 
@@ -27,7 +26,7 @@ export default function UsersPost() {
             </h1>
             <div className="flex gap-x-4">
               <Link
-                href={`${ROUTES.usersEdit}/${text._id}`}
+                href={`/users/edit/${text._id}`}
                 className="bg-orange-500 px-8 py-1 rounded-lg text-white"
               >
                 <EditIconItem />
