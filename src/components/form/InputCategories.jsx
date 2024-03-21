@@ -11,6 +11,7 @@ export default function InputCategories() {
     handleNewCategories,
     edited,
     error,
+    setCategoryName,
   } = useCategoriesRequest();
 
   return (
@@ -24,14 +25,22 @@ export default function InputCategories() {
             onChange={(ev) => setCategoriesName(ev.target.value)}
             type="text"
             name="categoriesName"
-            className="formCategories"
+            className="md:w-[60vh] sm:w-[50vh]"
           />
         </div>
         <div className="flex justify-center gap-3 mt-5">
           <button type="submit" className="btn-category">
             {edited ? "Edit" : "Create"}
           </button>
-          <button className="btn-category">Cancel</button>
+          <button
+            className="btn-category"
+            onClick={() => {
+              setEditedCategory(null);
+              setCategoryName("");
+            }}
+          >
+            Cancel
+          </button>
         </div>
       </form>
     </>

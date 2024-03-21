@@ -27,10 +27,11 @@ export default function InputSubscribe({ onSubmit, profile }) {
         id="email"
         name="email"
         type="email"
-        value={session?.data?.user?.email || ""}
+        value={session ? session?.data?.user?.email : ""}
+        onChange={(ev) => handleUpdate("email", ev.target.value)}
       />
       <div className="block md:mt-[52px] sm:mt-8 sm:pb-4">
-        <button className="bg-red-200 text-2xl font-bold px-10 py-1 rounded-md hover:transition-all hover:scale-105 hover:bg-red-500">
+        <button className="bg-red-200 text-2xl font-bold px-10 py-1 rounded-md hover:transition-all hover:scale-95 hover:bg-red-500 hover:text-white">
           <p className="pt-1">Subscribe</p>
         </button>
       </div>
