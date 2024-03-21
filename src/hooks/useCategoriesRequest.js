@@ -1,5 +1,3 @@
-import { ROUTES } from "@/util/constants";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function useCategoriesRequest() {
@@ -7,7 +5,6 @@ export default function useCategoriesRequest() {
   const [categories, setCategories] = useState([]);
   const [edited, setEdited] = useState(null);
   const [error, setError] = useState(null)
-  const router = useRouter()
 
   useEffect(() => {
     handleFetchCategories();
@@ -15,13 +12,12 @@ export default function useCategoriesRequest() {
 
   async function handleFetchCategories() {
     try {
-      const response = await fetch("/api/categories")
-      const data = await response.json()
-      setCategories(data)
-      setError(false)
-      if (response.ok) {
-        router.push(ROUTES.categoriesItem)
-      }
+      fetch("/api/categories").then((response) => {
+        response.json().then((data) => {
+          setCategories(data)
+          setError(false)
+        })
+      })
     } catch (error) {
       console.log(error)
       setError(true)
@@ -40,7 +36,6 @@ export default function useCategoriesRequest() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      setError(false)
       if (response.ok) {
         window.location.reload()
       }

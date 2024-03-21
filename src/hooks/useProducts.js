@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
-import { ROUTES } from "@/util/constants"
 
 export function useProducts() {
     const [products, setProducts] = useState([])
@@ -18,17 +17,20 @@ export function useProducts() {
     }, [])
     async function handleSubmitNewProduct(ev, data) {
         ev.preventDefault()
-        const response = await fetch("/api/products", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        })
-        setError(false)
-        if (response.ok) {
-            router.push(ROUTES.productsItems)
-        } else {
+        try {
+            const response = await fetch("/api/products", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            setError(false)
+            if (response.ok) {
+                router.push("/products-items")
+            }
+        } catch (error) {
+            console.log(error)
             setError(true)
-            router.push(ROUTES.productsItemsNew)
+            router.push("/products-items/new")
         }
     }
     useEffect(() => {
@@ -40,6 +42,25 @@ export function useProducts() {
         })
     }, [])
 
+    async function handleSubmitNewProduct(ev, data) {
+        ev.preventDefault()
+        try {
+            const response = await fetch("/api/products", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            setError(false)
+            if (response.ok) {
+                router.push("/products-items")
+            }
+        } catch (error) {
+            console.log(error)
+            setError(true)
+            window.location.reload()
+        }
+    }
+
     async function handleSubmitEdit(ev, data) {
         ev.preventDefault()
         data = { ...data, _id: id }
@@ -50,12 +71,12 @@ export function useProducts() {
             })
             setError(false)
             if (response.ok) {
-                router.push(ROUTES.productsItems)
+                router.push("/products-items")
             }
         } catch (error) {
             console.log(error)
             setError(true)
-            router.push(`${ROUTES.productsItemsEdit}/api/products?_id`)
+            router.push("/products-items/edit")
         }
     }
 
@@ -66,12 +87,12 @@ export function useProducts() {
             })
             setError(false)
             if (response.ok) {
-                router.push(ROUTES.productsItems)
+                router.push("/products-items")
             }
         } catch (error) {
             console.log(error)
             setError(true)
-            router.push(`${ROUTES.productsItemsEdit}/api/products?_id`)
+            router.push("/products-items/edit")
         }
     }
     return { products, product, error, handleSubmitNewProduct, handleSubmitEdit, handleDelete }
