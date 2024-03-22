@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="flex md:flex-row sm:flex-col justify-center max-w-screen-2xl mx-auto">
         <div className="mt-5 flex flex-row md:justify-between sm:justify-center items-center gap-x-4">
           <TitleFooter title="Follow us social media" />
-          <FacebookIcon className="text-blue-500 w-[50px] h-[50px]" />
+          <FacebookIcon className="text-blue-400" />
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
             rel="stylesheet"

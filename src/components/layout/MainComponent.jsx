@@ -13,7 +13,7 @@ export default function MainComponent() {
       <div className="overflow-hidden">
         <HeroMenu />
       </div>
-      <div className="md:flex w-full md:h-[40vh] sm:h-full overflow-hidden">
+      <div className="md:flex w-full md:h-[30vh] sm:h-[50vh] overflow-hidden">
         <Oferts
           margin="mt-1"
           width={140}
@@ -43,7 +43,7 @@ export default function MainComponent() {
             ShowDescription: false,
             ShowPrice: true,
             ShowCategory: true,
-            slice: 6,
+            slice: 8,
             imageFound: true,
             title: true,
           }}
@@ -52,12 +52,19 @@ export default function MainComponent() {
       <div className="w-full overflow-hidden">
         <AboutTec />
       </div>
-      <div className="md:flex w-full md:h-[30vh] sm:h-[40vh] overflow-hidden">
-        <Oferts width={100} height={100} src="/fondo-azul.webp" />
-        <Oferts width={130} height={130} src="/combo-2.webp" />
-        <Oferts width={130} height={130} src="/combo-3.webp" />
+      <div className="md:hidden w-full md:h-[30vh] sm:h-[50vh] overflow-hidden">
+        <Oferts
+          margin="mt-1"
+          width={160}
+          height={160}
+          src="/fondo-azul.webp"
+          srcOfert="/ofert-2.webp"
+          title="Main Offer"
+          date="Offer Valid on your first purchase"
+          description="If in one year, you buy more than $3000 in products, you will win headphones"
+        />
       </div>
-      <div className="w-full md:mt-0 sm:mt-[1000px] overflow-hidden">
+      <div className="w-full md:mt-0 overflow-hidden">
         <Contact />
       </div>
       <div className="w-full overflow-hidden">
