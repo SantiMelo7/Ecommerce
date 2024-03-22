@@ -42,25 +42,6 @@ export function useProducts() {
         })
     }, [])
 
-    async function handleSubmitNewProduct(ev, data) {
-        ev.preventDefault()
-        try {
-            const response = await fetch("/api/products", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            })
-            setError(false)
-            if (response.ok) {
-                router.push("/products-items")
-            }
-        } catch (error) {
-            console.log(error)
-            setError(true)
-            window.location.reload()
-        }
-    }
-
     async function handleSubmitEdit(ev, data) {
         ev.preventDefault()
         data = { ...data, _id: id }
