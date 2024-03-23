@@ -1,8 +1,10 @@
 import CartButton from "../button/CartButton";
 import { useContext } from "react";
 import { CartContext } from "@/context/AppProvider";
+import { DeleteIconItem } from "../layout/IconsItem";
 
 function MenuItemProps({ className, config, ...menuItem }) {
+  const { cartProducts, removeCart, cartPrice } = useContext(CartContext);
   const { images, name, price, description, category } = menuItem;
   const { addToCart } = useContext(CartContext);
 
@@ -33,6 +35,19 @@ function MenuItemProps({ className, config, ...menuItem }) {
           <span className="text-xl mb-3 text-white pt-3">{category.name}</span>
         </div>
       )}
+      {cartProducts?.map((product) => {
+        return (
+          <>
+            {config.ShowDelete && (
+              <div className="flex flex-col left-3 relative mt-5">
+                <button onClick={() => removeCart(product)}>
+                  <DeleteIconItem />
+                </button>
+              </div>
+            )}
+          </>
+        );
+      })}
     </div>
   );
 }

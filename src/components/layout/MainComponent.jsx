@@ -6,8 +6,10 @@ import Footer from "../footer/Footer";
 import AboutTec from "../about/AboutTec";
 import MenuPost from "../products/MenuPost";
 import Oferts from "@/components/layout/Oferts";
+import { useProducts } from "@/hooks/useProducts";
 
 export default function MainComponent() {
+  const { products } = useProducts();
   return (
     <>
       <div className="overflow-hidden">
@@ -37,6 +39,7 @@ export default function MainComponent() {
       </div>
       <div className="w-full overflow-hidden">
         <MenuPost
+          item={products}
           config={{
             ShowImages: true,
             ShowName: true,
