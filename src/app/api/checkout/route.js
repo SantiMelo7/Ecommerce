@@ -10,7 +10,5 @@ export async function POST(req) {
 
 export async function GET(req) {
     await connectMongoDB()
-    const data = await req.json();
-    const user = await Order.find(data)
-    return Response.json(user);
+    return Response.json(await Order.find())
 }
