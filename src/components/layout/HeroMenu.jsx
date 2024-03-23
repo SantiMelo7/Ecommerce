@@ -4,7 +4,7 @@ import Video from "./Video";
 
 export default function HeroMenu() {
   return (
-    <section className="flex justify-center items-center w-screen md:h-[50vh] sm:h-[70vh]  mx-auto relative">
+    <section className="flex justify-center items-center w-screen md:h-[50vh] sm:h-[50vh] mx-auto relative">
       <Video src="/video.mp4" />
       <div className="absolute mb-64">
         <img
@@ -13,7 +13,7 @@ export default function HeroMenu() {
           alt="Logo de la tienda"
         />
       </div>
-      <div className="absolute md:mt-8 sm:mb-10 flex flex-row">
+      <div className="absolute md:mt-8 sm:mb-6 flex flex-row">
         <h1 className="text-5xl font-extrabold text-orange-500 animate-flip-y animate-delay-100 z-40">
           Lorem Ipsum Tec
         </h1>

@@ -13,7 +13,7 @@ export default function MainComponent() {
       <div className="overflow-hidden">
         <HeroMenu />
       </div>
-      <div className="md:flex w-full md:h-[40vh] sm:h-[50vh] overflow-hidden">
+      <div className="md:flex w-full md:h-[40vh] sm:h-[40vh] overflow-hidden">
         <Oferts
           margin="mt-1"
           width={140}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 li.menu {
-  @apply bg-[#FEFAE2] pt-2 md:px-10 sm:px-5 rounded-md hover:transition-all hover:scale-110 text-black border-[3px] border-gray-200;
+  @apply bg-[#FEFAE2] pt-1 md:px-10 sm:px-5 rounded-md hover:transition-all hover:scale-110 text-black border-[3px] border-gray-200;
 }
 
 button.btn-category,
