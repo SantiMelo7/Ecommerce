@@ -34,6 +34,12 @@ export default function NavTabs({ isAdmin }) {
             >
               Users-Admin
             </Link>
+            <Link
+              className={path.includes("/orders") ? "active" : ""}
+              href={"/orders"}
+            >
+              Orders
+            </Link>
             <Link href={"/"}>Home</Link>
           </>
         ) : null}
