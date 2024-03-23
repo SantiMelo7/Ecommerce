@@ -18,7 +18,7 @@ export default function ListMenu() {
         <li className="menu md:mt-0 sm:mt-2">
           <a href={"/products"}>All Products</a>
         </li>
-        {cartProducts.length > 1 ? (
+        {cartProducts.length > 0 ? (
           <>
             <li className="md:mt-1 sm:mt-3">
               <a href={"/cart"}>
