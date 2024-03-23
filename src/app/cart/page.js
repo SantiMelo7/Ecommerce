@@ -3,13 +3,11 @@
 import MainTitle from "@/components/layout/MainTitle";
 import ProductsCart from "@/components/cart/ProductsCart";
 import LinkProducts from "@/components/products/LinksProducts";
-import FormCart from "@/components/cart/FormCart";
 import { useCart } from "@/hooks/useCart";
-import { useProfile } from "@/hooks/useProfile";
+import FormCart from "@/components/cart/FormCart";
 
 export default function PageCart() {
-    const { user } = useProfile()
-    const { handleSubmit } = useCart();
+    const { user, handleSubmitNewOrders } = useCart()
     return (
         <div>
             <MainTitle title="Cart" subtTitle="Here you have your added products, make your purchase" />
@@ -21,7 +19,7 @@ export default function PageCart() {
                     <ProductsCart />
                 </div>
                 <div className="relative md:right-12 sm:mt-6">
-                    <FormCart profile={user} onSubmit={handleSubmit} />
+                    <FormCart profile={user} onSubmit={handleSubmitNewOrders} />
                 </div>
             </div>
         </div>
