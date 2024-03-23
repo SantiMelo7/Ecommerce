@@ -28,7 +28,10 @@ export default function Session() {
       ) : (
         <a
           className="cursor-pointer relative md:top-40 sm:top-48 bg-orange-200 py-2 px-7 rounded-lg  text-2xl sm:text-center"
-          onClick={() => signIn("google")}
+          onClick={() => {
+            signIn("google");
+            window.localStorage.clear("nextauth.message");
+          }}
         >
           Iniciar Sesion
         </a>
