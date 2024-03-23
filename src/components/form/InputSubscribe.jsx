@@ -14,15 +14,6 @@ export default function InputSubscribe({ onSubmit, profile }) {
     >
       <GenericInput
         className="w-[40vh]"
-        label="Name"
-        type="text"
-        id="name"
-        value={updatedProduct?.name || ""}
-        onChange={(ev) => handleUpdate("name", ev.target.value)}
-        name="name"
-      />
-      <GenericInput
-        className="w-[40vh]"
         label="Email"
         id="email"
         name="email"
