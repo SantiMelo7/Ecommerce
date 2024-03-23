@@ -8,15 +8,15 @@ export function useCart() {
     const [error, setError] = useState(null)
     const [isAdmin, setIsAdmin] = useState(false);
     const router = useRouter()
+    useEffect(() => {
+        fetch("/api/profile").then((response) => {
+            response.json().then((data) => {
+                setIsAdmin(data);
+            });
+        });
+    }, []);
     async function handleSubmitNewOrders(ev, orderUser) {
         ev.preventDefault();
-        useEffect(() => {
-            fetch("/api/profile").then((response) => {
-                response.json().then((data) => {
-                    setIsAdmin(data);
-                });
-            });
-        }, []);
         try {
             const response = await fetch("/api/checkout", {
                 method: "POST",
