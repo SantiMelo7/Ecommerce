@@ -32,8 +32,8 @@ export default function NavTabs() {
               Products
             </Link>
             <Link
-              className={path.includes("/users") ? "active" : ""}
-              href={"/users"}
+              className={path.includes(`/users${id}`) ? "active" : ""}
+              href={`/users${id}`}
             >
               Users-Admin
             </Link>
@@ -41,10 +41,11 @@ export default function NavTabs() {
         ) : null}
         <Link
           className={path.includes("/orders") ? "active" : ""}
-          href={"/orders"}
+          href={`/orders`}
         >
           Orders
         </Link>
+
         <Link href={"/"}>Home</Link>
       </>
     </div>
