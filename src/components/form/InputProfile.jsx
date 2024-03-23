@@ -20,16 +20,19 @@ export default function InputProfile({ onSubmit, profile }) {
       >
         <InputNameAndEmail doc={{ name: updatedProduct?.name }} />
         <AddressInput address={updateAddress} setAddress={handleUpdate} />
-        <label>
-          Admin{" "}
-          <input
-            type="checkbox"
-            id="admin"
-            checked={updatedProduct?.admin || ""}
-            value={"1"}
-            onChange={(ev) => handleUpdate("admin", ev.target.value)}
-          />
-        </label>
+        {updatedProduct?.admin ? (
+          <label>
+            Admin{" "}
+            <input
+              type="checkbox"
+              id="admin"
+              checked={updatedProduct?.admin || ""}
+              value={"1"}
+              onChange={(ev) => handleUpdate("admin", ev.target.value)}
+            />
+          </label>
+        ) : null}
+
         <ButtonCreate className="bg-orange-400" />
       </form>
     </>
