@@ -1,9 +1,12 @@
 "use client";
 
+import { useCart } from "@/hooks/useCart";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavTabs({ isAdmin }) {
+export default function NavTabs() {
+  const { isAdmin } = useCart();
+
   const path = usePathname();
   return (
     <div className="md:flex md:flex-row justify-center sm:grid sm:grid-cols-2 md:max-w-screen-2xl sm:max-w-screen-sm sm:text-center gap-5 mx-auto text-white css">
@@ -34,15 +37,15 @@ export default function NavTabs({ isAdmin }) {
             >
               Users-Admin
             </Link>
-            <Link
-              className={path.includes("/orders") ? "active" : ""}
-              href={"/orders"}
-            >
-              Orders
-            </Link>
-            <Link href={"/"}>Home</Link>
           </>
         ) : null}
+        <Link
+          className={path.includes("/orders") ? "active" : ""}
+          href={"/orders"}
+        >
+          Orders
+        </Link>
+        <Link href={"/"}>Home</Link>
       </>
     </div>
   );
