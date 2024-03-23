@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 
 export default function InputSubscribe({ onSubmit, profile }) {
   const session = useSession();
-  const { updatedProduct, handleUpdate } = useUpdatedProduct(profile);
+  const { handleUpdate } = useUpdatedProduct(profile);
   return (
     <form
       className="flex md:flex-row sm:flex-col justify-center items-center gap-x-10"
@@ -18,7 +18,7 @@ export default function InputSubscribe({ onSubmit, profile }) {
         id="email"
         name="email"
         type="email"
-        value={session ? session?.data?.user?.email : ""}
+        value={session?.data?.user?.email || ""}
         onChange={(ev) => handleUpdate("email", ev.target.value)}
       />
       <div className="block md:mt-[52px] sm:mt-8 sm:pb-4">

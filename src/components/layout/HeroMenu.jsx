@@ -4,7 +4,7 @@ import Video from "./Video";
 
 export default function HeroMenu() {
   return (
-    <section className="flex justify-center items-center w-screen md:h-[50vh] sm:h-[50vh] mx-auto relative">
+    <section className="flex justify-center items-center w-screen md:h-[50vh] sm:h-[60vh] mx-auto relative">
       <Video src="/video.mp4" />
       <div className="absolute mb-64">
         <img

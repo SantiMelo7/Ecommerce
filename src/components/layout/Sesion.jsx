@@ -19,9 +19,12 @@ export default function Session() {
               alt="Foto de perfil | Google"
             />
           </button>
-          <div className="flex md:flex-col sm:flex-row gap-x-3 justify-end items-end relative bottom-3 bg-[#FEFAE2] px-5 py-1 rounded-md">
-            <a href={"/profile"} className="text-2xl font-extrabold text-black">
-              Profile
+          <div className="flex md:flex-col sm:flex-row gap-x-3 justify-end items-end relative bottom-3 rounded-md">
+            <a
+              href={"/profile"}
+              className="text-2xl font-extrabold text-orange-500"
+            >
+              {`${session?.user?.name} - Profile`}
             </a>
           </div>
         </div>
