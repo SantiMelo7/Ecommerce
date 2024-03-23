@@ -5,7 +5,7 @@ import MainTitle from "../../components/layout/MainTitle"
 import useCategoriesRequest from "../../hooks/useCategoriesRequest"
 import { useProducts } from "../../hooks/useProducts"
 import { configAll } from "@/util/constants"
-import LinkProducts from "@/components/products/LinksProducts"
+import ListMenu from "@/components/layout/ListMenu"
 
 export default function CategoriesHomePage() {
     const { products } = useProducts()
@@ -16,7 +16,9 @@ export default function CategoriesHomePage() {
             <div className="relative">
                 <MainTitle title="All the products" subtTitle="Here you will find the full variety of products we have in more detail." />
             </div>
-            <LinkProducts href="/" text="Volver a la página principal" />
+            <div className="flex justify-center items-center mt-5">
+                <ListMenu />
+            </div>
             {categories.length > 0 && categories.map((text) => (
                 <div key={text._id}>
                     <h1 className="title-categories">{text.name}</h1>
