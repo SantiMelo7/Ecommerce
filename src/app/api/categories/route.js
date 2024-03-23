@@ -10,8 +10,8 @@ export async function POST(req) {
 
 export async function PUT(req) {
     await connectMongoDB()
-    const { _id, name } = await req.json()
-    await Categories.updateOne({ _id }, { name })
+    const { _id } = await req.json()
+    await Categories.updateOne(_id)
     return Response.json(true)
 }
 
