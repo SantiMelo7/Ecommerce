@@ -18,7 +18,9 @@ export default function OrdersPage() {
             <NavTabs isAdmin={true} />
             {orderItems.length > 0 &&
                 orderItems.map((text) => (
-                    <p>{text.name}</p>
+                    <div key={text._id}>
+                        <p>{text.name}</p>
+                    </div>
                 ))}
         </section>
     )
