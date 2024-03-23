@@ -20,8 +20,19 @@ export async function POST(req) {
 
 export async function PUT(req) {
     await connectMongoDB()
-    const { _id, name } = await req.json()
-    await ProductsItem.updateOne({ _id }, { name })
+    const data = await req.json()
+    const newData = {
+        _id: data._id,
+        name: data.name,
+        images: data.images,
+        price: data.price,
+        description: data.description,
+        category: {
+            name: data.category
+
+        }
+    };
+    await ProductsItem.updateOne(newData)
     return Response.json(true)
 }
 
