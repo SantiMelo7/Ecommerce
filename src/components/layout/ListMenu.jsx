@@ -18,18 +18,22 @@ export default function ListMenu() {
         <li className="menu md:mt-0 sm:mt-2">
           <a href={"/products"}>All Products</a>
         </li>
-        <li className="md:mt-1 sm:mt-3">
-          <a href={"/cart"}>
-            <ShoppingCartIcon className="w-[35px] h-[35px] text-[#FEFAE2]" />
-          </a>
-        </li>
-        <li className="flex sm:justify-end md:left-0 sm:left-[140px] sm:bottom-8 md:bottom-0  relative">
-          <div className="bg-[#FEFAE2] md:h-[2.2vh] sm:h-[2.3vh] w-4 rounded-[5px] md:right-8 relative">
-            <div className="relative text-black flex justify-center items-center text-sm">
-              {cartProducts.length}
-            </div>
-          </div>
-        </li>
+        {cartProducts.length > 1 ? (
+          <>
+            <li className="md:mt-1 sm:mt-3">
+              <a href={"/cart"}>
+                <ShoppingCartIcon className="w-[35px] h-[35px] text-[#FEFAE2]" />
+              </a>
+            </li>
+            <li className="flex sm:justify-end md:left-0 sm:left-[140px] sm:bottom-8 md:bottom-0  relative">
+              <div className="bg-[#FEFAE2] md:h-[2.2vh] sm:h-[2.3vh] w-4 rounded-[5px] md:right-8 relative">
+                <div className="relative text-black flex justify-center items-center text-sm">
+                  {cartProducts.length}
+                </div>
+              </div>
+            </li>
+          </>
+        ) : null}
       </ul>
     </>
   );
