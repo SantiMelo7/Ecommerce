@@ -5,10 +5,10 @@ export async function POST(req) {
     await connectMongoDB()
     const data = await req.json();
     const orderDoc = await Order.create(data);
-    return Response.json(orderDoc)
+    return Response.json({ orderDoc })
 }
 
-export async function GET(req) {
+export async function GET() {
     await connectMongoDB()
     return Response.json(await Order.find())
 }
