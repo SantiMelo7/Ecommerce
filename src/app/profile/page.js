@@ -9,7 +9,7 @@ export default function ProfilePage() {
     const { user, handleSubmitProfile, error } = useProfile()
     return (
         <div className="mt-5">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <ErrorText error={error} />
             <div className="mt-10">
                 <InputProfile profile={user} onSubmit={handleSubmitProfile} />

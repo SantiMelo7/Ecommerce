@@ -10,7 +10,7 @@ export default function NewProductPage() {
 
     return (
         <section className="mt-5 text-gray-300 relative top-18">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <div className="max-h-min mt-10">
                 <ErrorText error={error} />
                 <InputProducts onSubmit={handleSubmitNewProduct} />

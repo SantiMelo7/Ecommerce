@@ -6,7 +6,7 @@ import UsersPost from "@/components/users/UsersPost";
 export default function UsersPage() {
     return (
         <section className="mt-5">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <UsersPost />
         </section>
     )

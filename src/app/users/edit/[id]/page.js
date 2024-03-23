@@ -8,7 +8,7 @@ export default function UserEditPage() {
     const { userProfile, handleSubmitEdit } = useUsers()
     return (
         <section className="mt-5">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <InputProfile profile={userProfile} onSubmit={handleSubmitEdit} />
         </section>
     )

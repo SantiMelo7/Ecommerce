@@ -7,7 +7,7 @@ import MenuPost from "@/components/products/MenuPost"
 export default function ProductsPage() {
     return (
         <section className="mt-5 mb-10">
-            <NavTabs isAdmin={true} />
+            <NavTabs />
             <LinkProducts href={"products-items/new"} text="Crear Un Nuevo Producto" />
             <MenuPost config={{
                 ShowImages: true,
