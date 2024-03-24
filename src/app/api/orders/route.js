@@ -8,7 +8,6 @@ export async function GET(req) {
     await connectMongoDB()
     const session = await getServerSession(authOptions)
     const userEmail = session?.user?.email
-    console.log(userEmail)
     let isAdmin = false
     const url = new URL(req.url)
     const _id = url.searchParams.get("_id")

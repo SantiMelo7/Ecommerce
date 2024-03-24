@@ -32,8 +32,8 @@ export default function NavTabs() {
               Products
             </Link>
             <Link
-              className={path.includes(`/users${id}`) ? "active" : ""}
-              href={`/users${id}`}
+              className={path.includes(`/users`) ? "active" : ""}
+              href={`/users`}
             >
               Users-Admin
             </Link>

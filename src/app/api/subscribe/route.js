@@ -6,14 +6,17 @@ import { connectMongoDB } from "@/util/connectMongoDB";
 export async function PUT(req) {
     await connectMongoDB()
     const data = await req.json();
-    const doc = await SubscribeItem.updateOne(data)
+    const session = await getServerSession(authOptions);
+    const email = session?.user?.email;
+    const doc = await SubscribeItem.updateOne(email, data)
     return Response.json(doc);
 }
 
-export async function GET() {
+/*export async function GET(req) {
     await connectMongoDB()
+    const data = await req.json()
     const session = await getServerSession(authOptions);
     const email = session?.user?.email;
-    const user = await SubscribeItem.find(email)
+    const user = await SubscribeItem.find(email, data)
     return Response.json(user);
-}
+}*/
