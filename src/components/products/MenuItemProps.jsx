@@ -23,7 +23,7 @@ function MenuItemProps({ className, config, ...menuItem }) {
         <h1 className="mt-3 text-2xl text-center font-extrabold">{name}</h1>
       )}
       {config.ShowDescription && (
-        <h4 className="mt-3 text-lg text-center font-extrabold text-violet-300">
+        <h4 className="mt-3 text-lg text-center font-extrabold text-green-300">
           {description}
         </h4>
       )}
@@ -38,6 +38,13 @@ function MenuItemProps({ className, config, ...menuItem }) {
       {cartProducts?.map((product) => {
         return (
           <>
+            {config.ShowPriceTotal && (
+              <div className="flex justify-center items-center">
+                <p className="text-2xl font-extrabold text-red-500">
+                  {`$${cartPrice(product)}`}
+                </p>
+              </div>
+            )}
             {config.ShowDelete && (
               <div className="flex flex-col left-3 relative mt-5">
                 <button onClick={() => removeCart(product)}>
