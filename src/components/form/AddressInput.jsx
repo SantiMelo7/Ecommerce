@@ -1,10 +1,15 @@
 import GenericInput from "./GenericInput";
 
-export default function AddressInput({ address, setAddress }) {
+export default function AddressInput({
+  address,
+  setAddress,
+  disabled = false,
+}) {
   const { phone, postalCode, city, streetAddress, country } = address;
   return (
     <>
       <GenericInput
+        disabled={disabled}
         label="phone"
         value={phone || ""}
         className="md:w-[70vh] sm:w-[40vh]"
@@ -14,6 +19,7 @@ export default function AddressInput({ address, setAddress }) {
       />
       <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3">
         <GenericInput
+          disabled={disabled}
           label="Postal Code"
           className="md:w-[34vh] sm:w-[40vh]"
           value={postalCode || ""}
@@ -22,6 +28,7 @@ export default function AddressInput({ address, setAddress }) {
           name="postalCode"
         />
         <GenericInput
+          disabled={disabled}
           label="City"
           className="md:w-[34vh] sm:w-[40vh]"
           value={city || ""}
@@ -32,6 +39,7 @@ export default function AddressInput({ address, setAddress }) {
       </div>
       <div className="md:grid md:grid-cols-2 mx-auto md:relative gap-x-3">
         <GenericInput
+          disabled={disabled}
           label="Street Address"
           value={streetAddress || ""}
           className="md:w-[34vh] sm:w-[40vh]"
@@ -40,6 +48,7 @@ export default function AddressInput({ address, setAddress }) {
           name="streetAddress"
         />
         <GenericInput
+          disabled={disabled}
           label="Country"
           id="country"
           name="country"
