@@ -1,8 +1,8 @@
 "use client"
 
-import LinkProducts from "@/components/products/LinksProducts"
-import NavTabs from "@/components/layout/NavTabs"
-import MenuPost from "@/components/products/MenuPost"
+import LinkProducts from "../../components/products/LinksProducts"
+import NavTabs from "../../components/layout/NavTabs"
+import MenuPost from "../../components/products/MenuPost"
 
 export default function ProductsPage() {
     return (
