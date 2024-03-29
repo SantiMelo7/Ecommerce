@@ -21,6 +21,7 @@ export default function MainComponent() {
           src="/fondo-verde.webp"
           srcOfert="/ofert-1.webp"
           title="Starter offer"
+          alt="Oferta 1"
           date="The offer is available all month"
           description="On your first purchase over $1000, you get an opening t-shirt"
         />
@@ -28,6 +29,7 @@ export default function MainComponent() {
           margin="mt-1"
           width={160}
           height={160}
+          alt="Oferta 2"
           src="/fondo-azul.webp"
           srcOfert="/ofert-2.webp"
           title="Main Offer"
@@ -57,6 +59,7 @@ export default function MainComponent() {
           margin="mt-1"
           width={160}
           height={160}
+          alt="Oferta 2"
           src="/fondo-azul.webp"
           srcOfert="/ofert-2.webp"
           title="Main Offer"

@@ -1,10 +1,10 @@
 import CartButton from "../button/CartButton";
 import { useContext } from "react";
-import { CartContext, cartPrice } from "@/context/AppProvider";
+import { CartContext } from "@/context/AppProvider";
 import { DeleteIconItem } from "../layout/IconsItem";
 
 function MenuItemProps({ className, config, product, ...menuItem }) {
-  const { removeCart } = useContext(CartContext);
+  const { removeCart, cartPrice } = useContext(CartContext);
   const { images, name, price, description, category } = menuItem;
   const { addToCart } = useContext(CartContext);
 
