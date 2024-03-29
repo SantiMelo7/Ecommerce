@@ -1,6 +1,8 @@
 import { CartContext } from "@/context/AppProvider";
+import { useSession } from "next-auth/react";
 import { useParams, useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
+
 
 export function useCart() {
     const { cartProducts } = useContext(CartContext);
@@ -8,6 +10,15 @@ export function useCart() {
     const [error, setError] = useState(null)
     const [isAdmin, setIsAdmin] = useState(false);
     const router = useRouter()
+    const session = useSession()
+    const userEmail = session?.data?.user?.email
+    useEffect(() => {
+        fetch("/api/profile").then((response) => {
+            response.json().then((data) => {
+                setIsAdmin(data);
+            });
+        });
+    }, []);
     useEffect(() => {
         fetch("/api/profile").then((response) => {
             response.json().then((data) => {
