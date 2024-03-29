@@ -8,7 +8,7 @@ export default function Session() {
   return (
     <>
       {session ? (
-        <div className="flex flex-row md:top-44 sm:top-48 justify-end items-end gap-x-3 relative">
+        <div className="flex flex-row lg:top-[155px] md:top-44 sm:top-48 justify-end items-end gap-x-3 relative">
           <button onClick={() => signOut()}>
             <Image
               priority

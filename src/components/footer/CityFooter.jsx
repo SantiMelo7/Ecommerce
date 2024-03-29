@@ -4,7 +4,7 @@ export default function CityFooter() {
     <footer className="relative md:bg-transparent opacity-[1] sm:bg-[#000] md:border-none block h-full pb-2">
       <ul
         className={`
-           md:flex sm:grid md:flex-row sm:grid-cols-3 justify-center mt-3 items-center gap-x-4 sm:pt-5 sm:gap-y-4 text-gray-300 text-sm text-center
+           lg:flex sm:grid lg:flex-row sm:grid-cols-3 justify-center mt-3 items-center gap-x-4 sm:pt-5 sm:gap-y-4 text-gray-300 text-sm text-center
         `}
       >
         <li>{year}</li>

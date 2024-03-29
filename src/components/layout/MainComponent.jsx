@@ -13,7 +13,7 @@ export default function MainComponent() {
       <div className="overflow-hidden">
         <HeroMenu />
       </div>
-      <div className="md:flex w-full md:h-[40vh] sm:h-[40vh] overflow-hidden">
+      <div className="md:flex w-full md:h-[40vh] sm:h-[45vh] overflow-hidden">
         <Oferts
           margin="mt-1"
           width={140}
@@ -64,9 +64,9 @@ export default function MainComponent() {
           description="If in one year, you buy more than $3000 in products, you will win headphones"
         />
       </div>
-      <div className="w-full md:mt-0 overflow-hidden">
+      {/*<div className="w-full md:mt-0 overflow-hidden">
         <Contact />
-      </div>
+        </div>*/}
       <div className="w-full overflow-hidden">
         <Footer />
       </div>
