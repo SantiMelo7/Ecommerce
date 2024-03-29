@@ -1,10 +1,10 @@
 import CartButton from "../button/CartButton";
 import { useContext } from "react";
-import { CartContext } from "@/context/AppProvider";
+import { CartContext, cartPrice } from "@/context/AppProvider";
 import { DeleteIconItem } from "../layout/IconsItem";
 
-function MenuItemProps({ className, config, ...menuItem }) {
-  const { cartProducts, removeCart, cartPrice } = useContext(CartContext);
+function MenuItemProps({ className, config, product, ...menuItem }) {
+  const { removeCart } = useContext(CartContext);
   const { images, name, price, description, category } = menuItem;
   const { addToCart } = useContext(CartContext);
 
@@ -23,7 +23,7 @@ function MenuItemProps({ className, config, ...menuItem }) {
         <h1 className="mt-3 text-2xl text-center font-extrabold">{name}</h1>
       )}
       {config.ShowDescription && (
-        <h4 className="mt-3 text-lg text-center font-extrabold text-green-300">
+        <h4 className="mt-3 text-xl text-center font-extrabold text-orange-300">
           {description}
         </h4>
       )}
@@ -35,26 +35,20 @@ function MenuItemProps({ className, config, ...menuItem }) {
           <span className="text-xl mb-3 text-white pt-3">{category.name}</span>
         </div>
       )}
-      {cartProducts?.map((product) => {
-        return (
-          <>
-            {config.ShowPriceTotal && (
-              <div className="flex justify-center items-center">
-                <p className="text-2xl font-extrabold text-red-500">
-                  {`$${cartPrice(product)}`}
-                </p>
-              </div>
-            )}
-            {config.ShowDelete && (
-              <div className="flex flex-col left-3 relative mt-5">
-                <button onClick={() => removeCart(product)}>
-                  <DeleteIconItem />
-                </button>
-              </div>
-            )}
-          </>
-        );
-      })}
+      {config.ShowPriceTotal && (
+        <div className="flex justify-center items-center">
+          <p className="text-2xl font-extrabold text-red-500">
+            {`$${cartPrice(product)}`}
+          </p>
+        </div>
+      )}
+      {config.ShowDelete && (
+        <div className="flex flex-col left-3 relative mt-5">
+          <button onClick={() => removeCart(product)}>
+            <DeleteIconItem />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
