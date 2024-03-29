@@ -9,10 +9,10 @@ import { useContext } from "react";
 import MenuItemProps from "@/components/products/MenuItemProps";
 
 export default function PageCart() {
-    const { cartProducts, cartPrice, removeCart } = useContext(CartContext);
+    const { cartProducts } = useContext(CartContext);
     const { orderUser, handleSubmitNewOrders } = useCart()
     return (
-        <div>
+        <>
             <MainTitle title="Cart" subtTitle="Here you have your added products, make your purchase" />
             <div className="relative md:bottom-5 sm:bottom-9">
                 <LinkProducts href="/" text="Volver a la página principal" />
@@ -20,7 +20,7 @@ export default function PageCart() {
             <section className="grid md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 w-full h-full md:max-w-screen-lg md:mt-10 sm:max-w-screen-sm sm:mx-auto rounded-md">
                 {cartProducts?.map((product) => (
                     <div key={product._id}>
-                        <MenuItemProps
+                        <MenuItemProps product={product}
                             config={{
                                 ShowImages: true,
                                 ShowName: true,
@@ -38,6 +38,6 @@ export default function PageCart() {
             <div className="flex justify-center items-center mt-10">
                 <FormCart config={{ ShowButton: true }} profile={orderUser} onSubmit={handleSubmitNewOrders} />
             </div>
-        </div >
+        </ >
     );
 }

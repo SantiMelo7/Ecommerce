@@ -18,7 +18,7 @@ export default function OrdersPage() {
             <section className="grid md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 w-full h-full md:max-w-screen-xl md:mt-10 sm:max-w-screen-sm sm:mx-auto rounded-md">
                 {order?.cartProducts?.map((orderCartProducts) => (
                     <div key={orderCartProducts._id}>
-                        <MenuItemProps config={{
+                        <MenuItemProps product={orderCartProducts} config={{
                             ShowImages: true,
                             ShowName: true,
                             ShowDescription: true,
@@ -28,7 +28,6 @@ export default function OrdersPage() {
                             ShowDelete: false,
                             ShowPriceTotal: true
                         }} {...orderCartProducts} />
-
                     </div>
                 ))}
             </section>
