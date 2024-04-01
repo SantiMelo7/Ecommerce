@@ -13,12 +13,17 @@ export function useCart() {
     const session = useSession()
     const userEmail = session?.data?.user?.email
     useEffect(() => {
+        handleCartContent()
+    }, []);
+
+    async function handleCartContent() {
         fetch("/api/profile").then((response) => {
             response.json().then((data) => {
                 setIsAdmin(data);
             });
         });
-    }, []);
+    }
+
     async function handleSubmitNewOrders(ev, orderUser) {
         ev.preventDefault();
         try {

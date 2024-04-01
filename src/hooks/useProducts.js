@@ -9,12 +9,17 @@ export function useProducts() {
     const [error, setError] = useState(null)
     const router = useRouter()
     useEffect(() => {
+        handleProducts()
+    }, [])
+
+    async function handleProducts() {
         fetch("/api/products").then(response => {
             response.json().then(products => {
                 setProducts(products)
             })
         })
-    }, [id])
+    }
+
     async function handleSubmitNewProduct(ev, data) {
         ev.preventDefault()
         try {

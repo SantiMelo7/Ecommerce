@@ -5,12 +5,16 @@ export function useProfile() {
     const [error, setError] = useState(null)
 
     useEffect(() => {
+        handleProfileContent()
+    }, [])
+
+    async function handleProfileContent() {
         fetch("/api/profile").then(response => {
             response.json().then(data => {
                 setUser(data)
             })
         })
-    }, [])
+    }
 
     async function handleSubmitProfile(ev, data) {
         ev.preventDefault()

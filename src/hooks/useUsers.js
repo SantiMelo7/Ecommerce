@@ -8,13 +8,17 @@ export function useUsers() {
     const [user, setUser] = useState([]);
 
     useEffect(() => {
+        handleUsersContent()
+    }, [])
+
+    async function handleUsersContent() {
         fetch("/api/users").then(response => {
             response.json().then(items => {
                 const item = items.find((user) => user._id === id)
                 setuserProfile(item)
             })
         })
-    }, [])
+    }
 
     async function handleSubmitEdit(ev, data) {
         ev.preventDefault()

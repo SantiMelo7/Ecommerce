@@ -29,7 +29,7 @@ export default function MainComponent() {
           margin="mt-1"
           width={160}
           height={160}
-          alt="Oferta 2"
+          alt="Oferta 2 - Inicial"
           src="/fondo-azul.webp"
           srcOfert="/ofert-2.webp"
           title="Main Offer"
@@ -54,7 +54,7 @@ export default function MainComponent() {
       <div className="w-full overflow-hidden">
         <AboutTec />
       </div>
-      <div className="md:hidden w-full md:h-[30vh] sm:h-[50vh] overflow-hidden">
+      <div className="md:hidden w-full md:h-[30vh] sm:h-[40vh] overflow-hidden">
         <Oferts
           margin="mt-1"
           width={160}
