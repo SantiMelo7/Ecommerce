@@ -14,7 +14,7 @@ export function useProducts() {
                 setProducts(products)
             })
         })
-    }, [])
+    }, [id])
     async function handleSubmitNewProduct(ev, data) {
         ev.preventDefault()
         try {

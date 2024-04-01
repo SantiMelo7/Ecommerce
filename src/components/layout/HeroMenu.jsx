@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ListMenu from "./ListMenu";
 import Session from "./Sesion";
 import Video from "./Video";
@@ -7,7 +8,9 @@ export default function HeroMenu() {
     <section className="flex justify-center items-center w-screen md:h-[50vh] sm:h-[60vh] mx-auto relative">
       <Video src="/video.mp4" />
       <div className="absolute mb-64">
-        <img
+        <Image
+          width={100}
+          height={100}
           src="/logo.webp"
           className="hero-img animate-blurred-fade-in animate-delay-100"
           alt="Logo de la tienda"

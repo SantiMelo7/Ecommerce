@@ -8,14 +8,6 @@ export function useUsers() {
     const [user, setUser] = useState([]);
 
     useEffect(() => {
-        fetch("/api/users").then((response) => {
-            response.json().then((data) => {
-                setUser(data);
-            });
-        });
-    }, []);
-
-    useEffect(() => {
         fetch("/api/users").then(response => {
             response.json().then(items => {
                 const item = items.find((user) => user._id === id)

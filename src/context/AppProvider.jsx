@@ -23,7 +23,7 @@ export default function AppProvider({ session, children }) {
       // damos el segundo estado el parse de ls de cart
       setCartProducts(JSON.parse(ls.getItem("cart")));
     }
-  }, []);
+  }, [ls]);
 
   // guardar en local storage
   function saveCartProducts(cartProducts) {

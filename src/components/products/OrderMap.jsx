@@ -1,5 +1,6 @@
 import { useCart } from "@/hooks/useCart";
 import MainTitle from "../layout/MainTitle";
+import Image from "next/image";
 
 export default function OrderMap() {
   const { orderItems, isAdmin } = useCart();
@@ -10,7 +11,7 @@ export default function OrderMap() {
           <div key={index}>
             {isAdmin ? (
               <div className={`flex flex-col shadow-lg `}>
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={text.cartProducts.images}

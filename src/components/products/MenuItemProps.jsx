@@ -2,6 +2,7 @@ import CartButton from "../button/CartButton";
 import { useContext } from "react";
 import { CartContext } from "@/context/AppProvider";
 import { DeleteIconItem } from "../layout/IconsItem";
+import Image from "next/image";
 
 function MenuItemProps({ className, config, product, ...menuItem }) {
   const { removeCart, cartPrice } = useContext(CartContext);
@@ -11,7 +12,7 @@ function MenuItemProps({ className, config, product, ...menuItem }) {
   return (
     <div className={`flex flex-col shadow-lg ${className}`}>
       {config.ShowImages && (
-        <img
+        <Image
           width={200}
           height={200}
           src={images}

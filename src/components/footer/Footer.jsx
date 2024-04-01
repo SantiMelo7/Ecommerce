@@ -36,7 +36,12 @@ export default function Footer() {
           <ListText text="Tote bags" />
         </div>
         <div className="flex justify-center items-center max-w-screen-2xl mx-auto lg:relative lg:left-40">
-          <Image src="/logo.webp" width={200} height={200} />
+          <Image
+            src="/logo.webp"
+            width={200}
+            height={200}
+            alt="Logo Ecommerce"
+          />
         </div>
         <div className="md:mt-8 sm:mt-0 lg:relative lg:left-40">
           <TitleFooter title="Services" />

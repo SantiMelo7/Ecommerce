@@ -19,13 +19,6 @@ export function useCart() {
             });
         });
     }, []);
-    useEffect(() => {
-        fetch("/api/profile").then((response) => {
-            response.json().then((data) => {
-                setIsAdmin(data);
-            });
-        });
-    }, []);
     async function handleSubmitNewOrders(ev, orderUser) {
         ev.preventDefault();
         try {
