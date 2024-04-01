@@ -1,16 +1,16 @@
 "use client"
 
-//import MainTitle from "@/components/layout/MainTitle";
-//import NavTabs from "@/components/layout/NavTabs"
-//import MenuItemProps from "@/components/products/MenuItemProps";
+import MainTitle from "@/components/layout/MainTitle";
+import NavTabs from "@/components/layout/NavTabs"
+import MenuItemProps from "@/components/products/MenuItemProps";
 import { useOrders } from "@/hooks/useCart"
-//import Link from "next/link";
+import Link from "next/link";
 
 export default function OrdersPageHome() {
-    //const { orderHome } = useOrders()
+    const { orderHome } = useOrders()
 
     return (
-        {/*<div className="mt-5">
+        <div className="mt-5">
             <NavTabs />
             <MainTitle title="Here you can see all your current orders"
                 subtTitle="If you click on it, you can see more detail" />
@@ -34,6 +34,6 @@ export default function OrdersPageHome() {
                     </div>
                 ))}
             </section>
-                            </div>*/}
+        </div>
     )
 }
