@@ -4,7 +4,7 @@
 </a>
 
 ## Description
-
+<div aling="center">
 -**For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.**
 
 -**The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.**
@@ -12,7 +12,7 @@
 -**Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.**
 
 -**Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.**
-
+</div>
 
 ## Instalacion
 
@@ -55,11 +55,11 @@
 
 ## 🛠️ Stack
 <div align="center">
-    <img width="10%" height="10%" src="/public/readme/Next.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/React.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Javascript.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Tailwind.png"></img>
-    <img width="10%" height="10%" src="/public/readme/Mongo.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Postman.svg"></img>
+    <img width="20%" height="20%" src="/public/readme/Next.svg"></img>
+    <img width="20%" height="20%" src="/public/readme/React.svg"></img>
+    <img width="20%" height="20%" src="/public/readme/Javascript.svg"></img>
+    <img width="20%" height="20%" src="/public/readme/Tailwind.png"></img>
+    <img width="20%" height="20%" src="/public/readme/Mongo.svg"></img>
+    <img width="20%" height="20%" src="/public/readme/Postman.svg"></img>
 </div>
 
