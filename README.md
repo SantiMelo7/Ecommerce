@@ -5,22 +5,14 @@
 
 ## Description
 
-```sh
-For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.
+-**For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.**
 
-```
+-**The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.**
 
-```sh
-The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.
-```
+-**Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.**
 
-```sh
-Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.
-```
+-**Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.**
 
-```sh
-Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.
-```
 
 ## Instalacion
 
@@ -61,21 +53,20 @@ Although challenging, the experience of building this ecommerce platform from sc
     <img src="/public/readme/photo-5.webp"></img>
 </div>
 
-
-<div>
 ## 🛠️ Stack
+<div>
 
 - [![Next][next-url] - The web framework for content-driven websites.
 - [![Javascript][javascript-url] -
 - [![React][react-url] -
-- [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
+- [![Tailwind CSS][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
 - [!Mongo DB][mongodb-url] -
 - [!Postman][postman-url] -
 </div>
 
-[next-url]: https://tailwindcss.com/
-[react-url]: https://es.react.dev/
-[javascript-url]: https://javascript.com/
-[tailwind-url]: https://tailwindcss.com/
-[mongodb-url]: https://www.mongodb.com/es
-[postman-url]: https://postman.com/
+[next-url]: /public/readme/Next.svg
+[react-url]: /public/readme/React.svg
+[javascript-url]: /public/readme/Javascript.svg
+[tailwind-url]: /public/readme/Tailwind.png
+[mongodb-url]: /public/readme/MongoDB.svg
+[postman-url]: /public/readme/Postman.svg
