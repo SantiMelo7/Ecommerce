@@ -1,36 +1,70 @@
-<span className="text-2xl">Ecommerce 💻💻</span>
-<img width={100} height={100} src="/public/logo.webp"></img>
+## Ecommerce 💻💻
+<a href="https://ecommerce-tec.netlify.app">
+  <img width="300px" src="./public/logo.webp" alt="Logo" width="800" />
+</a>
 
-## Description ✏️✏️✏️✏️✏️
+## Description
 
-<p className="text-lg">For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.</p>
+```bash
+For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.
 
+The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.
 
-<p className="text-lg">The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.</p>
+Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.
 
+Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.
+```
 
-<p className="text-lg">Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.</p>
+## Instalacion
 
-<p className="text-lg">Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.</p>
+1.Clona el repositorio
+```sh
+    https://github.com/SantiMelo7/Ecommerce.git
+```
+
+2. Instala los paquetes
+```sh
+    npm install
+```
+
+2. Inicia el proyecto
+```sh
+    npm run dev
+```
+
+## Recordatorio
+
+1.Debes tener una base de datos de `Mongo DB`
+```sh
+    https://www.mongodb.com/es/cloud/atlas/register
+```
+
+2. Debes tener un proyecto en `Google Cloud`
+```sh
+    https://console.cloud.google.com/
+```
+
 
 ## Images of the page
 
-<div>
     <img src="/public/readme/photo-1.webp"></img>
     <img src="/public/readme/photo-2.webp"></img>
     <img src="/public/readme/photo-3.webp"></img>
     <img src="/public/readme/photo-4.webp"></img>
     <img src="/public/readme/photo-5.webp"></img>
-    <img src="/public/readme/photo-6.webp"></img>
-</div>
+## 🛠️ Stack
 
-# Tools with which to develop the application
 
-<div>
-    <img width="10%" height="10%" src="/public/readme/next.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/React.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Javascript.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Tailwind.png"></img>
-    <img width="10%" height="10%" src="/public/readme/Mongo.svg"></img>
-    <img width="10%" height="10%" src="/public/readme/Postman.svg"></img>
-</div>
+    - [![Next][next-url] - The web framework for content-driven websites.
+     - [![Javascript][javascript-url] -
+    - [![React][react-url] -
+    - [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
+    - [!Mongo DB][mongodb-badge]][mongodb-url] -
+    - [!Postman][postman-badge]][postman-url] -
+
+    [next-url]: https://tailwindcss.com/
+    [react-url]: https://es.react.dev/
+    [javascript-url]: https://javascript.com/
+    [tailwind-url]: https://tailwindcss.com/
+    [mongodb-url]: https://www.mongodb.com/es
+    [postman-url]: https://postman.com/
