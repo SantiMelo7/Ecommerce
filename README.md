@@ -55,11 +55,11 @@
 
 ## 🛠️ Stack
 <div className="flex flex-col">
-    <img weight="10%" height="10%" src="/public/readme/Next.svg"></img>
-    <img weight="10%" height="10%" src="/public/readme/React.svg"></img>
-    <img weight="10%" height="10%" src="/public/readme/Javascript.svg"></img>
-    <img weight="10%" height="10%" src="/public/readme/Tailwind.png"></img>
-    <img weight="10%" height="10%" src="/public/readme/Mongo.svg"></img>
-    <img weight="10%" height="10%" src="/public/readme/Postman.svg"></img>
+    <img width="10%" height="10%" src="/public/readme/Next.svg"></img>
+    <img width="10%" height="10%" src="/public/readme/React.svg"></img>
+    <img width="10%" height="10%" src="/public/readme/Javascript.svg"></img>
+    <img width="10%" height="10%" src="/public/readme/Tailwind.png"></img>
+    <img width="10%" height="10%" src="/public/readme/Mongo.svg"></img>
+    <img width="10%" height="10%" src="/public/readme/Postman.svg"></img>
 </div>
 
