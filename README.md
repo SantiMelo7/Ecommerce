@@ -5,13 +5,20 @@
 
 ## Description
 
-```bash
+```sh
 For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.
 
+```
+
+```sh
 The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.
+```
 
+```sh
 Integrating MongoDB as the database backend provided me with invaluable experience in setting up data models and implementing CRUD operations. Postman played a crucial role in testing the API endpoints, ensuring smooth communication between the frontend and backend.
+```
 
+```sh
 Although challenging, the experience of building this ecommerce platform from scratch was immensely rewarding. It not only strengthened my programming skills but also taught me the importance of perseverance and problem-solving in real-world projects.
 ```
 
@@ -46,25 +53,29 @@ Although challenging, the experience of building this ecommerce platform from sc
 
 
 ## Images of the page
-
+<div>
     <img src="/public/readme/photo-1.webp"></img>
     <img src="/public/readme/photo-2.webp"></img>
     <img src="/public/readme/photo-3.webp"></img>
     <img src="/public/readme/photo-4.webp"></img>
     <img src="/public/readme/photo-5.webp"></img>
+</div>
+
+
+<div>
 ## 🛠️ Stack
 
+- [![Next][next-url] - The web framework for content-driven websites.
+- [![Javascript][javascript-url] -
+- [![React][react-url] -
+- [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
+- [!Mongo DB][mongodb-url] -
+- [!Postman][postman-url] -
+</div>
 
-    - [![Next][next-url] - The web framework for content-driven websites.
-     - [![Javascript][javascript-url] -
-    - [![React][react-url] -
-    - [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
-    - [!Mongo DB][mongodb-badge]][mongodb-url] -
-    - [!Postman][postman-badge]][postman-url] -
-
-    [next-url]: https://tailwindcss.com/
-    [react-url]: https://es.react.dev/
-    [javascript-url]: https://javascript.com/
-    [tailwind-url]: https://tailwindcss.com/
-    [mongodb-url]: https://www.mongodb.com/es
-    [postman-url]: https://postman.com/
+[next-url]: https://tailwindcss.com/
+[react-url]: https://es.react.dev/
+[javascript-url]: https://javascript.com/
+[tailwind-url]: https://tailwindcss.com/
+[mongodb-url]: https://www.mongodb.com/es
+[postman-url]: https://postman.com/
