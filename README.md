@@ -54,19 +54,12 @@
 </div>
 
 ## 🛠️ Stack
-<div>
-
-- [![Next][next-url] - The web framework for content-driven websites.
-- [![Javascript][javascript-url] -
-- [![React][react-url] -
-- [![Tailwind CSS][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
-- [!Mongo DB][mongodb-url] -
-- [!Postman][postman-url] -
+<div className="flex flex-col">
+    <img weight="10%" height="10%" src="/public/readme/Next.svg"></img>
+    <img weight="10%" height="10%" src="/public/readme/React.svg"></img>
+    <img weight="10%" height="10%" src="/public/readme/Javascript.svg"></img>
+    <img weight="10%" height="10%" src="/public/readme/Tailwind.png"></img>
+    <img weight="10%" height="10%" src="/public/readme/Mongo.svg"></img>
+    <img weight="10%" height="10%" src="/public/readme/Postman.svg"></img>
 </div>
 
-[next-url]: /public/readme/Next.svg
-[react-url]: /public/readme/React.svg
-[javascript-url]: /public/readme/Javascript.svg
-[tailwind-url]: /public/readme/Tailwind.png
-[mongodb-url]: /public/readme/MongoDB.svg
-[postman-url]: /public/readme/Postman.svg
