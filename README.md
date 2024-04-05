@@ -26,7 +26,7 @@
     npm install
 ```
 
-2. Inicia el proyecto
+3. Inicia el proyecto
 ```sh
     npm run dev
 ```
