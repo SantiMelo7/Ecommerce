@@ -5,6 +5,8 @@ import Link from "next/link";
 export default function UsersPost() {
   const { user, handleDelete } = useUsers();
 
+  console.log(user);
+
   return (
     <>
       {user.length > 0 &&

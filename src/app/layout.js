@@ -2,7 +2,7 @@ import { Newsreader } from 'next/font/google'
 import './globals.css'
 import AppProvider from '@/context/AppProvider'
 
-const newsreader = Newsreader({ subsets: ['latin'], weight: ["400"] })
+const newsreader = Newsreader({ subsets: ['latin'], weight: ["500"] })
 
 export const metadata = {
   title: 'Ecommerce Technology',
