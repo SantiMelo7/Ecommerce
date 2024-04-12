@@ -25,7 +25,7 @@ export default function OrdersPageHome() {
                                     <Image width={200} height={200} src={order.cartProducts[0].images}
                                         alt="Images" className="rounded-lg mx-auto mt-3"
                                     />
-                                    <div className="lg:grid lg:grid-cols-2  sm:flex sm:flex-col
+                                    <div className="lg:grid lg:grid-cols-2 sm:flex sm:flex-col
                                         sm:text-center text-xl mt-5 mb-5 max-w-screen-md mx-auto gap-5">
                                         <span className="font-extrabold text-red-500">Owner's name:</span>
                                         <h1 className="text-slate-200 ">{order.orderUser.name}</h1>

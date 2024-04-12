@@ -14,7 +14,7 @@ export default function ProductsHomePage() {
             <div className="flex justify-center items-center mt-5">
                 <ListMenu />
             </div>
-            <MenuPost config={configAll} />
+            <MenuPost className="bg-gradient-to-r from-sky-100 to-teal-100" config={configAll} />
         </section>
     )
 }

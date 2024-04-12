@@ -27,7 +27,7 @@ export default function CategoriesHomePage() {
                     <section className="grid xl:grid-cols-4 md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 md:max-w-screen-2xl md:mt-10 sm:max-w-screen-sm sm:mx-auto">
                         {products.filter(item => item.category.name === text.name).map(item => (
                             <div key={text._id}>
-                                <MenuItemProps {...item} config={configAll} />
+                                <MenuItemProps className="bg-gradient-to-r from-lime-100 to-lime-200" {...item} config={configAll} />
                             </div>
                         ))}
                     </section>
