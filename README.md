@@ -5,6 +5,7 @@
 
 ## Description
 <div aling="center">
+  
 -**For my first self-taught project, I embarked on creating an ecommerce website for a mobile phone store using Next.js. This project allowed me to dive into various technologies such as React.js, JavaScript, Tailwind CSS, MongoDB, and Postman.**
 
 -**The journey began with exploring the fundamentals of Next.js and React.js, enabling me to understand how to structure components and manage state effectively. Tailwind CSS came in handy for swiftly styling the website, offering a plethora of utility classes that streamlined the process.**
@@ -16,7 +17,7 @@
 
 ## Instalacion
 
-1.Clona el repositorio
+1. Clona el repositorio
 ```sh
     https://github.com/SantiMelo7/Ecommerce.git
 ```
