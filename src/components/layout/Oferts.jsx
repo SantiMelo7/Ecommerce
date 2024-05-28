@@ -12,14 +12,7 @@ export default function Oferts({
   alt,
 }) {
   return (
-    <section className="grid grid-cols-2 max-w-screen-2xl md:h-[40vh] sm:h-[70vh] relative">
-      <Image
-        src={src}
-        width={900}
-        height={100}
-        className="object-center object-cover max-w-screen-2xl md:h-[40vh] sm:h-[70vh] -z-10"
-        alt={alt}
-      />
+    <section className="grid grid-cols-2 max-w-screen-2xl">
       <div
         className={`absolute ${margin} flex flex-col justify-center items-center w-full mx-auto text-center animate-zoom-in animate-delay-900`}
       >
