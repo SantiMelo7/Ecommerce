@@ -8,27 +8,36 @@ export default function AboutTec() {
   return (
     <div className="relative">
       <MainTitle title="About the shop" />
-      <se className="grid md:grid-cols-3 gap-y-0 gap-x-0 sm:grid-cols-2 gap-4 mt-3 mb-8">
+      <section className="grid md:grid-cols-3 gap-y-0 gap-x-0 sm:grid-cols-2 gap-4 mt-3 mb-8">
         <TextAbout />
-
         <div>
           <ImageSponsors
             className="about-img"
-            src="/photo-5.webp"
+            src="/photo-1.webp"
             alt="photo-5"
           />
           <ImageSponsors
             className="about-img"
-            src="/photo-6.webp"
+            src="/photo-2.webp"
+            alt="photo-5"
+          />
+          <ImageSponsors
+            className="about-img"
+            src="/photo-3.webp"
+            alt="photo-5"
+          />
+          <ImageSponsors
+            className="about-img"
+            src="/photo-4.webp"
             alt="photo-6"
           />
           <ImageSponsors
             className="about-img"
-            src="/photo-7.webp"
+            src="/photo-5.webp"
             alt="photo-7"
           />
         </div>
-      </se>
+      </section>
     </div>
   );
 }

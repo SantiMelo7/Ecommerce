@@ -8,29 +8,26 @@ export default function Session() {
   return (
     <>
       {session ? (
-        <div className="flex flex-row lg:top-[155px] md:top-44 sm:top-48 justify-end items-end gap-x-3 relative">
+        <div className="flex flex-row -translate-x-5 translate-y-9 gap-x-3">
           <button onClick={() => signOut()}>
             <Image
               priority
-              className="rounded-[50%] right-5 sm:bottom-1 relative"
+              className="rounded-[50%]"
               src={session?.user?.image}
-              width={60}
-              height={30}
+              width={50}
+              height={50}
               alt="Foto de perfil | Google"
             />
           </button>
-          <div className="flex md:flex-col sm:flex-row gap-x-3 justify-end items-end relative bottom-3 rounded-md">
-            <a
-              href={"/profile"}
-              className="text-2xl font-extrabold text-orange-500"
-            >
+          <div className="flex justify-center items-center">
+            <a href={"/profile"} className="text-xl font-extrabold text-white">
               {`${session?.user?.name} - Profile`}
             </a>
           </div>
         </div>
       ) : (
         <a
-          className="cursor-pointer relative md:top-40 sm:top-48 bg-orange-200 py-2 px-7 rounded-lg  text-2xl sm:text-center"
+          className="cursor-pointer bg-orange-200 py-2 px-7 rounded-lg text-2xl sm:text-center"
           onClick={() => {
             signIn("google");
             window.localStorage.clear("nextauth.message");
