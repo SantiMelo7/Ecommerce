@@ -13,15 +13,6 @@ export default function MenuPost({ className, config }) {
   }
   return (
     <div className="relative">
-      {config.imageFound ? (
-        <Image
-          src="/fondo-global.webp"
-          width={900}
-          height={50}
-          className="object-center object-cover w-full h-full -z-10 absolute"
-          alt="fondo-global"
-        />
-      ) : null}
       {config.results ? (
         <div className="mt-5">
           <NoResults item={products} />

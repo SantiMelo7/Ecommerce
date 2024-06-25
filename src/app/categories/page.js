@@ -21,7 +21,7 @@ export default function CategoriesHomePage() {
             </div>
             {categories.length > 0 && categories.map((text) => (
                 <>
-                    <div key={text._id}>
+                    <div key={text._id} className="mt-10">
                         <h1 className="title-categories">{text.name}</h1>
                     </div>
                     <section className="grid xl:grid-cols-4 md:grid-cols-2 md:pl-4 md:pr-4 sm:grid-cols-1 gap-7 md:max-w-screen-2xl md:mt-10 sm:max-w-screen-sm sm:mx-auto">
