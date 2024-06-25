@@ -17,7 +17,7 @@ export default function HeroMenu() {
           Lorem Ipsum Tec
         </h1>
       </div>
-      <div className="animate-shake animate-delay-100">
+      <div className="animate-shake animate-delay-100 mt-10">
         <ListMenu />
       </div>
       <div>

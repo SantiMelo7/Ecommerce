@@ -8,7 +8,7 @@ export default function ListMenu() {
   const { cartProducts } = useContext(CartContext);
   return (
     <>
-      <ul className="md:flex md:flex-row sm:grid sm:grid-cols-2 md:gap-x-7 md:translate-y-11 md:p-0 sm:p-3 md:gap-y-0 sm:gap-y-6">
+      <ul className="md:flex md:flex-row sm:grid sm:grid-cols-2 md:gap-x-7 md:translate-y-1 md:p-0 sm:p-3 md:gap-y-0 sm:gap-y-6">
         <li className="bg-[#FEFAE2] text-lg pt-1 md:text-start sm:text-center md:p-0 sm:p-2 md:px-10 sm:px-5 rounded-md hover:transition-all hover:scale-110 text-black border-[3px] border-yellow-800">
           <a href={"/"}>Home</a>
         </li>
