@@ -52,6 +52,7 @@
     <img src="/public/readme/photo-3.webp"></img>
     <img src="/public/readme/photo-4.webp"></img>
     <img src="/public/readme/photo-5.webp"></img>
+        <img src="/public/readme/photo-6.webp"></img>
 </div>
 
 ## 🛠️ Stack
